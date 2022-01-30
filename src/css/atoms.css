@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    /*Illustration colors*/
+    --lime-green: #E3FCF2;
+    --bright-yellow: #F2D142;
+    --grayish-orange: #FCE3D9;
+    --soft-orange: #FDEEC7;
+    --brown: #7C5D52;
+    --light-brown: #F1E8DA;
+    --mid-grey: #393E46;
+
+    /*Primary colors*/
+    --cyan: #052120;
+    --dark-blue: #02394D;
+    --grayish-cyan: #8CAC9C;
+
+    /*Secondary colors*/
+    --white: #FFFFFF;;
+    --light-gray: #F7F7F7;
+    --soft-red: #FD8F82;
+
+    /*Disabled colors*/
+    --disabled-grey: #697281;
+
+    /*Font sizes*/
+    --title: 5rem;
+    --h2: 3.75rem;
+    --h2-mobile: 2.5rem;
+    --h3: 2rem;
+    --h4: 1.5rem;
+    --body: 1rem;
+    --body-large: 1.25rem;
+    --body-small: 0.875rem;
+    --caption: 1.125rem;
+
+    /*Line heights*/
+    --title-lh: 100%;
+    --h2-lh: 110%;
+    --h3-lh: 130%;
+    --h4-lh: 135%;
+    --body-lh: 140%;
+    --caption-lh: 140%;
+    --button-lh: 100%;
+
+    /*Font boldness*/
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+
+    /* SPACING TOKENS */
+    --smallest: 0.25rem;
+    --smaller: 0.5rem;
+    --small: 1rem;
+    --normal: 2.25rem;
+    --medium: 3rem;
+    --large: 4rem;
+    --larger: 5rem;
+    --largest: 6.5rem;
+    --huge: 15rem;
+}
+
+html,
+.root {
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1500px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    html,
+    body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html,
+    body {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+}
+
+p br {
+    display: block;
+    margin-bottom: 1rem;
+    content: " ";
+}
