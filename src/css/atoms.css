@@ -1,35 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     /*colors-verteslovas-gyerek*/
-    --grey-background:#EBEDEC;
-    --green-camp:#96D0C2;
-    --yellow-table:#F4BE18;
-    --light-yellow-table:rgb(244,190,24,0.2);
-    --light-brown-form:rgb(200,187,155,0.3);
+    --grey-background: #EBEDEC;
+    --green-camp: #96D0C2;
+    --yellow-table: #F4BE18;
+    --yellow: #F6AA00;
+    --light-yellow-table: rgb(244, 190, 24, 0.2);
+    --light-brown-form: rgb(200, 187, 155, 0.3);
     /*colors-verteslovas-felnőtt*/
-    --whitesmoke-background:whitesmoke;
-    --light-grey:#E6E6E6;
-    --light-beige:#F8EFEC;
-    --wedding-background:#F9EBEB;
-    --beige:#F1E0DA;
+    --whitesmoke-background: whitesmoke;
+    --light-grey: #E6E6E6;
+    --light-beige: #F8EFEC;
+    --wedding-background: #F9EBEB;
+    --beige: #F1E0DA;
     /*text-color*/
-    --dark-gery:#4D4D4D;
+    --dark-grey: #4D4D4D;
 
     /*Font sizes verteslovas*/
-    --title:5.6rem;
-    --h1:5rem;
-    --p:1rem;
-    --form-title:2rem;
-    --form-p:1.12rem;
-    --card-title:4rem;
+    --title: 5.625rem;
+    --h2: 5rem;
+    --p: 1rem;
+    --form-title: 2rem;
+    --form-p: 1.125rem;
+    --card-title: 4rem;
 
     /*Line heights*/
     --title-lh: 100%;
-    --h1-lh:120%;
+    --h2-lh: 110%;
+    --p-lh: 140%;
 
 
     /*Font boldness*/
+    --thin: 100;
     --light: 300;
     --regular: 400;
     --bold: 700;
@@ -49,7 +52,7 @@
 
 html,
 .root {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 html,
