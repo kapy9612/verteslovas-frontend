@@ -2,6 +2,7 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 
 import "/src/css/zero.css";
+import "/src/css/atoms.css";
 
 global.___loader = {
   enqueue: () => {},

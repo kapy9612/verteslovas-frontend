@@ -199,11 +199,11 @@ export const handleJustifyContent = jc => {
 
 /*BUTTON*/
 
-export const handleButtonColor = type => {
-    switch (type) {
-        case "primary":
-            return "var(--yellow)";
-        case "secondary":
+export const handleButtonColor = variant => {
+    switch (variant) {
+        case "yellow":
+            return "var(--yellow-main)";
+        case "beige":
             return "var(--light-beige)";
         default:
             return "";
@@ -212,10 +212,10 @@ export const handleButtonColor = type => {
 
 export const handleButtonHover = type => {
     switch (type) {
-        case "primary":
-            return "red";
-        case "secondary":
-            return "green";
+        case "yellow":
+            return "var(--yellow-table)";
+        case "beige":
+            return "var(--wedding-background)";
         default:
             return "";
     }
