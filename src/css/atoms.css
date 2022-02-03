@@ -20,8 +20,9 @@
     /*Font sizes verteslovas*/
     --title: 5.625rem;
     --h2: 5rem;
-    --p: 1rem;
-    --form-title: 2rem;
+    --p-simple: 1rem;
+    --form-title-camp: 2rem;
+    --form-title-simple: 3.75rem;
     --form-p: 1.125rem;
     --card-title: 4rem;
 
@@ -29,6 +30,7 @@
     --title-lh: 100%;
     --h2-lh: 110%;
     --p-lh: 140%;
+
 
 
     /*Font boldness*/

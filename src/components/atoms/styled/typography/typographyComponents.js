@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import {
+  handleBodyFontSize,
   handleColor,
   handleFontWeight,
   handleMarginBottom,
@@ -35,12 +36,11 @@ export const Header2 = styled.h2`
 `
 
 export const Header3 = styled.h3`
+  font-family: ${props => props.sand ? "'Quicksand', sans-serif" : "'Parisienne', sans-serif"};
   font-style: normal;
-  font-weight: bold;
-  font-size: var(--h3);
-  line-height: var(--h3-lh);
-  text-transform: ${props => props.upper ? "uppercase" : "unset"};
-  
+  font-size:${props => props.sand ?" var(--form-title-camp)" :" var(--form-title-simple)"}; 
+  line-height: var(--h2-lh);
+
   /*Optional fields*/
   color: ${({ color }) => handleColor(color)};
   text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
@@ -50,9 +50,9 @@ export const Header3 = styled.h3`
 
 export const Header4 = styled.h4`
   font-style: normal;
-  font-weight: bold;
-  font-size: var(--h4);
-  line-height: var(--h4-lh);
+  font-family: 'Parisienne', sans-serif;
+  font-size: var(--card-title);
+  line-height: var(--h2-lh);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
   
   /*Optional fields*/
@@ -66,7 +66,7 @@ export const Body = styled.p`
   font-style: normal;
   font-weight: ${({ weight }) => handleFontWeight(weight)};
   font-size: ${({ size }) => handleBodyFontSize(size)};
-  line-height: var(--body-lh);
+  line-height: var(--p-lh);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
 
   br {
@@ -76,20 +76,6 @@ export const Body = styled.p`
   strong{
     font-weight: var(--bold);
   }
-
-  /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
-`
-
-export const Caption = styled.p`
-  font-style: normal;
-  font-weight: ${({ weight }) => handleFontWeight(weight)};
-  font-size: var(--caption);
-  line-height: var(--caption-lh);
-  text-transform: ${props => props.upper ? "uppercase" : "unset"};
 
   /*Optional fields*/
   color: ${({ color }) => handleColor(color)};

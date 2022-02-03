@@ -54,6 +54,15 @@ export const handleFontWeight = weight => {
     }
 };
 
+export const handleBodyFontSize = size => {
+    switch (size) {
+        case "form":
+            return "var(--form-p)";
+        default:
+            return "var(--p-simple)";
+    }
+};
+
 export const handleMarginTop = marginTop => {
     switch (marginTop) {
         case "smallest":
