@@ -220,3 +220,32 @@ export const handleButtonHover = type => {
             return "";
     }
 };
+
+/*TABLE*/
+
+export const handleTableColumnColor = variant => {
+    switch (variant) {
+        case "grey":
+            return "var(--light-grey)";
+        case "beige":
+            return "var(--light-beige)";
+        case "lightYellow":
+            return "var(--yellow-table)";
+        case "yellow":
+            return "var(--yellow-main)";
+        case "whitesmoke":
+            return "var(--whitesmoke-background:)";
+        default:
+            return "";
+    }
+};
+export const handleTableColumnNumber = variant => {
+    switch (variant) {
+        case "two":
+            return "var(--grid-two)";
+        case "three":
+            return "var(--grid-three)";
+        default:
+            return "";
+    }
+};
