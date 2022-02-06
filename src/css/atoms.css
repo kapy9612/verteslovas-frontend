@@ -29,8 +29,8 @@
 
     /*Line heights*/
     --title-lh: 100%;
-    --h2-lh: 110%;
-    --p-lh: 140%;
+    --h2-lh: 120%;
+    --p-lh: 160%;
 
 
 
@@ -39,7 +39,6 @@
     --light: 300;
     --regular: 400;
     --bold: 700;
-    --black: 900;
 
     /* SPACING TOKENS */
     --smallest: 0.25rem;

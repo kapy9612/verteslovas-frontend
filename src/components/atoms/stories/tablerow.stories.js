@@ -11,7 +11,7 @@ export default {
         firstColumn: "Szállás",
         secondColumn: "Gyerek",
         thirdColumn: "Felnőtt",
-        grid: "three"
+        isThreeWay: false
     },
     argTypes: {
         variant: {
@@ -24,13 +24,6 @@ export default {
             ],
             control: {type: 'select'}
         },
-        grid: {
-            options: [
-                'two',
-                'three',
-            ],
-            control: {type: 'select'}
-        }
     }
 };
 

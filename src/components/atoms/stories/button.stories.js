@@ -1,6 +1,9 @@
 import React from "react";
 
+import SectionLayoutGrid from "../layout/SectionLayoutGrid";
+
 import {ButtonLink} from "../styled/button/buttonComponents"
+import {Col} from "../styled/layout/layoutComponents";
 
 export default {
     title: 'Atoms/Buttons',
@@ -20,5 +23,9 @@ export default {
 };
 
 export const Buttons = ({...args}) => (
-    <ButtonLink to={"/test"} {...args}/>
+    <SectionLayoutGrid>
+        <Col>
+            <ButtonLink to={"/test"} {...args}/>
+        </Col>
+    </SectionLayoutGrid>
 );

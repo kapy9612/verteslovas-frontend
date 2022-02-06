@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 import {
-  handleBodyFontSize,
-  handleColor,
-  handleFontWeight,
-  handleMarginBottom,
-  handleMarginTop,
-  handleTextAlign
+    handleBodyFontSize,
+    handleColor,
+    handleFontWeight,
+    handleMarginBottom,
+    handleMarginTop,
+    handleTextAlign
 } from "../../functions/atomsFunctions";
 
 export const Title = styled.h1`
@@ -14,12 +14,12 @@ export const Title = styled.h1`
   font-style: normal;
   font-size: var(--title);
   line-height: var(--title-lh);
-  
+
   /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
 `
 
 export const Header2 = styled.h2`
@@ -29,23 +29,23 @@ export const Header2 = styled.h2`
   line-height: var(--h2-lh);
 
   /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
 `
 
 export const Header3 = styled.h3`
   font-family: ${props => props.sand ? "'Quicksand', sans-serif" : "'Parisienne', sans-serif"};
   font-style: normal;
-  font-size:${props => props.sand ?" var(--form-title-camp)" :" var(--form-title-simple)"}; 
+  font-size: ${props => props.sand ? " var(--form-title-camp)" : " var(--form-title-simple)"};
   line-height: var(--h2-lh);
 
   /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
 `
 
 export const Header4 = styled.h4`
@@ -54,36 +54,36 @@ export const Header4 = styled.h4`
   font-size: var(--card-title);
   line-height: var(--h2-lh);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
-  
+
   /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
 `
 
 export const Body = styled.p`
   font-style: normal;
-  font-weight: ${({ weight }) => handleFontWeight(weight)};
-  font-size: ${({ size }) => handleBodyFontSize(size)};
+  font-weight: ${({weight}) => handleFontWeight(weight)};
+  font-size: ${({size}) => handleBodyFontSize(size)};
   line-height: var(--p-lh);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
 
   br {
     margin-bottom: var(--small);
   }
-  
-  strong{
+
+  strong {
     font-weight: var(--bold);
   }
 
   /*Optional fields*/
-  color: ${({ color }) => handleColor(color)};
-  text-align: ${({ textAlign }) => handleTextAlign(textAlign)};
-  margin-top: ${({ marginTop }) => handleMarginTop(marginTop)};
-  margin-bottom: ${({ marginBottom }) => handleMarginBottom(marginBottom)};
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
 `
 
 export const Span = styled.span`
-  color: ${({ color }) => handleColor(color)};
+  color: ${({color}) => handleColor(color)};
 `
