@@ -205,6 +205,21 @@ export const handleButtonColor = variant => {
             return "var(--yellow-main)";
         case "beige":
             return "var(--light-beige)";
+        case "whitesmoke":
+            return "var(--whitesmoke-background)";
+        default:
+            return "";
+    }
+};
+
+export const handleButtonWidth = width => {
+    switch (width) {
+        case "small":
+            return "40%";
+        case "full":
+            return "100%";
+        case "whitesmoke":
+            return "var(--whitesmoke-background)";
         default:
             return "";
     }

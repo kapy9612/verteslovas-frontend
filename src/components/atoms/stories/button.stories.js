@@ -10,12 +10,23 @@ export default {
     args: {
         variant: "yellow",
         children: "Test Button",
+        width:"small"
     },
     argTypes: {
         variant: {
             options: [
                 'yellow',
                 'beige',
+                'whitesmoke',
+
+            ],
+            control: {type: 'select'}
+        },
+        width: {
+            options: [
+                'small',
+                'full',
+
             ],
             control: {type: 'select'}
         }

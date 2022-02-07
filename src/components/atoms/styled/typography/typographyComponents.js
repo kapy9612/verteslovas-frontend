@@ -42,6 +42,8 @@ export const Header3 = styled.h3`
   line-height: var(--h2-lh);
 
   /*Optional fields*/
+  font-weight: ${({weight}) => handleFontWeight(weight)};
+
   color: ${({color}) => handleColor(color)};
   text-align: ${({textAlign}) => handleTextAlign(textAlign)};
   margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
@@ -64,6 +66,7 @@ export const Header4 = styled.h4`
 
 export const Body = styled.p`
   font-style: normal;
+  font-family: 'Raleway', sans-serif;
   font-weight: ${({weight}) => handleFontWeight(weight)};
   font-size: ${({size}) => handleBodyFontSize(size)};
   line-height: var(--p-lh);

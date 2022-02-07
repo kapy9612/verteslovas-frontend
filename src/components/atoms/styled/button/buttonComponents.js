@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { handleButtonColor, handleButtonHover } from "../../functions/atomsFunctions";
+import { handleButtonColor, handleButtonHover,handleButtonWidth } from "../../functions/atomsFunctions";
 
 export const ButtonLink = styled(Link)`
   font-size: var(--form-p);
@@ -15,9 +15,9 @@ export const ButtonLink = styled(Link)`
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   color: var(--dark-grey);
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25); 
   background-color: ${({variant}) => handleButtonColor(variant)};
-  
+  text-align: center;
   &:hover {
     background-color: ${({variant}) => handleButtonHover(variant)};
   }
