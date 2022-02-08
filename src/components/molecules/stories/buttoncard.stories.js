@@ -22,10 +22,10 @@ export default {
 
 export const buttonCard = ({...args}) => (
     <SectionLayoutGrid>
-        <Col span={6} grid>
+        <Col span={6} grid justifyContent="center">
             <ButtonCard  {...args}/>
         </Col>
-        <Col span={6} grid>
+        <Col span={6} grid justifyContent="center">
             <ButtonCard  {...args}/>
         </Col>
     </SectionLayoutGrid>

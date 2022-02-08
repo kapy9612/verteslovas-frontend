@@ -1,10 +1,10 @@
 import styled from "styled-components";
-export const FormField = styled.input`
 
+export const FormField = styled.input`
   padding: 0.5rem;
   position: static;
   width: 95%;
-  border:0;
+  border: 0;
   justify-self: center;
   font-family: 'Raleway', sans-serif;
   font-size: var(--p-simple);
@@ -13,4 +13,8 @@ export const FormField = styled.input`
   border-radius: 0.5rem;
   align-self: stretch;
   
-  `
+  &:focus {
+    font-weight: bold;
+    outline: 0;
+  }
+`
