@@ -62,7 +62,16 @@ export const handleBodyFontSize = size => {
             return "var(--p-simple)";
     }
 };
-
+export const handleAlignSelf = alignSelf => {
+    switch (alignSelf) {
+        case "center":
+            return "center";
+        case "end":
+            return "end";
+        default:
+            return "";
+    }
+};
 export const handleMarginTop = marginTop => {
     switch (marginTop) {
         case "smallest":
@@ -201,6 +210,8 @@ export const handleJustifyContent = jc => {
 
 export const handleButtonColor = variant => {
     switch (variant) {
+        case "lightYellow":
+            return "var(--yellow-card)";
         case "yellow":
             return "var(--yellow-main)";
         case "beige":
@@ -228,6 +239,8 @@ export const handleButtonWidth = width => {
 export const handleButtonHover = type => {
     switch (type) {
         case "yellow":
+            return "var(--yellow-table)";
+        case "lightYellow":
             return "var(--yellow-table)";
         case "beige":
             return "var(--wedding-background)";

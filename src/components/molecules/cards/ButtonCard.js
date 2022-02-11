@@ -8,19 +8,19 @@ import {
 import {Body, Header3} from "../../atoms/styled/typography/typographyComponents";
 import {ButtonLink} from "../../atoms/styled/button/buttonComponents";
 
-const ButtonCard = ({title, description, image,button}) => {
+const ButtonCard = ({title, description, image,button,sand, color}) => {
     return (
-        <ButtonCardContainer>
+        <ButtonCardContainer color={color}>
             <ButtonCardImg image={image}/>
             <ButtonCardContentWrapper>
-                <Header3 textAlign="center" marginBottom="small" >
+                <Header3 textAlign="center" marginBottom="small" sand={sand}>
                     {title}
                 </Header3>
                 <Body color="dark-grey" textAlign="center">
                     {description}
                 </Body>
                 <ButtonCardButtonWrapper>
-                    <ButtonLink to={button.slug} variant="whitesmoke">{button.name}</ButtonLink>
+                    <ButtonLink to={button.slug} variant={button.color}>{button.name}</ButtonLink>
                 </ButtonCardButtonWrapper>
             </ButtonCardContentWrapper>
 

@@ -10,8 +10,19 @@ export default {
     args: {
         title: "Jelentkezz a táborba!",
         button: "Jelentkezés",
-        placeholder:"Szülő neve:"
+        placeholder: "Szülő neve:",
+        color: "brown",
 
+    },
+    argTypes: {
+        color: {
+            options: [
+                'grey',
+                'brown',
+
+            ],
+            control: {type: 'select'}
+        },
     }
 };
 

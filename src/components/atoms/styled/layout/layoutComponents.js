@@ -18,7 +18,7 @@ export const LayoutGrid = styled.div`
   width: ${props => props.thin ? "60vw" : "80vw"};
   margin: auto;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 3rem 1.5rem;
+  grid-gap: 3rem 3rem;
   padding: ${({ customPadding }) => handleLayoutPadding(customPadding)};
   min-height: ${({ minHeight }) => handleLayoutMinHeight(minHeight)};
   align-content: center;

@@ -12,11 +12,22 @@ export default {
     args: {
         button:{
             slug:"/test",
-            name:"Tovább"
+            name:"Tovább",
+            color:"yellow"
         },
+        sand:false,
+        color:"grey",
         image: image,
         title: "Születésnap",
         description: "Délelőttönként és délutánonként a lovaglás mellett, egyéb lovas foglalkozásokkal színesítjük a programot. Lócsemegét készítünk, lovaskocsikázásra megyünk. A gyerekek megtanulják a ló körüli teendőket. Megtanulják ápolni, etetni a lovakat, egyszóval, megtanulnak gondoskodni a lovakról. ",
+    }, argTypes: {
+        color: {
+            options: [
+                'grey',
+                'white',
+            ],
+            control: {type: 'select'}
+        }
     }
 };
 

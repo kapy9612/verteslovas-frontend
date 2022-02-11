@@ -14,7 +14,7 @@ export const ButtonLink = styled(Link)`
   margin: 0;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
-  color: var(--dark-grey);
+  color: var(--black);
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25); 
   background-color: ${({variant}) => handleButtonColor(variant)};
   text-align: center;

@@ -6,7 +6,8 @@ import {
     handleFontWeight,
     handleMarginBottom,
     handleMarginTop,
-    handleTextAlign
+    handleTextAlign,
+    handleAlignSelf
 } from "../../functions/atomsFunctions";
 
 export const Title = styled.h1`
@@ -38,7 +39,8 @@ export const Header2 = styled.h2`
 export const Header3 = styled.h3`
   font-family: ${props => props.sand ? "'Quicksand', sans-serif" : "'Parisienne', sans-serif"};
   font-style: normal;
-  font-size: ${props => props.sand ? " var(--form-title-camp)" : " var(--form-title-simple)"};
+  //font-size: ${props => props.sand ? " var(--form-title-camp)" : " var(--form-title-simple)"};
+  font-size: var(--form-title-simple);
   line-height: var(--h2-lh);
 
   /*Optional fields*/
@@ -48,6 +50,7 @@ export const Header3 = styled.h3`
   text-align: ${({textAlign}) => handleTextAlign(textAlign)};
   margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
   margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+  align-self: ${({alignSelf}) => handleAlignSelf(alignSelf)};
 `
 
 export const Header4 = styled.h4`
@@ -56,6 +59,19 @@ export const Header4 = styled.h4`
   font-size: var(--card-title);
   line-height: var(--h2-lh);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
+
+  /*Optional fields*/
+  color: ${({color}) => handleColor(color)};
+  text-align: ${({textAlign}) => handleTextAlign(textAlign)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+`
+export const H5AboutUs = styled.h5`
+  font-style: normal;
+  font-family: 'Parisienne', sans-serif;
+  font-size: var(--h5);
+  text-transform: ${props => props.upper ? "uppercase" : "unset"};
+  line-height: var(--h2-lh);
 
   /*Optional fields*/
   color: ${({color}) => handleColor(color)};
