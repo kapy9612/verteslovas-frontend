@@ -147,6 +147,8 @@ export const handleLayoutPadding = padding => {
 
 export const handleLayoutMinHeight = mh => {
     switch (mh) {
+        case "small":
+            return "40vh";
         case "large":
             return "100vh";
         default:
@@ -258,11 +260,11 @@ export const handleTableColumnColor = variant => {
         case "beige":
             return "var(--light-beige)";
         case "lightYellow":
-            return "var(--yellow-table)";
+            return "var(--yellow-tablerow)";
         case "yellow":
-            return "var(--yellow-main)";
+            return "var(--yellow-table)";
         case "whitesmoke":
-            return "var(--whitesmoke-background:)";
+            return "var(--whitesmoke-background)";
         default:
             return "";
     }
