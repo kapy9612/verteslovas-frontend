@@ -12,6 +12,9 @@ export default {
         button: "Jelentkezés",
         placeholder: "Szülő neve:",
         color: "brown",
+        sand:true,
+        titlePosition:true,
+        buttonColor:true
 
     },
     argTypes: {
