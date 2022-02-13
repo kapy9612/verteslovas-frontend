@@ -4,7 +4,7 @@ import image from "./dummy/wedding_dummy.png"
 import WeddingHeroSection from "../hero-section/WeddingHeroSection";
 
 export default {
-    title: 'Organisms/Hero Sections/Wedding Hero',
+    title: 'Organisms/Hero Sections/Wedding Hero Section',
     args: {
         image: image,
         title: "Rendezd meg álmaid esküvőjét",
