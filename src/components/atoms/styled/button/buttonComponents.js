@@ -12,6 +12,7 @@ export const ButtonLink = styled(Link)`
   padding: 0.75rem 1.5rem 0.75rem 1.5rem;
   box-sizing: border-box;
   margin: 0;
+  max-height: 3rem;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   color: var(--black);

@@ -39,8 +39,7 @@ export const Header2 = styled.h2`
 export const Header3 = styled.h3`
   font-family: ${props => props.sand ? "'Quicksand', sans-serif" : "'Parisienne', sans-serif"};
   font-style: normal;
-  //font-size: ${props => props.sand ? " var(--form-title-camp)" : " var(--form-title-simple)"};
-  font-size: var(--form-title-simple);
+  font-size: ${props => props.sand ? " calc(var(--form-title-camp)*1.3)" : " var(--form-title-simple)"};
   line-height: var(--h2-lh);
 
   /*Optional fields*/

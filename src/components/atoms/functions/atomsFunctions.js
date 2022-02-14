@@ -241,7 +241,7 @@ export const handleButtonWidth = width => {
 export const handleButtonHover = type => {
     switch (type) {
         case "yellow":
-            return "var(--yellow-table)";
+            return "var(--yellow-hover)";
         case "lightYellow":
             return "var(--yellow-table)";
         case "beige":
@@ -265,6 +265,8 @@ export const handleTableColumnColor = variant => {
             return "var(--yellow-table)";
         case "whitesmoke":
             return "var(--whitesmoke-background)";
+        case "lightGrey":
+            return "var(--grey-background)";
         default:
             return "";
     }

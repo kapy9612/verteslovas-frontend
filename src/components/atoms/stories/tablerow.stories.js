@@ -20,7 +20,10 @@ export default {
                 'beige',
                 'lightYellow',
                 'yellow',
-                'whitesmoke'
+                'whitesmoke',
+                'lightGrey',
+
+
             ],
             control: {type: 'select'}
         },

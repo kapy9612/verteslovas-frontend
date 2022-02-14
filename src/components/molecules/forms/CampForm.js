@@ -7,8 +7,8 @@ import {FormField} from "../../atoms/styled/formField/formFieldComponents";
 const CampForm = ({title, button, placeholder, color, sand, titlePosition, buttonColor}) => {
     return (
         <CampFormContainer color={color}>
-            <Header3 sand={sand} marginBottom={"small"} textAlign={!titlePosition ? "center" : "left"}
-                     weight={"regular"}>
+            <Header3 sand={sand} marginBottom={"small"} weight={sand ? "bold" :"regular"} textAlign={!titlePosition ? "center" : "left"}
+                     >
                 {title}
             </Header3>
             <FormField placeholder={placeholder}/>

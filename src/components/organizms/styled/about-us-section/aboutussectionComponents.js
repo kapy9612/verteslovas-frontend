@@ -1,8 +1,16 @@
 import styled from "styled-components";
-import {handleFontWeight,handleBodyFontSize,handleColor,handleTextAlign,handleMarginTop,handleMarginBottom} from "../../../atoms/functions/atomsFunctions"
+import {
+    handleFontWeight,
+    handleBodyFontSize,
+    handleColor,
+    handleTextAlign,
+    handleMarginTop,
+    handleMarginBottom
+} from "../../../atoms/functions/atomsFunctions"
+
 export const Container = styled.div`
   display: grid;
-  width: 90%;
+  width: 100%;
   grid-template-rows: 0.1fr 1fr;
 
 `
@@ -13,7 +21,7 @@ export const Icon = styled.div`
 export const BodyContainer = styled.div`
   min-height: 12rem;
   font-style: normal;
-  
+
   font-family: 'Raleway', sans-serif;
   font-weight: ${({weight}) => handleFontWeight(weight)};
   font-size: ${({size}) => handleBodyFontSize(size)};

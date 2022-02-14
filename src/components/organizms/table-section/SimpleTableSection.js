@@ -18,7 +18,7 @@ const SimpleTableSection = ({title ,header, rows, isYellow}) => {
             <TableRowCol>
                 <TableRow firstColumn={header.firstColumn} secondColumn={header.secondColumn} variant={isYellow ? "yellow" : "grey"}/>
                 {rows && rows.map((item, index) =>
-                    <TableRow key={index} firstColumn={item.firstColumn} secondColumn={item.secondColumn} variant={!isYellow ? (index % 2 === 0 ? "beige" : "whitesmoke") : (index % 2 === 0 ? "lightYellow" : "whitesmoke")}/>
+                    <TableRow key={index} firstColumn={item.firstColumn} secondColumn={item.secondColumn} variant={!isYellow ? (index % 2 === 0 ? "beige" : "whitesmoke") : (index % 2 === 0 ? "lightYellow" : "lightGrey")}/>
                 )}
             </TableRowCol>
         </SectionLayoutGrid>

@@ -5,11 +5,13 @@
     --grey-background: #EBEDEC;
     --green-camp: #96D0C2;
     --yellow-table: #F4BE18;
-    --yellow-tablerow: rgba(244, 190, 24, 0.2);
+    --yellow-tablerow: rgb(237, 228, 196);
     --yellow-card:rgba(237, 199, 81, 0.9);
     --yellow-main: rgba(246, 170, 0, 0.7);
-    --light-yellow-table: rgb(244, 190, 24, 0.2);
-    --light-brown-form: rgb(200, 187, 155, 0.3);
+    --light-yellow-table: rgb(244, 190, 24,0.2);
+    --yellow-hover:rgb(255, 204, 0);
+
+    --light-brown-form: rgb(225, 220, 208);
     /*colors-verteslovas-felnőtt*/
     --whitesmoke-background: whitesmoke;
     --light-grey: #E6E6E6;
@@ -41,7 +43,7 @@
     --thin: 100;
     --light: 300;
     --regular: 400;
-    --bold: 700;
+    --bold: 500;
 
     /* SPACING TOKENS */
     --smallest: 0.25rem;
