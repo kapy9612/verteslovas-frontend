@@ -16,7 +16,7 @@ const SimpleTableSection = ({title ,header, rows, isYellow}) => {
                 </Title>
             </Col>
             <TableRowCol>
-                <TableRow firstColumn={header.firstColumn} secondColumn={header.secondColumn} variant={isYellow ? "yellow" : "grey"}/>
+                <TableRow firstColumn={header.row1} secondColumn={header.row2} variant={isYellow ? "yellow" : "grey"}/>
                 {rows && rows.map((item, index) =>
                     <TableRow key={index} firstColumn={item.firstColumn} secondColumn={item.secondColumn} variant={!isYellow ? (index % 2 === 0 ? "beige" : "whitesmoke") : (index % 2 === 0 ? "lightYellow" : "lightGrey")}/>
                 )}

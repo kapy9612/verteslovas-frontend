@@ -40,5 +40,5 @@ export const MainCardRightImg = styled.img`
   display: grid;
   align-self: center;
   margin-left: -5%;
-
+  border-radius:  ${props => props.border ? "2.5rem" : "0"};
 `

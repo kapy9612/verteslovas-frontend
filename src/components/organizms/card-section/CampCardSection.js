@@ -1,6 +1,8 @@
 import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
+import CampCard from "../../molecules/cards/ChildCard";
+
 import {
     MainCardLeftImg,
     MainRightCardContainer,
@@ -9,39 +11,43 @@ import {
     MainCardSectionContainer
 } from "../styled/card-section/cardSectionComponents"
 import {Col} from "../../atoms/styled/layout/layoutComponents";
-import CampCard from "../../molecules/cards/ChildCard";
-import MainCard from "../../molecules/cards/MainCard";
+import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const CampCardSection = ({image, card, position, border}) => {
+const CampCardSection = ({title, cards, border}) => {
     return (
-        <SectionLayoutGrid>
-            {position % 2 === 0 ?
-                <Col>
-                    <MainCardSectionContainer>
-                        <MainCardLeftImg src={image} border />
-                        <MainRightCardContainer>
-                            <CampCard
-                                color={position % 2 === 0 ? "yellow" : "green"}
-                                title={card.title}
-                                description={card.description}
-                            />
-                        </MainRightCardContainer>
-                    </MainCardSectionContainer>
-                </Col>
-                :
-                <Col>
-                    <MainCardSectionContainer>
-                        <MainLeftCardContainer>
-                            <CampCard
-                                color={position % 2 === 0 ? "yellow" : "green"}
-                                title={card.title}
-                                description={card.description}
-                            />
-                        </MainLeftCardContainer>
-                        <MainCardRightImg src={image} border/>
-                    </MainCardSectionContainer>
-                </Col>
-            }
+        <SectionLayoutGrid id="camp-card-section">
+            <Col>
+                <Title sand="true" textAlign="center" marginBottom="medium">
+                    {title}
+                </Title>
+            </Col>
+            {cards && cards.map((item, index) => (index % 2 === 0 ?
+                    <Col>
+                        <MainCardSectionContainer>
+                            <MainCardLeftImg src={item.image.localFile.publicURL} border={border ? "true" : ""}/>
+                            <MainRightCardContainer>
+                                <CampCard
+                                    color={index % 2 === 0 ? "yellow" : "green"}
+                                    title={item.title}
+                                    description={item.description}
+                                />
+                            </MainRightCardContainer>
+                        </MainCardSectionContainer>
+                    </Col>
+                    :
+                    <Col>
+                        <MainCardSectionContainer>
+                            <MainLeftCardContainer>
+                                <CampCard
+                                    color={index % 2 === 0 ? "yellow" : "green"}
+                                    title={item.title}
+                                    description={item.description}
+                                />
+                            </MainLeftCardContainer>
+                            <MainCardRightImg src={item.image} border={border ? "true" : ""}/>
+                        </MainCardSectionContainer>
+                    </Col>
+            ))}
         </SectionLayoutGrid>
     );
 };
