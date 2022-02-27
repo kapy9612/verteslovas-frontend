@@ -21,10 +21,11 @@
     /*text-color*/
     --dark-grey: #4D4D4D;
     --black: #000000;
+    --white:#FFFFFF;
 
     /*Font sizes verteslovas*/
     --title: 5.625rem;
-    --h2: 5rem;
+    --h2: 4rem;
     --p-simple: 1.1rem;
     --form-title-camp: 2rem;
     --form-title-simple: 3.75rem;
@@ -35,7 +36,7 @@
     /*Line heights*/
     --title-lh: 100%;
     --h2-lh: 120%;
-    --p-lh: 160%;
+    --p-lh: 180%;
 
 
 
@@ -43,10 +44,11 @@
     --thin: 100;
     --light: 300;
     --regular: 400;
+    --bolder:500;
     --bold: 600;
 
     /* SPACING TOKENS */
-    --smallest: 0.25rem;
+    --smallest: 0rem;
     --smaller: 0.5rem;
     --small: 1rem;
     --normal: 2.25rem;

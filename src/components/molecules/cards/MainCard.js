@@ -2,8 +2,7 @@ import React from 'react';
 import {
     MainCardContainer
 } from "../styled/cards/cardComponents";
-import {Body, Header2, Header3} from "../../atoms/styled/typography/typographyComponents";
-import {ButtonLink} from "../../atoms/styled/button/buttonComponents";
+import {Body, Header2} from "../../atoms/styled/typography/typographyComponents";
 
 const MainCard = ({title, description,color}) => {
     return (

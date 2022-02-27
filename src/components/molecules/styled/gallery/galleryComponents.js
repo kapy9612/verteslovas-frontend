@@ -10,8 +10,9 @@ export const GalleryWrapper = styled.div`
   width: 100%;
 
   img {
-    max-width: 33rem;
-    height: auto;
+    width: 100%;
+    height: stretch;
+    max-height: 20rem;
     place-self: center;
   }
 `

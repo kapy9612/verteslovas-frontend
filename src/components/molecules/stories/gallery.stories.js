@@ -9,7 +9,17 @@ import Gallery from "../gallery/Gallery";
 export default {
     title: 'Molecules/Gallery/Gallery',
     args: {
-        image: image,
+        images:[
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+            {image:image},
+        ]
 
 
     },

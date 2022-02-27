@@ -11,12 +11,11 @@ const ActiveCardSection = ({title , cards}) => {
                 <Title textAlign="center">{title}</Title>
             </Col>
             {cards && cards.map((item, index) => (
-                <Col span={3} key={index}>
+                <Col span={4} key={index} grid justifyContent={"stretch"}>
                     <ActiveCard
                         description={item.description}
                         title={item.title}
-                        image={item.image}
-                        price={item.price}
+                        image={item.cover.localFile.publicURL}
                     />
                 </Col>
             ))}

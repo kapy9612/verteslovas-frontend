@@ -2,19 +2,13 @@ import React from 'react';
 import {GalleryWrapper} from "../styled/gallery/galleryComponents";
 
 
-const Gallery = ({image}) => {
+const Gallery = ({images}) => {
     return (
-           <GalleryWrapper>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-               <img src={image}/>
-           </GalleryWrapper>
+        <GalleryWrapper>
+            {images.map((item, index) => (
+                <img src={item.localFile.publicURL} alt={"kep"} key={index}/>
+            ))}
+        </GalleryWrapper>
     );
 };
 

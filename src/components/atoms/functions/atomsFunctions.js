@@ -45,6 +45,8 @@ export const handleFontWeight = weight => {
             return "var(--thin)";
         case "light":
             return "var(--light)";
+        case "bolder":
+            return "var(--bolder)";
         case "bold":
             return "var(--bold)";
         case "black":

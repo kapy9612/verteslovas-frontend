@@ -30,6 +30,9 @@ export const Header2 = styled.h2`
   line-height: var(--h2-lh);
 
   /*Optional fields*/
+
+  font-weight: ${({weight}) => handleFontWeight(weight)};
+
   color: ${({color}) => handleColor(color)};
   text-align: ${({textAlign}) => handleTextAlign(textAlign)};
   margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
@@ -88,7 +91,7 @@ export const Body = styled.p`
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
 
   br {
-    margin-bottom: var(--small);
+    margin-bottom: var(--smallest);
   }
 
   strong {

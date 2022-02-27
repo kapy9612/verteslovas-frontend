@@ -21,13 +21,13 @@ const CampCardSection = ({title, cards, border}) => {
                     {title}
                 </Title>
             </Col>
-            {cards && cards.map((item, index) => (index % 2 === 0 ?
+            {cards && cards.map((item, index) => (index % 2 === 1?
                     <Col>
                         <MainCardSectionContainer>
                             <MainCardLeftImg src={item.image.localFile.publicURL} border={border ? "true" : ""}/>
                             <MainRightCardContainer>
                                 <CampCard
-                                    color={index % 2 === 0 ? "yellow" : "green"}
+                                    color={index % 2 === 1 ? "yellow" : "green"}
                                     title={item.title}
                                     description={item.description}
                                 />
@@ -39,12 +39,12 @@ const CampCardSection = ({title, cards, border}) => {
                         <MainCardSectionContainer>
                             <MainLeftCardContainer>
                                 <CampCard
-                                    color={index % 2 === 0 ? "yellow" : "green"}
+                                    color={index % 2 === 1 ? "yellow" : "green"}
                                     title={item.title}
                                     description={item.description}
                                 />
                             </MainLeftCardContainer>
-                            <MainCardRightImg src={item.image} border={border ? "true" : ""}/>
+                            <MainCardRightImg src={item.image.localFile.publicURL} border={border ? "true" : ""}/>
                         </MainCardSectionContainer>
                     </Col>
             ))}

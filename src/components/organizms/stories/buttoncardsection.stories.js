@@ -7,7 +7,8 @@ import image from "../../molecules/stories/dummy/active_card_dummy.png";
 export default {
     title: 'Organisms/Card Sections/Button Card Section',
     args: {
-        title:"Születésnapok",
+        color:"grey",
+        sand:false,
         cards:
             [
                 {
@@ -16,7 +17,6 @@ export default {
                         name:"Tovább",
                         color:"beige"
                     },
-                    color:"grey",
                     image: image,
                     title: "Szolgáltatások",
                     description: "Délelőttönként és délutánonként a lovaglás mellett, egyéb lovas foglalkozásokkal színesítjük a programot. Lócsemegét készítünk, lovaskocsikázásra megyünk. A gyerekek megtanulják a ló körüli teendőket. Megtanulják ápolni, etetni a lovakat, egyszóval, megtanulnak gondoskodni a lovakról. ",
@@ -28,7 +28,6 @@ export default {
                         color:"beige"
 
                     },
-                    color:"grey",
                     image: image,
                     title: "Szállás",
                     description: "Délelőttönként és délutánonként a lovaglás mellett, egyéb lovas foglalkozásokkal színesítjük a programot. Lócsemegét készítünk, lovaskocsikázásra megyünk. A gyerekek megtanulják a ló körüli teendőket. Megtanulják ápolni, etetni a lovakat, egyszóval, megtanulnak gondoskodni a lovakról. ",

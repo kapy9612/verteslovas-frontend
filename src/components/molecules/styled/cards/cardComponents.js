@@ -26,6 +26,7 @@ export const MainCardContainer = styled.div`
   padding: 2rem 3rem 2rem 3rem;
   background: ${({color}) => handleMainCardColor(color)};
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  min-height: 25rem;
 
 `
 export const ChildCardContainer = styled.div`
@@ -44,8 +45,8 @@ export const ChildCardContainer = styled.div`
 export const ActiveCardContainer = styled.div`
   display: grid;
   width: 100%;
-  justify-self: stretch;
-  grid-template-rows: 10rem 1fr;
+  justify-content: stretch;
+  grid-template-rows: 16rem 1fr;
   box-sizing: border-box;
   background: var(--light-grey);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);

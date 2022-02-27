@@ -20,7 +20,7 @@ const ButtonCard = ({title, description, image,button,sand, color}) => {
                     {description}
                 </Body>
                 <ButtonCardButtonWrapper>
-                    <ButtonLink to={button.slug} variant={button.color}>{button.name}</ButtonLink>
+                    <ButtonLink to={button.slug} variant={color==="white" ? "yellow" : "beige"}>{button.name}</ButtonLink>
                 </ButtonCardButtonWrapper>
             </ButtonCardContentWrapper>
 

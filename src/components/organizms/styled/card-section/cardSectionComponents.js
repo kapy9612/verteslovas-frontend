@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import {handleMainCardColor} from "../../../molecules/functions/moleculesFunctions";
 
 
 export const MainCardSectionContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   display: grid;
-  
+  margin: 50px 0 50px 0;
+ 
 `
 /*Egyik*/
 export const MainCardLeftImg = styled.img`
@@ -23,7 +23,6 @@ export const MainRightCardContainer = styled.div`
   opacity: 95%;
   align-self: center;
   border-radius:  ${props => props.border ? "2.5rem" : "0"};
-
 `
 /*Másik*/
 export const MainLeftCardContainer = styled.div`

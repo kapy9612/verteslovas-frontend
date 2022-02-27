@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { handleButtonColor, handleButtonHover,handleButtonWidth } from "../../functions/atomsFunctions";
+import { handleButtonColor, handleButtonHover } from "../../functions/atomsFunctions";
 
 export const ButtonLink = styled(Link)`
   font-size: var(--form-p);
@@ -34,7 +34,7 @@ export const ButtonLink = styled(Link)`
   }
 `
 
-export const Button = styled.button`
+/*export const Button = styled.button`
   font-size: var(--body);
   line-height: var(--button-lh);
   font-family: "Lato", sans-serif;
@@ -67,7 +67,7 @@ export const Button = styled.button`
     pointer-events: none;
   }
 `
-
+*//*
 export const ButtonSpan = styled.span`
   font-size: var(--body);
   line-height: var(--button-lh);
@@ -105,4 +105,4 @@ export const ButtonSpan = styled.span`
     background-color: var(--disabled-grey) !important;
     pointer-events: none;
   }
-`
+`*/

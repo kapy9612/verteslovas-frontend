@@ -15,7 +15,7 @@ export const Background = styled.div`
 
 export const LayoutGrid = styled.div`
   display: grid;
-  width: ${props => props.thin ? "60vw" : "80vw"};
+  width: ${props => props.thin ? "60vw" : "72vw"};
   margin: auto;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 3rem 3rem;

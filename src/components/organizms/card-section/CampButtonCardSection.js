@@ -1,10 +1,9 @@
 import React from 'react';
-import {Title} from "../../atoms/styled/typography/typographyComponents";
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import ButtonCard from "../../molecules/cards/ButtonCard";
 
-const CampButtonCardSection = ({  cards}) => {
+const CampButtonCardSection = ({  cards,color,sand}) => {
     return (
         <SectionLayoutGrid>
 
@@ -13,10 +12,11 @@ const CampButtonCardSection = ({  cards}) => {
                     <ButtonCard
                         description={item.description}
                         title={item.title}
-                        image={item.image}
+                        image={item.cover.localFile.publicURL}
                         button={item.button}
-                        sand={item.sand}
-                        color={item.color}
+                        sand={sand}
+                        color={color}
+
 
                     />
                 </Col>
