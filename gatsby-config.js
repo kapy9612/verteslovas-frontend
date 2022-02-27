@@ -28,13 +28,14 @@ module.exports = {
               queryLimit: 100, // Defaults to 100
               singleTypes: [
                   `birthday-page`,
-                  /*`for-companies-page`,
-                  `for-families-page`,
+                  `our-camps-page`,
+                  `organize-your-camp-page`,
                   `horse-riding-page`,
                   `housing-page`,
-                  `organize-your-camp-page`,
-                  `our-camps-page`,
                   `services-page`,
+
+                  /*`for-companies-page`,
+                  `for-families-page`,
                   `wedding-page`,*/
               ],
               collectionTypes: [],
