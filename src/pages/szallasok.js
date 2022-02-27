@@ -1,16 +1,17 @@
 import React from "react"
 import {graphql} from "gatsby"
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
+import Layout from "../components/general/layout/Layout";
 
 
 const Szallasok = ({data: {szallas}}) => {
 
     return (
-        <div>
+        <Layout seo={szallas.seo}>
             <MainCardSection
                 card={szallas.buildings}
             />
-        </div>
+        </Layout>
     );
 }
 

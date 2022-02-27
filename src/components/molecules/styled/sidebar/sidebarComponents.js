@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Body, Header4 } from "../../../atoms/styled/typography/typographyComponents"
+import { Body } from "../../../atoms/styled/typography/typographyComponents"
 
 export const SidebarContainer = styled.nav`
   display: none;

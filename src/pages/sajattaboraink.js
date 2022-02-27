@@ -2,17 +2,18 @@ import React from 'react';
 import {graphql} from "gatsby";
 
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
+import Layout from "../components/general/layout/Layout";
 
 
 const Sajattaboraink = ({data: {camp}}) => {
     return (
-        <div>
+        <Layout seo={camp.seo}>
             <CampCardSection
                 title={camp.main_section.title}
                 cards={camp.main_section.content}
                 border={"true"}
             />
-        </div>
+        </Layout>
     );
 };
 

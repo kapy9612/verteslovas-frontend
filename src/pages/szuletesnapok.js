@@ -3,10 +3,11 @@ import {graphql} from "gatsby";
 
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
+import Layout from "../components/general/layout/Layout";
 
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
-        <div>
+        <Layout seo={birthdays.seo}>
             <CampCardSection
                 title={birthdays.main_section.title}
                 cards={birthdays.main_section.content}
@@ -16,9 +17,9 @@ const Szuletesnapok = ({data: {birthdays}}) => {
                 isYellow
                 title={birthdays.table.title}
                 header={birthdays.table.header}
-                rows={birthdays.table.rows}
+                rows={birthdays.table.table}
             />
-        </div>
+        </Layout>
     );
 };
 

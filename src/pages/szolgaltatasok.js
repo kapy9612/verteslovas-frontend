@@ -1,20 +1,21 @@
 import React from "react"
 import {graphql} from "gatsby"
-import MainCardSection from "../components/organizms/card-section/MainCardSection";
+
 import {
-    MainCardLeftImg, MainCardRightImg, MainCardSectionContainer, MainLeftCardContainer,
-    MainRightCardContainer
+    MainCardRightImg, MainCardSectionContainer, MainLeftCardContainer,
 } from "../components/organizms/styled/card-section/cardSectionComponents";
 import MainCard from "../components/molecules/cards/MainCard";
 import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
+import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
+import Layout from "../components/general/layout/Layout";
 
 
 const Szolgaltatasok = ({data: {szolg}}) => {
 
     return (
-        <div>
+        <Layout seo={szolg.seo}>
             <SectionLayoutGrid>
                 <Col span={12}>
                     <MainCardSectionContainer>
@@ -45,7 +46,17 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                 cards={szolg.group_programs.cards}
                 title={szolg.group_programs.title}
             />
-        </div>
+            <SimpleTableSection
+                title={szolg.meal.title}
+                header={szolg.meal.header}
+                rows={szolg.meal.table}
+            />
+            <SimpleTableSection
+                title={szolg.rents.title}
+                header={szolg.rents.header}
+                rows={szolg.rents.table}
+            />
+        </Layout>
     );
 }
 

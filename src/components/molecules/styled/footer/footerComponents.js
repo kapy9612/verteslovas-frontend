@@ -11,17 +11,16 @@ export const FooterContainer = styled.div`
 `
 export const FooterCopyrightContainer = styled.div`
   display: grid;
-  //max-width: 21rem;
-  grid-template-columns: 2fr 1fr;
   padding: 1rem 6rem 1rem 6rem;
   background-color: var(--whitesmoke-background);
-
+  justify-content: center;
 `
 export const FooterLinkWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  a{
-    &:hover{
+
+  a {
+    &:hover {
       opacity: 0.5;
     }
   }
@@ -45,16 +44,21 @@ export const LogoContainer = styled.div`
 `
 export const FooterContactWrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 90%;
-  
+  align-content: start;
 `
 export const FooterSocialWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.2fr 0.2fr ;
-  
-  img{
-    &:hover{
+  grid-template-columns: auto auto;
+  grid-gap: 0.5rem;
+  justify-content: start;
+  align-content: center;
+
+  img {
+    width: 2rem;
+    height: auto;
+    transition: opacity 0.2s;
+
+    &:hover {
       opacity: 0.5;
     }
   }

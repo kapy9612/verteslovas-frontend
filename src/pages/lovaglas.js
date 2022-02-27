@@ -4,14 +4,12 @@ import MainCardSection from "../components/organizms/card-section/MainCardSectio
 import TrainerSection from "../components/organizms/trainer-section/TrainerSection";
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
-import {Title} from "../components/atoms/styled/typography/typographyComponents";
-import {Col} from "../components/atoms/styled/layout/layoutComponents";
+import Layout from "../components/general/layout/Layout";
 
 const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
-        <div>
-
+        <Layout seo={lovaglas.seo}>
             <MainCardSection
                 card={lovaglas.riding_types}
             />
@@ -26,7 +24,7 @@ const Lovaglas = ({data: {lovaglas}}) => {
                 title={lovaglas.our_horses_section.title}
                 cards={lovaglas.our_horses_section.cards}
             />
-        </div>
+        </Layout>
     );
 }
 

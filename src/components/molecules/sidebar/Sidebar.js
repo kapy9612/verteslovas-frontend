@@ -12,13 +12,11 @@ import {
 } from "../styled/sidebar/sidebarComponents"
 
 import logo from "../../../../static/assets/verteslovas_logo.png"
-//import arrow from "../../../../static/assets/arrow_sidebar.svg"
 
 const Sidebar = ({menus}) => {
 
     const [isSidebar, setIsSidebar] = useState(false)
     const [counter, setCounter] = useState(0)
-    const [subMenuOpen, setSubMenuOpen] = useState(-1)
 
     function menuOpen() {
         setIsSidebar(!isSidebar)

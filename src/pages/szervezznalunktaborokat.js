@@ -2,11 +2,12 @@ import React from "react"
 import {graphql} from "gatsby"
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import CampButtonCardSection from "../components/organizms/card-section/CampButtonCardSection";
+import Layout from "../components/general/layout/Layout";
 
 const Szervezznalunktaborokat = ({data: {camps}}) => {
 
     return (
-        <div>
+        <Layout seo={camps.seo}>
             <CampCardSection
                 title={camps.main_section.title}
                 cards={camps.main_section.content}
@@ -18,7 +19,7 @@ const Szervezznalunktaborokat = ({data: {camps}}) => {
                 sand={true}
             />
 
-        </div>
+        </Layout>
     );
 }
 

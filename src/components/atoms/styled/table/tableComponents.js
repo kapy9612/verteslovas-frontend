@@ -8,6 +8,6 @@ export const TableWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
   padding: 1rem 0.5rem 1rem 0.5rem;
-  
-  background-color:${({color}) => handleTableColumnColor(color)};
+
+  background-color: ${({color}) => handleTableColumnColor(color)};
 `
