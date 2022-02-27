@@ -7,7 +7,7 @@ import {TrainerImage, TrainerName} from "../styled/trainer-section/TrainerSectio
 
 const TrainerSection = ({trainers}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"}>
             {trainers && trainers.map((item, index) => (
                 <>
                     <Col span={12}>

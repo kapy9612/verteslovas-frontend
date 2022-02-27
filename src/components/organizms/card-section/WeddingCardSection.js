@@ -6,16 +6,17 @@ import WeddingCard from "../../molecules/cards/WeddingCard";
 
 const WeddingCardSection = ({title , cards}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"}>
             <Col marginBottom="medium">
                 <Title textAlign="center">{title}</Title>
             </Col>
             {cards && cards.map((item, index) => (
-                <Col span={3} key={index}>
+                <Col span={3} key={index} grid>
                     <WeddingCard
                         description={item.description}
                         title={item.title}
-                        logo={item.logo}
+                        logo={item.logo.localFile.publicURL}
+
                     />
                 </Col>
             ))}

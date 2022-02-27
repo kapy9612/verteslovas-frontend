@@ -5,12 +5,16 @@ import TrainerSection from "../components/organizms/trainer-section/TrainerSecti
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import Layout from "../components/general/layout/Layout";
+import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
+import {Col} from "../components/atoms/styled/layout/layoutComponents";
+import {Title} from "../components/atoms/styled/typography/typographyComponents";
 
 const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
         <Layout seo={lovaglas.seo}>
             <MainCardSection
+                title={lovaglas.title}
                 card={lovaglas.riding_types}
             />
             <TrainerSection

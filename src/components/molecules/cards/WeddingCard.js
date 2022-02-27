@@ -4,7 +4,7 @@ import {Body, Header3} from "../../atoms/styled/typography/typographyComponents"
 
 const WeddingCard = ({title, description, logo}) => {
     return (
-        <WeddingCardContainer>
+        <WeddingCardContainer >
             <img src={logo} alt="logo"/>
             <Header3 color="black" textAlign="center" marginBottom="small">
                 {title}

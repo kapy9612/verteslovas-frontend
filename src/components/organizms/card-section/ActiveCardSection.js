@@ -6,7 +6,7 @@ import ActiveCard from "../../molecules/cards/ActiveCard";
 
 const ActiveCardSection = ({title , cards}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"}>
             <Col marginBottom="medium">
                 <Title textAlign="center">{title}</Title>
             </Col>

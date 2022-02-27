@@ -33,10 +33,9 @@ module.exports = {
                   `horse-riding-page`,
                   `housing-page`,
                   `services-page`,
-
-                  /*`for-companies-page`,
+                  `for-companies-page`,
                   `for-families-page`,
-                  `wedding-page`,*/
+                  `wedding-page`,
               ],
               collectionTypes: [],
           },

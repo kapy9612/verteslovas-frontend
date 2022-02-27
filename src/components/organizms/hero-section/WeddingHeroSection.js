@@ -6,11 +6,11 @@ import {WeddingHeroImage} from "../styled/hero-section/heroSectionComponents";
 
 const WeddingHeroSection = ({title, description, image}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"} customPadding={"firstElement"}>
             <Col justifyContent={"center"} grid>
-                <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
+                <Title textAlign={"center"} marginBottom={"larger"}>{title}</Title>
                 <WeddingHeroImage src={image}/>
-                <Body textAlign={"center"} marginTop={"medium"}>{description}</Body>
+                <Body textAlign={"center"} marginTop={"medium"} >{description}</Body>
             </Col>
         </SectionLayoutGrid>
 

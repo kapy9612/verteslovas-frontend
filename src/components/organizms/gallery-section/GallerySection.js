@@ -8,7 +8,7 @@ import Gallery from "../../molecules/gallery/Gallery";
 const GallerySection = ({title, images}) => {
     console.log(images)
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"}>
             <Col span={12}>
                 <Title textAlign="center" marginBottom="medium">{title}</Title>
             </Col>

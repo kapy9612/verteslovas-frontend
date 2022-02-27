@@ -1,35 +1,45 @@
 import React from "react"
-import {graphql} from "gatsby"
+import { graphql } from "gatsby"
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import Layout from "../components/general/layout/Layout";
 
-
-const Szallasok = ({data: {szallas}}) => {
-
-    return (
-        <Layout seo={szallas.seo} >
+const Cegeknek = ({ data:{ceg} }) => {
+    return(
+        <Layout seo={ceg.seo}>
             <MainCardSection
-                card={szallas.buildings}
+            title={ceg.main_section.title}
+            card={ceg.main_section.content}
             />
         </Layout>
+
     );
 }
 
 export const query = graphql`
   {
-    szallas: strapiHousingPage {
-      buildings {
-        description
-        title
+    ceg: strapiForCompaniesPage {
+      form_section {
+        form_id
         image {
           localFile {
             publicURL
           }
         }
       }
-       seo {
+      main_section {
+        title
+        content {
+          description
+          title
+          image {
+            localFile {
+              publicURL
+            }
+          }
+        }
+      }
+      seo {
         description
-        id
         isIndexable
         keywords
         title
@@ -39,10 +49,8 @@ export const query = graphql`
           }
         }
       }
-      
     }
   }
 `
 
-export default Szallasok
-
+export default Cegeknek

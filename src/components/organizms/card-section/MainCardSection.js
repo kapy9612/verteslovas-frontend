@@ -14,9 +14,9 @@ import {Title} from "../../atoms/styled/typography/typographyComponents";
 
 const MainCardSection = ({ card,title}) => {
         return (
-            <SectionLayoutGrid>
+            <SectionLayoutGrid background={"whitesmoke"} >
                 <Col>
-                    <Title sand="true" textAlign="center" marginBottom="medium">
+                    <Title textAlign="center" marginBottom="medium">
                         {title}
                     </Title>
                 </Col>

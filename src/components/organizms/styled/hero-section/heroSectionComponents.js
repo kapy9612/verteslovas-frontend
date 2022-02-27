@@ -4,6 +4,8 @@ export const WeddingHeroImage = styled.img`
   display: grid;
   justify-self: center;
   justify-content: center;
-  width: 100%;
+  width: 70%;
+  height: 30rem;
+  
 
 `

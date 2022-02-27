@@ -9,7 +9,7 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 const AboutUsSection = ({image, title, cards}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid background={"whitesmoke"}>
             <Col>
                 <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
                 <Container>

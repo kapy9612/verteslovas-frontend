@@ -3,8 +3,9 @@ import {handleMainCardColor,handleButtonCardBG} from "../../functions/moleculesF
 
 export const WeddingCardContainer = styled.div`
   display: grid;
+  justify-content: stretch;
   //max-width: 21rem;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: 6rem auto 1fr;
   box-sizing: border-box;  
   padding: 2rem 2rem;
   background: var(--whitesmoke-background);
