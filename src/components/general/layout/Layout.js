@@ -19,21 +19,45 @@ const Layout = ({children, seo}) => {
             <Navbar
                 menus={[
                     {
-                        "name": "Helyszínek",
-                        "slug": "/test",
+                        "name": "Esküvő",
+                        "slug": "/eskuvo",
                     },
                     {
+                        "name": "Cégeknek",
+                        "slug": "/cegeknek",
+                    },
+                    {
+                        "name": "Családoknak",
+                        "slug": "/csaladoknak",
+                    },
+                    {
+                        "name": "Lovaglás",
+                        "slug": "/lovaglas",
+                    },
+                     {
+                        "name": "Táborok",
+                        "slug": "/sajattaboraink",
+                    },
+
+                    {
+                        "name": "Születésnapok",
+                        "slug": "/szuletesnapok",
+                    },
+
+                     {
                         "name": "Szolgáltatások",
-                        "slug": "/test",
+                        "slug": "/szolgaltatasok",
                     },
                     {
-                        "name": "Ajánlatkérés",
-                        "slug": "/test",
+                        "name": "Szállás",
+                        "slug": "/szallasok",
                     },
                     {
-                        "name": "Kapcsolat",
-                        "slug": "/test",
+                        "name": "Gomb",
+                        "slug": "/szuletesnapok",
                     },
+
+
                 ]}
             />
             <Sidebar

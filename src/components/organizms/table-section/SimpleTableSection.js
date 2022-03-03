@@ -9,7 +9,7 @@ import {Title} from "../../atoms/styled/typography/typographyComponents";
 
 const SimpleTableSection = ({title ,header, rows, isYellow}) => {
     return (
-        <SectionLayoutGrid customMinHeight="small">
+        <SectionLayoutGrid customMinHeight="small" background={"whitesmoke"}>
             <Col>
                 <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"}>
                     {title}

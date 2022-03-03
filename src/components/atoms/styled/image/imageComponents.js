@@ -6,6 +6,13 @@ export const Img = styled.img`
   place-self: center;
 `
 
+export const TerkepImg = styled.img`
+  max-width: 100%;
+  height: auto;
+  padding-top: 10rem;
+  margin-bottom: -8rem;
+`
+
 export const MobileImg = styled(Img)`
   display: none;
   

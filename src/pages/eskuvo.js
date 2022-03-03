@@ -7,6 +7,7 @@ import Layout from "../components/general/layout/Layout";
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import AboutUsSection from "../components/organizms/about-us-section/AboutUsSection";
 import image from "../components/molecules/stories/dummy/icon.png"
+import {CampFormContainer} from "../components/molecules/styled/form/formComponentes";
 
 const Eskuvo = ({data: {eskuvo}}) => {
     return (
@@ -16,27 +17,34 @@ const Eskuvo = ({data: {eskuvo}}) => {
                 image={eskuvo.header.image.localFile.publicURL}
                 description={eskuvo.header.description}
             />
+            <WeddingCardSection
+                title={eskuvo.services_section.title}
+                cards={eskuvo.services_section.cards}
+            />
             <MainCardSection
                 title={eskuvo.locations_section.title}
                 card={eskuvo.locations_section.content}
             />
-            <WeddingCardSection
-                title={eskuvo.services_section.title}
-                cards={eskuvo.services_section.cards}
+
+            <AboutUsSection
+                title={eskuvo.they_said_section.title}
+                cards={eskuvo.they_said_section.cards}
+                image={image}
             />
             <MainCardSection
                 title={eskuvo.housing_section.title}
                 card={eskuvo.housing_section.content}
             />
             <GallerySection
-            title={eskuvo.gallery_section.title}
-            images={eskuvo.gallery_section.images}
+                title={eskuvo.gallery_section.title}
+                images={eskuvo.gallery_section.images}
             />
-            <AboutUsSection
-            title={eskuvo.they_said_section.title}
-            cards={eskuvo.they_said_section.cards}
-            image={image}
-            />
+
+
+
+
+
+
         </Layout>
     );
 }

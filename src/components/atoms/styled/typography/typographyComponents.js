@@ -74,7 +74,6 @@ export const H5AboutUs = styled.h5`
   font-size: var(--h5);
   text-transform: ${props => props.upper ? "uppercase" : "unset"};
   line-height: var(--h2-lh);
-
   /*Optional fields*/
   color: ${({color}) => handleColor(color)};
   text-align: ${({textAlign}) => handleTextAlign(textAlign)};

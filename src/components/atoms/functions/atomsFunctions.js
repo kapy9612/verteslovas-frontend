@@ -153,8 +153,10 @@ export const handleLayoutMinHeight = mh => {
             return "40vh";
         case "large":
             return "100vh";
+        case "medium":
+            return "50vh";
         default:
-            return "60vh";
+            return "30vh";
     }
 };
 

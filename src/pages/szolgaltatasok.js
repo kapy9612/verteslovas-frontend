@@ -2,7 +2,8 @@ import React from "react"
 import {graphql} from "gatsby"
 
 import {
-    MainCardRightImg, MainCardSectionContainer, MainLeftCardContainer,
+    MainCardCarausel,
+    MainCardRightImg, MainCardSectionContainer, MainLeftCardContainer, StyledCarousel,
 } from "../components/organizms/styled/card-section/cardSectionComponents";
 import MainCard from "../components/molecules/cards/MainCard";
 import {Col} from "../components/atoms/styled/layout/layoutComponents";
@@ -10,6 +11,8 @@ import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
+import {Img} from "../components/atoms/styled/image/imageComponents";
+import {Carousel} from "react-responsive-carousel";
 
 
 const Szolgaltatasok = ({data: {szolg}}) => {
@@ -26,7 +29,12 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                                 description={szolg.animator_section.description}
                             />
                         </MainLeftCardContainer>
-                        <MainCardRightImg src={szolg.animator_section.image.localFile.publicURL}/>
+                        <StyledCarousel autoPlay={true} infiniteLoop={true} showThumbs={false} transitionTime={1000}>
+                            {szolg.animator_section.image.map((pic, index) => (
+                                <Img src={pic.localFile.publicURL} key={index}/>
+                            ))}
+                        </StyledCarousel>
+
                     </MainCardSectionContainer>
                 </Col>
             </SectionLayoutGrid>

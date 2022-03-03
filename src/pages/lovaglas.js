@@ -5,9 +5,7 @@ import TrainerSection from "../components/organizms/trainer-section/TrainerSecti
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import Layout from "../components/general/layout/Layout";
-import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
-import {Col} from "../components/atoms/styled/layout/layoutComponents";
-import {Title} from "../components/atoms/styled/typography/typographyComponents";
+import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 
 const Lovaglas = ({data: {lovaglas}}) => {
 
@@ -17,8 +15,14 @@ const Lovaglas = ({data: {lovaglas}}) => {
                 title={lovaglas.title}
                 card={lovaglas.riding_types}
             />
+
             <TrainerSection
                 trainers={lovaglas.trainer_section}
+            />
+            <SimpleTableSection
+                title={lovaglas.prices.title}
+                header={lovaglas.prices.header}
+                rows={lovaglas.prices.table}
             />
             <GallerySection
                 images={lovaglas.gallery_section.images}
