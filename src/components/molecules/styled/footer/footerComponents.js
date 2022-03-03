@@ -30,17 +30,22 @@ export const FooterWrapper = styled.div`
   display: grid;
   //max-width: 21rem;
   grid-template-columns: 1fr 1fr;
-  padding: 2rem 2rem 2rem 6rem;
+  padding: 2rem 6rem 2rem 6rem;
+  box-sizing: border-box;
 `
 export const FooterContentWrapper = styled.div`
   display: grid;
-  grid-template-rows: 0.5fr 1fr;
+  grid-template-rows: auto 1fr;
   width: 90%;
 `
 export const LogoContainer = styled.div`
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   height: 3rem;
+  
+  img{
+    max-width: 100%;
+  }
 `
 export const FooterContactWrapper = styled.div`
   display: grid;
@@ -54,7 +59,7 @@ export const FooterSocialWrapper = styled.div`
   align-content: center;
 
   img {
-    width: 2rem;
+    width: 3rem;
     height: auto;
     transition: opacity 0.2s;
 
@@ -65,6 +70,23 @@ export const FooterSocialWrapper = styled.div`
 `
 export const FooterContactContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
+  align-content: center;
+  grid-gap: 1rem;
+`
+
+export const ContactMapIframeWrapper = styled.div`
+  display: grid;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 `

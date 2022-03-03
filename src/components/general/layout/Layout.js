@@ -19,19 +19,27 @@ const Layout = ({children, seo}) => {
             <Navbar
                 menus={[
                     {
-                        "name": "Helyszínek",
+                        "name": "Cégek",
                         "slug": "/test",
                     },
                     {
-                        "name": "Szolgáltatások",
+                        "name": "Családok",
                         "slug": "/test",
                     },
                     {
-                        "name": "Ajánlatkérés",
+                        "name": "Gyerekek",
                         "slug": "/test",
                     },
                     {
-                        "name": "Kapcsolat",
+                        "name": "Esküvő",
+                        "slug": "/test",
+                    },
+                    {
+                        "name": "Lovaglás",
+                        "slug": "/test",
+                    },
+                    {
+                        "name": "Szállás",
                         "slug": "/test",
                     },
                 ]}
@@ -59,9 +67,9 @@ const Layout = ({children, seo}) => {
             {children}
             <Footer
                 description={"Buying the right telescope to take your love of astronomy to the next level is a big next step in the development of your passion for the stars."}
-                phone={"+36 1 0111111"}
-                email={"info@verteslovas.hu"}
-                address={"1221 kiskurutty utca 32"}
+                phone={"+36 30 401 30 30"}
+                email={"verteslovas@gmail.com"}
+                address={"8085 Vértesboglár, Kossuth L. u. 69."}
             />
         </React.Fragment>
     )

@@ -97,6 +97,15 @@ export const Body = styled.p`
   strong {
     font-weight: var(--bold);
   }
+  
+  a{
+    color: ${({color}) => handleColor(color)};
+    transition: opacity 0.3s;
+    font-weight: 450;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
 
   /*Optional fields*/
   color: ${({color}) => handleColor(color)};
