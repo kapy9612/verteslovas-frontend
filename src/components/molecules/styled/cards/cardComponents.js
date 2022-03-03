@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import {handleMainCardColor,handleButtonCardBG} from "../../functions/moleculesFunctions"
-
+import {handleMainCardColor, handleButtonCardBG} from "../../functions/moleculesFunctions"
 export const WeddingCardContainer = styled.div`
   display: grid;
   justify-content: stretch;
   //max-width: 21rem;
-  grid-template-rows: 6rem auto 1fr;
-  box-sizing: border-box;  
+  grid-template-rows: 9rem auto 1fr;
+  box-sizing: border-box;
   padding: 2rem 2rem;
   background: var(--whitesmoke-background);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  background: ${({color}) => handleMainCardColor(color)};
+  min-height: 25rem;
 
   img {
     max-width: 6rem;
@@ -18,6 +19,7 @@ export const WeddingCardContainer = styled.div`
     margin-bottom: 1rem;
   }
 `
+
 export const MainCardContainer = styled.div`
   display: grid;
   //max-width: 21rem;
@@ -81,6 +83,7 @@ export const ActiveCardContentWrapper = styled.div`
   padding: 1rem 2rem 2rem 2rem;
   box-sizing: border-box;
 `
+
 
 export const ButtonCardContentWrapper = styled.div`
   display: grid;

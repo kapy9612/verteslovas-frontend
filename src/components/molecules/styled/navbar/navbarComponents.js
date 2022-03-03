@@ -17,7 +17,7 @@ export const NavbarContainer = styled.div`
 export const NavbarInnerContainer = styled.div`
   display: grid;
   grid-template-columns: auto 1fr auto;
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
   height: 6rem;
   align-items: center;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActiveCardContainer, ActiveCardContentWrapper, ActiveCardImg} from "../styled/cards/cardComponents";
+import {ActiveCardContainer, ActiveCardContentWrapper, ActiveCardImg,} from "../styled/cards/cardComponents";
 import {Body} from "../../atoms/styled/typography/typographyComponents";
 import parse from "html-react-parser";
 
@@ -16,6 +16,7 @@ const ActiveCard = ({title, description, price, image}) => {
                 </Body>
 
             </ActiveCardContentWrapper>
+
         </ActiveCardContainer>
     );
 };

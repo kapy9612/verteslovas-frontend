@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Carousel} from "react-responsive-carousel";
 
 
 export const MainCardSectionContainer = styled.div`
@@ -23,11 +24,12 @@ export const MainRightCardContainer = styled.div`
   opacity: 95%;
   align-self: center;
   border-radius:  ${props => props.border ? "2.5rem" : "0"};
+  z-index: 100;
 `
 /*Másik*/
 export const MainLeftCardContainer = styled.div`
   width: 105%;
-  
+  z-index: 100;
   opacity: 95%;
   align-self: center;
 
@@ -40,4 +42,22 @@ export const MainCardRightImg = styled.img`
   align-self: center;
   margin-left: -5%;
   border-radius:  ${props => props.border ? "2.5rem" : "0"};
+`
+export const StyledCarousel = styled(Carousel)`
+  //max-width: 21rem;
+  width: 130%;
+  margin-bottom: -2rem;
+
+  margin-left: -15%;
+  z-index: 1 !important;
+  
+`
+export const StyledCarouselLeft= styled(Carousel)`
+  //max-width: 21rem;
+  width: 130%;
+  
+  z-index: 1 !important;
+  margin-left: -15%;
+  margin-bottom: -2rem;
+  
 `
