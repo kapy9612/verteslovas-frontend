@@ -7,7 +7,7 @@ import Layout from "../components/general/layout/Layout";
 const Szervezznalunktaborokat = ({data: {camps}}) => {
 
     return (
-        <Layout seo={camps.seo}>
+        <Layout seo={camps.seo} isChild>
             <CampCardSection
                 title={camps.main_section.title}
                 cards={camps.main_section.content}

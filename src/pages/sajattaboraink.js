@@ -7,7 +7,7 @@ import Layout from "../components/general/layout/Layout";
 
 const Sajattaboraink = ({data: {camp}}) => {
     return (
-        <Layout seo={camp.seo}>
+        <Layout seo={camp.seo} isChild>
             <CampCardSection
                 title={camp.main_section.title}
                 cards={camp.main_section.content}

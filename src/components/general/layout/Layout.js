@@ -5,7 +5,7 @@ import Footer from "../../molecules/footer/Footer";
 import Sidebar from "../../molecules/sidebar/Sidebar";
 import Seo from "../seo/SEO"
 
-const Layout = ({children, seo}) => {
+const Layout = ({children, seo, isChild}) => {
 
     return (
         <React.Fragment>
@@ -17,32 +17,78 @@ const Layout = ({children, seo}) => {
                 noIndex={seo.isIndexable && seo.isIndexable}
             />
             <Navbar
-                menus={[
-                    {
-                        "name": "Cégek",
-                        "slug": "/test",
-                    },
-                    {
-                        "name": "Családok",
-                        "slug": "/test",
-                    },
+                isCamp={isChild}
+                menus={!isChild ? [
                     {
                         "name": "Gyerekek",
-                        "slug": "/test",
+                        "slug": "",
+                        "hasSubmenu": true,
+                        "submenu": [
+                            {"name":"Születésnapok", "slug":"/szuletesnapok"},
+                            {"name":"Saját táboraink", "slug":"/sajattaboraink"},
+                            {"name":"Szervezz nálunk tábort", "slug":"/szervezznalunktaborokat"},
+                        ]
                     },
                     {
                         "name": "Esküvő",
-                        "slug": "/test",
+                        "slug": "/eskuvo",
+                    },
+                    {
+                        "name": "Cégek",
+                        "slug": "/cegeknek",
+                    },
+                    {
+                        "name": "Családok",
+                        "slug": "/csaladoknak",
                     },
                     {
                         "name": "Lovaglás",
-                        "slug": "/test",
+                        "slug": "/lovaglas",
                     },
                     {
                         "name": "Szállás",
-                        "slug": "/test",
+                        "slug": "/szallasok",
                     },
-                ]}
+                    {
+                        "name": "Szolgáltatások",
+                        "slug": "/szolgaltatasok",
+                    },
+                ] : [
+                    {
+                        "name":"Szervezz nálunk tábort",
+                        "slug":"/szervezznalunktaborokat"
+                    },
+                    {
+                        "name":"Saját táboraink",
+                        "slug":"/sajattaboraink"
+                    },
+                    {
+                        "name":"Születésnapok",
+                        "slug":"/szuletesnapok"
+                    },
+                    {
+                        "name": "Lovaglás",
+                        "slug": "/lovaglas",
+                    },
+                    {
+                        "name": "Felnőttek",
+                        "slug": "",
+                        "hasSubmenu": true,
+                        "submenu": [
+                            {"name": "Cégek", "slug": "/cegeknek"},
+                            {"name": "Családok", "slug": "/csaladoknak"},
+                            {"name": "Esküvő", "slug": "/eskuvo"},
+                        ]
+                    },
+                    {
+                        "name": "Szolgáltatások",
+                        "slug": "/szolgaltatasok",
+                        "hasSubmenu": true,
+                        "submenu": [
+                            {"name": "Szállás", "slug": "/szallasok"},
+                        ]
+                    },
+                ] }
             />
             <Sidebar
                 menus={[

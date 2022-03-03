@@ -7,7 +7,7 @@ import Layout from "../components/general/layout/Layout";
 
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
-        <Layout seo={birthdays.seo}>
+        <Layout seo={birthdays.seo} isChild>
             <CampCardSection
                 title={birthdays.main_section.title}
                 cards={birthdays.main_section.content}
