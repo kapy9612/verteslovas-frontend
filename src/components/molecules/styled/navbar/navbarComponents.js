@@ -27,7 +27,6 @@ export const NavbarLogo = styled.img`
   height: 5rem;
   cursor: pointer;
   max-width: 100%;
-  margin-bottom: ${props => props.camp && "-2.6rem"};
 `
 
 export const NavbarMenuItemWrapper = styled.div`

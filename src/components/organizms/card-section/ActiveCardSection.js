@@ -1,12 +1,14 @@
 import React from 'react';
-import {Title} from "../../atoms/styled/typography/typographyComponents";
+
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
 import ActiveCard from "../../molecules/cards/ActiveCard";
 
-const ActiveCardSection = ({title , cards}) => {
+import {Title} from "../../atoms/styled/typography/typographyComponents";
+import {Col} from "../../atoms/styled/layout/layoutComponents";
+
+const ActiveCardSection = ({title, cards, id}) => {
     return (
-        <SectionLayoutGrid background={"whitesmoke"}>
+        <SectionLayoutGrid background={"whitesmoke"} id={id ? "active-card-section-" + id : "active-card-section"}>
             <Col marginBottom="medium">
                 <Title textAlign="center">{title}</Title>
             </Col>

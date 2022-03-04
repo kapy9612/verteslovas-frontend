@@ -13,41 +13,41 @@ import {
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const CampCardSection = ({title, cards, border}) => {
+const CampCardSection = ({title, card, border, isRight, id}) => {
     return (
-        <SectionLayoutGrid id="camp-card-section">
+        <SectionLayoutGrid id={id ? "camp-card-section" + id : "camp-card-section"} customMinHeight={"small"}>
             <Col>
                 <Title sand="true" textAlign="center" marginBottom="medium">
                     {title}
                 </Title>
             </Col>
-            {cards && cards.map((item, index) => (index % 2 === 1?
-                    <Col>
-                        <MainCardSectionContainer>
-                            <MainCardLeftImg src={item.image.localFile.publicURL} border={border ? "true" : ""}/>
-                            <MainRightCardContainer>
-                                <CampCard
-                                    color={index % 2 === 1 ? "yellow" : "green"}
-                                    title={item.title}
-                                    description={item.description}
-                                />
-                            </MainRightCardContainer>
-                        </MainCardSectionContainer>
-                    </Col>
-                    :
-                    <Col>
-                        <MainCardSectionContainer>
-                            <MainLeftCardContainer>
-                                <CampCard
-                                    color={index % 2 === 1 ? "yellow" : "green"}
-                                    title={item.title}
-                                    description={item.description}
-                                />
-                            </MainLeftCardContainer>
-                            <MainCardRightImg src={item.image.localFile.publicURL} border={border ? "true" : ""}/>
-                        </MainCardSectionContainer>
-                    </Col>
-            ))}
+            {isRight ?
+                <Col>
+                    <MainCardSectionContainer>
+                        <MainCardLeftImg src={card.image.localFile.publicURL} border={border ? "true" : ""}/>
+                        <MainRightCardContainer>
+                            <CampCard
+                                color={isRight ? "yellow" : "green"}
+                                title={card.title}
+                                description={card.description}
+                            />
+                        </MainRightCardContainer>
+                    </MainCardSectionContainer>
+                </Col>
+                :
+                <Col>
+                    <MainCardSectionContainer>
+                        <MainLeftCardContainer>
+                            <CampCard
+                                color={isRight ? "yellow" : "green"}
+                                title={card.title}
+                                description={card.description}
+                            />
+                        </MainLeftCardContainer>
+                        <MainCardRightImg src={card.image.localFile.publicURL} border={border ? "true" : ""}/>
+                    </MainCardSectionContainer>
+                </Col>
+            }
         </SectionLayoutGrid>
     );
 };

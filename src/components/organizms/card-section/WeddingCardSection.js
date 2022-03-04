@@ -1,13 +1,14 @@
 import React from 'react';
-import {Title} from "../../atoms/styled/typography/typographyComponents";
-import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
+
 import WeddingCard from "../../molecules/cards/WeddingCard";
 import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
 
-const WeddingCardSection = ({title , cards}) => {
+import {Title} from "../../atoms/styled/typography/typographyComponents";
+import {Col} from "../../atoms/styled/layout/layoutComponents";
+
+const WeddingCardSection = ({title, cards}) => {
     return (
-        <SectionLayoutGridWedding background={"whitesmoke"}>
+        <SectionLayoutGridWedding id="wedding-card-section">
             <Col marginBottom="medium">
                 <Title textAlign="center">{title}</Title>
             </Col>

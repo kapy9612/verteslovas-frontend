@@ -1,25 +1,23 @@
 import React from "react"
 import {graphql} from "gatsby"
 
-import {
-    MainCardCarausel,
-    MainCardRightImg, MainCardSectionContainer, MainLeftCardContainer, StyledCarousel,
-} from "../components/organizms/styled/card-section/cardSectionComponents";
-import MainCard from "../components/molecules/cards/MainCard";
-import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
-import {Img} from "../components/atoms/styled/image/imageComponents";
-import {Carousel} from "react-responsive-carousel";
+import MainCard from "../components/molecules/cards/MainCard";
 
+import {
+    MainCardSectionContainer, MainLeftCardContainer, StyledCarousel,
+} from "../components/organizms/styled/card-section/cardSectionComponents";
+import {Col} from "../components/atoms/styled/layout/layoutComponents";
+import {Img} from "../components/atoms/styled/image/imageComponents";
 
 const Szolgaltatasok = ({data: {szolg}}) => {
 
     return (
         <Layout seo={szolg.seo}>
-            <SectionLayoutGrid>
+            <SectionLayoutGrid id="szolgaltatasok">
                 <Col span={12}>
                     <MainCardSectionContainer>
                         <MainLeftCardContainer>
@@ -39,27 +37,33 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                 </Col>
             </SectionLayoutGrid>
             <ActiveCardSection
+                id={1}
                 cards={szolg.active_games.cards}
                 title={szolg.active_games.title}
             />
             <ActiveCardSection
+                id={2}
                 cards={szolg.craftsman_programs.cards}
                 title={szolg.craftsman_programs.title}
             />
             <ActiveCardSection
+                id={3}
                 cards={szolg.horse_programs.cards}
                 title={szolg.horse_programs.title}
             />
             <ActiveCardSection
+                id={4}
                 cards={szolg.group_programs.cards}
                 title={szolg.group_programs.title}
             />
             <SimpleTableSection
+                id={1}
                 title={szolg.meal.title}
                 header={szolg.meal.header}
                 rows={szolg.meal.table}
             />
             <SimpleTableSection
+                id={2}
                 title={szolg.rents.title}
                 header={szolg.rents.header}
                 rows={szolg.rents.table}

@@ -1,12 +1,13 @@
 import React from 'react';
+
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
 import ButtonCard from "../../molecules/cards/ButtonCard";
+
+import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 const CampButtonCardSection = ({  cards,color,sand}) => {
     return (
-        <SectionLayoutGrid>
-
+        <SectionLayoutGrid id="camp-button-section">
             {cards && cards.map((item, index) => (
                 <Col span={6} key={index} justifyContent={"center"} grid>
                     <ButtonCard
@@ -16,8 +17,6 @@ const CampButtonCardSection = ({  cards,color,sand}) => {
                         button={item.button}
                         sand={sand}
                         color={color}
-
-
                     />
                 </Col>
             ))}

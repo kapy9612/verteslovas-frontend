@@ -8,11 +8,16 @@ import Layout from "../components/general/layout/Layout";
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
         <Layout seo={birthdays.seo} isChild>
-            <CampCardSection
-                title={birthdays.main_section.title}
-                cards={birthdays.main_section.content}
-                border={"true"}
-            />
+            {birthdays.main_section.content && birthdays.main_section.content.map((item, index) => (
+                <CampCardSection
+                    title={index === 0 ? birthdays.main_section.title : null}
+                    card={item}
+                    isRight={index % 2 === 1}
+                    id={index}
+                    key={index}
+                    border={"true"}
+                />
+            ))}
             <SimpleTableSection
                 isYellow
                 title={birthdays.table.title}

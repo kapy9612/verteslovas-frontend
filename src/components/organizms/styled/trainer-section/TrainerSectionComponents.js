@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {Body} from "../../../atoms/styled/typography/typographyComponents";
-import SectionLayoutGrid from "../../../atoms/layout/SectionLayoutGrid";
 
 export const TrainerImage = styled.img`
   border-radius: 50%;

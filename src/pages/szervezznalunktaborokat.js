@@ -8,17 +8,21 @@ const Szervezznalunktaborokat = ({data: {camps}}) => {
 
     return (
         <Layout seo={camps.seo} isChild>
-            <CampCardSection
-                title={camps.main_section.title}
-                cards={camps.main_section.content}
-                border={"true"}
-            />
+            {camps.main_section.content && camps.main_section.content.map((item, index) => (
+                <CampCardSection
+                    title={index === 0 ? camps.main_section.title : null}
+                    card={item}
+                    isRight={index % 2 === 1}
+                    id={index}
+                    key={index}
+                    border={"true"}
+                />
+            ))}
             <CampButtonCardSection
                 cards={camps.landscape_cards}
                 color={"white"}
                 sand={true}
             />
-
         </Layout>
     );
 }

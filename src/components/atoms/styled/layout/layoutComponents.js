@@ -11,23 +11,16 @@ import {
 
 export const Background = styled.div`
   background: ${({customBg}) => handleLayoutBackground(customBg)};
-
-  //background-image: url("/assets/bg2.png");
-
- 
-
 `
 export const BackgroundWedding = styled.div`
   background: ${({customBg}) => handleLayoutBackground(customBg)};
-  background-image: url("/assets/bg15.png");
+  background-image: url("/assets/bg12.png");
   background-repeat: no-repeat;
-  background-size: 100%  ;
+  background-size: 100%;
   background-position: top;
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
   margin-bottom: 2rem;
   padding-bottom: var(--small);
-
-
 `
 
 export const LayoutGrid = styled.div`

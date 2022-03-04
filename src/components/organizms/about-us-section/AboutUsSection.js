@@ -1,16 +1,16 @@
 import React from 'react';
-import { H5AboutUs, Title} from "../../atoms/styled/typography/typographyComponents";
 import {Carousel} from "react-responsive-carousel";
-import {Container, Icon, BodyContainer} from "../styled/about-us-section/aboutussectionComponents";
-import "../../../css/carousel.css";
-import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
+
 import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
 
+import {H5AboutUs, Title} from "../../atoms/styled/typography/typographyComponents";
+import {Container, Icon, BodyContainer} from "../styled/about-us-section/aboutussectionComponents";
+import "../../../css/carousel.css";
+import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 const AboutUsSection = ({image, title, cards}) => {
     return (
-        <SectionLayoutGridWedding background={"whitesmoke"}>
+        <SectionLayoutGridWedding background={"whitesmoke"} id="about-us-section">
             <Col>
                 <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
                 <Container>
@@ -21,7 +21,7 @@ const AboutUsSection = ({image, title, cards}) => {
                               transitionTime={1000}>
                         {cards.map((item, index) => (
                             <BodyContainer marginBottom={"small"} key={index}>
-                                <H5AboutUs marginBottom={"small"} >{item.name}</H5AboutUs>
+                                <H5AboutUs marginBottom={"small"}>{item.name}</H5AboutUs>
                                 {item.description}
                             </BodyContainer>
                         ))}

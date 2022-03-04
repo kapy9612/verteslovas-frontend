@@ -8,11 +8,16 @@ import Layout from "../components/general/layout/Layout";
 const Sajattaboraink = ({data: {camp}}) => {
     return (
         <Layout seo={camp.seo} isChild>
-            <CampCardSection
-                title={camp.main_section.title}
-                cards={camp.main_section.content}
-                border={"true"}
-            />
+            {camp.main_section.content && camp.main_section.content.map((item, index) => (
+                <CampCardSection
+                    title={index === 0 ? camp.main_section.title : null}
+                    card={item}
+                    isRight={index % 2 === 1}
+                    id={index}
+                    key={index}
+                    border={"true"}
+                />
+            ))}
         </Layout>
     );
 };

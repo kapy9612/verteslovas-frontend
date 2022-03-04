@@ -66,7 +66,7 @@ const Navbar = ({menus, isCamp}) => {
         <NavbarContainer id="headerNavigation">
             <NavbarInnerContainer>
                 <Link to={"/"}>
-                    <NavbarLogo src={isCamp ? logo_camp : logo} alt="logo" camp={isCamp ? "true" : ""}/>
+                    <NavbarLogo src={isCamp ? logo_camp : logo} alt="logo"/>
                 </Link>
                 <NavbarMenuItemWrapper>
                     {menus.map((item, index) => (item.hasSubmenu ?

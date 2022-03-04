@@ -7,9 +7,9 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {TableRowCol} from "../styled/table-section/TableSectionComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const SimpleTableSection = ({title ,header, rows, isYellow}) => {
+const SimpleTableSection = ({title ,header, rows, isYellow, id}) => {
     return (
-        <SectionLayoutGrid customMinHeight="small" background={"whitesmoke"}>
+        <SectionLayoutGrid customMinHeight="small" background={"whitesmoke"} id={id ? "simple-table-section-" + id : "simple-table-section"}>
             <Col>
                 <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"}>
                     {title}

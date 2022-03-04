@@ -1,6 +1,8 @@
 import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
+import MainCard from "../../molecules/cards/MainCard";
+
 import {
     MainCardLeftImg,
     MainRightCardContainer,
@@ -9,26 +11,27 @@ import {
     MainCardSectionContainer
 } from "../styled/card-section/cardSectionComponents"
 import {Col} from "../../atoms/styled/layout/layoutComponents";
-import MainCard from "../../molecules/cards/MainCard";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const MainCardSection = ({ card,title}) => {
+const MainCardSection = ({card, title, id, isRight}) => {
         return (
-            <SectionLayoutGrid background={"whitesmoke"} >
+            <SectionLayoutGrid id={id ? "main-card-section" + id : "main-card-section"}>
+                {title &&
                 <Col>
                     <Title textAlign="center" marginBottom="medium">
                         {title}
                     </Title>
                 </Col>
-                {card && card.map((item, index) => (index % 2 === 1 ?
+                }
+                {isRight ?
                     <Col>
                         <MainCardSectionContainer>
-                            <MainCardLeftImg src={item.image.localFile.publicURL}/>
+                            <MainCardLeftImg src={card.image.localFile.publicURL}/>
                             <MainRightCardContainer>
                                 <MainCard
-                                    color={index % 2 === 1 ? "beige" : "grey"}
-                                    title={item.title}
-                                    description={item.description}
+                                    color={isRight ? "beige" : "grey"}
+                                    title={card.title}
+                                    description={card.description}
                                 />
                             </MainRightCardContainer>
                         </MainCardSectionContainer>
@@ -38,15 +41,15 @@ const MainCardSection = ({ card,title}) => {
                         <MainCardSectionContainer>
                             <MainLeftCardContainer>
                                 <MainCard
-                                    color={index % 2 === 1 ? "beige" : "grey"}
-                                    title={item.title}
-                                    description={item.description}
+                                    color={isRight ? "beige" : "grey"}
+                                    title={card.title}
+                                    description={card.description}
                                 />
                             </MainLeftCardContainer>
-                            <MainCardRightImg src={item.image.localFile.publicURL}/>
+                            <MainCardRightImg src={card.image.localFile.publicURL}/>
                         </MainCardSectionContainer>
                     </Col>
-                ))}
+                }
             </SectionLayoutGrid>
         );
     }

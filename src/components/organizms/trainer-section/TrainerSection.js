@@ -1,14 +1,14 @@
 import React from 'react';
-import {Body, Title,} from "../../atoms/styled/typography/typographyComponents";
-import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
-import {SectionLayoutGridTrainer, TrainerImage, TrainerName} from "../styled/trainer-section/TrainerSectionComponents";
+
 import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
 
+import {Body, Title,} from "../../atoms/styled/typography/typographyComponents";
+import {Col} from "../../atoms/styled/layout/layoutComponents";
+import { TrainerImage, TrainerName} from "../styled/trainer-section/TrainerSectionComponents";
 
 const TrainerSection = ({trainers}) => {
     return (
-        <SectionLayoutGridWedding background={"whitesmoke"}>
+        <SectionLayoutGridWedding background={"whitesmoke"} id="trainer-section">
             {trainers && trainers.map((item, index) => (
                 <>
                     <Col span={12}>

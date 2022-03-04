@@ -1,5 +1,6 @@
 import React from "react"
 import {graphql} from "gatsby"
+
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import TrainerSection from "../components/organizms/trainer-section/TrainerSection";
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
@@ -11,11 +12,15 @@ const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
         <Layout seo={lovaglas.seo}>
-            <MainCardSection
-                title={lovaglas.title}
-                card={lovaglas.riding_types}
-            />
-
+            {lovaglas.riding_types && lovaglas.riding_types.map((item, index) => (
+                <MainCardSection
+                    title={index === 0 ? lovaglas.title : null}
+                    card={item}
+                    isRight={index % 2 === 1}
+                    id={index}
+                    key={index}
+                />
+            ))}
             <TrainerSection
                 trainers={lovaglas.trainer_section}
             />

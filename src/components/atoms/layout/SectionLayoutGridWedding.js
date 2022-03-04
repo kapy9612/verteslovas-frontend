@@ -1,12 +1,12 @@
 import React from "react"
 
-import {Background, BackgroundWedding, LayoutGrid, } from "../styled/layout/layoutComponents"
+import {BackgroundWedding, LayoutGrid } from "../styled/layout/layoutComponents"
 
 const SectionLayoutGridWedding = ({ children, background, id, customPadding, customMinHeight, thin}) => {
 
     return (
-        <BackgroundWedding customBg={background}>
-            <LayoutGrid id={id} customPadding={customPadding} minHeight={"customMinHeight"} thin={thin}>
+        <BackgroundWedding customBg={background} id={id} >
+            <LayoutGrid customPadding={customPadding} minHeight={"customMinHeight"} thin={thin}>
                 {children}
             </LayoutGrid>
         </BackgroundWedding>
