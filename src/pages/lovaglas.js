@@ -7,11 +7,13 @@ import GallerySection from "../components/organizms/gallery-section/GallerySecti
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import Layout from "../components/general/layout/Layout";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
         <Layout seo={lovaglas.seo}>
+            <VideoSection/>
             {lovaglas.riding_types && lovaglas.riding_types.map((item, index) => (
                 <MainCardSection
                     title={index === 0 ? lovaglas.title : null}
