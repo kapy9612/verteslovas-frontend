@@ -10,7 +10,7 @@ const WeddingCardSection = ({title, cards}) => {
     return (
         <SectionLayoutGridWedding id="wedding-card-section">
             <Col marginBottom="medium">
-                <Title textAlign="center">{title}</Title>
+                <Title textAlign="center" >{title}</Title>
             </Col>
             {cards && cards.map((item, index) => (
                 <Col span={3} key={index} grid>

@@ -11,7 +11,7 @@ const WeddingHeroSection = ({title, description, image}) => {
                 <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
                 <WeddingHeroContainer>
                     <WeddingHeroImage src={image}/>
-                    <Body textAlign={"center"} marginTop={"medium"} weight={"bold"}
+                    <Body textAlign={"left"} marginTop={"medium"} weight={"bolder"}
                           marginBottom={"medium"}>{description}</Body>
                 </WeddingHeroContainer>
             </Col>

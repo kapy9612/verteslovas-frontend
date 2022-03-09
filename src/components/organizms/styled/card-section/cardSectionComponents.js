@@ -46,7 +46,6 @@ export const MainCardRightImg = styled.img`
 export const StyledCarousel = styled(Carousel)`
   //max-width: 21rem;
   width: 130%;
-  margin-bottom: -2rem;
 
   margin-left: -15%;
   z-index: 1 !important;

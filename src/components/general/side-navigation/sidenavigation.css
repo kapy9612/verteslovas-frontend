@@ -8,11 +8,11 @@
 }
 
 .dot:hover {
-    background-color: var(--yellow-main) !important;
+    background-color: var(--dark-gray) !important;
 }
 
 .dot--active {
-    background-color: var(--yellow-main) !important;
+    background-color: var(--dark-gray) !important;
     width: 16px;
     border-radius: 8px;
     margin: 0 6px 0 0;

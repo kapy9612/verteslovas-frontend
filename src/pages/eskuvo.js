@@ -19,6 +19,7 @@ const Eskuvo = ({data: {eskuvo}}) => {
                 description={eskuvo.header.description}
             />
             <WeddingCardSection
+
                 title={eskuvo.services_section.title}
                 cards={eskuvo.services_section.cards}
             />

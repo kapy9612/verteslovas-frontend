@@ -19,8 +19,10 @@ export const BackgroundWedding = styled.div`
   background-size: 100%;
   background-position: top;
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
-  padding-bottom: var(--small);
+  z-index: 100;
+  border-bottom: 2rem;
+  background-color: var(--grey-background);
+  margin-bottom: 1rem;
 `
 
 export const LayoutGrid = styled.div`

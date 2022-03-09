@@ -15,7 +15,7 @@ import {Title} from "../../atoms/styled/typography/typographyComponents";
 
 const MainCardSection = ({card, title, id, isRight}) => {
         return (
-            <SectionLayoutGrid id={id ? "main-card-section" + id : "main-card-section"}>
+            <SectionLayoutGrid id={id ? "main-card-section" + id : "main-card-section"} customPadding={"firstElement"}>
                 {title &&
                 <Col>
                     <Title textAlign="center" marginBottom="medium">

@@ -1,14 +1,13 @@
 import React from 'react';
 
-import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
-
 import {Body, Title,} from "../../atoms/styled/typography/typographyComponents";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import { TrainerImage, TrainerName} from "../styled/trainer-section/TrainerSectionComponents";
+import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
 const TrainerSection = ({trainers}) => {
     return (
-        <SectionLayoutGridWedding background={"whitesmoke"} id="trainer-section">
+        <SectionLayoutGrid  id="trainer-section">
             {trainers && trainers.map((item, index) => (
                 <>
                     <Col span={12}>
@@ -28,7 +27,7 @@ const TrainerSection = ({trainers}) => {
                 ))}
 
 
-        </SectionLayoutGridWedding>
+        </SectionLayoutGrid>
     );
 };
 

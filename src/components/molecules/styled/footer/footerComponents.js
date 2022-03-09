@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   display: grid;
-  //max-width: 21rem;
   width: 100%;
-  height: 20rem;
+  
   background-color: white;
-  grid-template-rows: 5fr 1fr;
+  grid-template-rows: 6fr 0.5fr;
 
 `
 export const FooterCopyrightContainer = styled.div`

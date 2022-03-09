@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    /*colors-verteslovas-gyerek*/
     --grey-background: #EBEDEC;
+
     --green-camp: #96D0C2;
     --yellow-table: #F4BE18;
-    --yellow-tablerow: rgb(237, 228, 196);
+    --yellow-tablerow: #fbe39d;
     --yellow-card: rgba(237, 199, 81, 0.9);
     --yellow-main: rgba(246, 170, 0, 0.7);
     --light-yellow-table: rgb(244, 190, 24, 0.2);
     --yellow-hover: rgb(255, 204, 0);
 
     --light-brown-form: rgb(225, 220, 208);
-    /*colors-verteslovas-felnőtt*/
-    --whitesmoke-background: white;
-    /*--whitesmoke-background: #F9F6F1;*/
+    --whitesmoke-background: whitesmoke;
 
     --wedding-background: #F9EBEB;
     --beige: #F1E0DA;
-    /*text-color*/
-    /*--dark-grey: #4D4D4D;*/
-    --dark-grey: #000000;
-    /*--dark-grey: #5d3e3c;*/
+
+    --dark-gray: rgb(0,0,0,0.4);
+    --dark-grey: #4D4D4D;
     --black: #000000;
     --white: #FFFFFF;
 

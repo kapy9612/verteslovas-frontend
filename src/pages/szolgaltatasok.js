@@ -12,13 +12,15 @@ import {
 } from "../components/organizms/styled/card-section/cardSectionComponents";
 import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import {Img} from "../components/atoms/styled/image/imageComponents";
+import {Title} from "../components/atoms/styled/typography/typographyComponents";
 
 const Szolgaltatasok = ({data: {szolg}}) => {
 
     return (
         <Layout seo={szolg.seo}>
-            <SectionLayoutGrid id="szolgaltatasok">
+            <SectionLayoutGrid id="szolgaltatasok" customPadding={"firstElement"}>
                 <Col span={12}>
+                    <Title textAlign={"center"} marginBottom={"larger"}>Szolgáltatások</Title>
                     <MainCardSectionContainer>
                         <MainLeftCardContainer>
                             <MainCard
@@ -41,6 +43,7 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                 cards={szolg.active_games.cards}
                 title={szolg.active_games.title}
             />
+
             <ActiveCardSection
                 id={2}
                 cards={szolg.craftsman_programs.cards}

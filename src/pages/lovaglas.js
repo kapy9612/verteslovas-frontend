@@ -24,15 +24,16 @@ const Lovaglas = ({data: {lovaglas}}) => {
             <TrainerSection
                 trainers={lovaglas.trainer_section}
             />
+            <GallerySection
+                images={lovaglas.gallery_section.images}
+                title={lovaglas.gallery_section.title}
+            />
             <SimpleTableSection
                 title={lovaglas.prices.title}
                 header={lovaglas.prices.header}
                 rows={lovaglas.prices.table}
             />
-            <GallerySection
-                images={lovaglas.gallery_section.images}
-                title={lovaglas.gallery_section.title}
-            />
+
             <ActiveCardSection
                 title={lovaglas.our_horses_section.title}
                 cards={lovaglas.our_horses_section.cards}

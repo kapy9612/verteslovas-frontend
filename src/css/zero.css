@@ -42,6 +42,7 @@ table {
 
 html {
     scroll-behavior: smooth;
+    background-color: whitesmoke;
 }
 
 .image-for-modal {

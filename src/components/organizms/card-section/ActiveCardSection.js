@@ -8,7 +8,7 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 const ActiveCardSection = ({title, cards, id}) => {
     return (
-        <SectionLayoutGrid background={"whitesmoke"} id={id ? "active-card-section-" + id : "active-card-section"}>
+        <SectionLayoutGrid id={id ? "active-card-section-" + id : "active-card-section"}>
             <Col marginBottom="medium">
                 <Title textAlign="center">{title}</Title>
             </Col>

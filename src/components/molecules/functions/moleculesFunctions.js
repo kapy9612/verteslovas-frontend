@@ -5,7 +5,7 @@ export const handleMainCardColor = color => {
         case "grey":
             return "var(--light-grey)";
         case "yellow":
-            return "var(--yellow-card)";
+            return "var(--yellow-table)";
         case "green":
             return "var(--green-camp)";
         default:

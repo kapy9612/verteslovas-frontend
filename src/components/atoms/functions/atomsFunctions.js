@@ -177,10 +177,10 @@ export const handleLayoutBackground = bg => {
             return "unset";
         case "wedding":
             return "var(--wedding-background)";
-        case "whitesmoke":
-            return "var(--whitesmoke-background)";
-        default:
+        case "grey":
             return "var(--grey-background)";
+        default:
+            return "var(--whitesmoke-background)";
     }
 };
 
