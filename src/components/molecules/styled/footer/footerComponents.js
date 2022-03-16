@@ -53,7 +53,7 @@ export const FooterContactWrapper = styled.div`
 export const FooterSocialWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   justify-content: start;
   align-content: center;
 
@@ -75,7 +75,6 @@ export const FooterContactContainer = styled.div`
 
 export const ContactMapIframeWrapper = styled.div`
   display: grid;
-  margin-top: 2rem;
   overflow: hidden;
   padding-bottom: 50%;
   position: relative;
