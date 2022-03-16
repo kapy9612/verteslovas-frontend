@@ -44,19 +44,11 @@ export const MainCardRightImg = styled.img`
   border-radius:  ${props => props.border ? "2.5rem" : "0"};
 `
 export const StyledCarousel = styled(Carousel)`
-  //max-width: 21rem;
-  width: 130%;
-
-  margin-left: -15%;
+  width: 115%;
   z-index: 1 !important;
-  
 `
 export const StyledCarouselLeft= styled(Carousel)`
   //max-width: 21rem;
-  width: 130%;
-  
+  width: 115%;
   z-index: 1 !important;
-  margin-left: -15%;
-  margin-bottom: -2rem;
-  
 `

@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
 
-import {VideoSectionContainer} from "../styled/video-section/videoSectionComponents";
 import VideoJS from "../../general/video/VideoJS";
 
+import {VideoSectionContainer} from "../styled/video-section/videoSectionComponents";
 
 const VideoSection = ({video}) => {
 

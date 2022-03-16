@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {handleMainCardColor, handleButtonCardBG} from "../../functions/moleculesFunctions"
+import {Link} from "gatsby";
+
 export const WeddingCardContainer = styled.div`
   display: grid;
   justify-content: stretch;
@@ -94,5 +96,36 @@ export const ButtonCardContentWrapper = styled.div`
 export const ButtonCardButtonWrapper = styled.div`
   justify-self: center;
   margin: 3rem 0 2rem 0;
+`
 
+/*IndexCard*/
+
+export const IndexCardWrapper = styled(Link)`
+  display: grid;
+  grid-template-rows: auto 10rem;
+  background: white;
+  grid-gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  //box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+
+  transition: filter 0.5s, box-shadow 0.5s;
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  &:active{
+    box-shadow: inset 0 0 4px #000000;
+  }
+  
+  img{
+    place-self: center;
+    max-width: 100%;
+    max-height: 10rem;
+  }
 `
