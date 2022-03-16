@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import CampButtonCardSection from "../components/organizms/card-section/CampButtonCardSection";
 import Layout from "../components/general/layout/Layout";
+import SmallFormSection from "../components/organizms/form-section/SmallFormSection";
 
 const Szervezznalunktaborokat = ({data: {camps}}) => {
 
@@ -23,63 +24,79 @@ const Szervezznalunktaborokat = ({data: {camps}}) => {
                 color={"white"}
                 sand={true}
             />
+            <SmallFormSection image={camps.form_section.image.localFile.publicURL}/>
         </Layout>
     );
 }
 
 export const query = graphql`
-  {
-    camps: strapiOrganizeYourCampPage {
-      main_section {
+{
+camps: strapiOrganizeYourCampPage
+{
+    main_section
+    {
         title
-        content {
-          description
-          id
-          title
-          image {
-            localFile {
-              publicURL
+        content
+        {
+            description
+            id
+            title
+            image
+            {
+                localFile
+                {
+                    publicURL
+                }
             }
-          }
         }
-      }
-      landscape_cards {
-        button {
-          name
-          slug
-          id
+    }
+    landscape_cards
+    {
+        button
+        {
+            name
+            slug
+            id
         }
-        cover {
-          localFile {
-            publicURL
-          }
+        cover
+        {
+            localFile
+            {
+                publicURL
+            }
         }
         description
         id
         title
-      }
-      form_section {
+    }
+    form_section
+    {
         form_id
         id
-        image {
-          localFile {
-            publicURL
-          }
+        image
+        {
+            localFile
+            {
+                publicURL
+            }
         }
-      }
-      seo {
+    }
+    seo
+    {
         description
         id
         isIndexable
         keywords
         title
-        preview {
-          localFile {
-            publicURL
-          }
+        preview
+        {
+            localFile
+            {
+                publicURL
+            }
         }
-      }
     }
+}
   }
 `
 

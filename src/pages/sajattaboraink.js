@@ -3,6 +3,7 @@ import {graphql} from "gatsby";
 
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import Layout from "../components/general/layout/Layout";
+import CampFormSection from "../components/organizms/form-section/CampFormSection";
 
 
 const Sajattaboraink = ({data: {camp}}) => {
@@ -18,6 +19,9 @@ const Sajattaboraink = ({data: {camp}}) => {
                     border={"true"}
                 />
             ))}
+            <CampFormSection
+                card={camp.form_section}
+            />
         </Layout>
     );
 };

@@ -4,6 +4,7 @@ import {graphql} from "gatsby";
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
+import BirthdayFormSection from "../components/organizms/form-section/BirthdayFormSection";
 
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
@@ -24,6 +25,7 @@ const Szuletesnapok = ({data: {birthdays}}) => {
                 header={birthdays.table.header}
                 rows={birthdays.table.table}
             />
+            <BirthdayFormSection card={birthdays.form_section}/>
         </Layout>
     );
 };
