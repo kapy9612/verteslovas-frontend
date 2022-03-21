@@ -106,7 +106,7 @@ export const IndexCardWrapper = styled(Link)`
   background: white;
   grid-gap: 1rem;
   box-sizing: border-box;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 2rem 0.5rem 2rem 0.5rem;
   //box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 60px;

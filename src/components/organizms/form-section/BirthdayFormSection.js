@@ -16,8 +16,8 @@ import {FormField} from "../../atoms/styled/formField/formFieldComponents";
 
 const BirthdayFormSection    = ({card}) => {
     return (
-        <SectionLayoutGrid>
-            <Col span={7} grid alignContent={"end"}>
+        <SectionLayoutGrid >
+            <Col span={7} grid alignContent={"end"} >
                 <CampImage src={card.image.localFile.publicURL}/>
             </Col>
             <Col span={5}>

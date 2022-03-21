@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/general/layout/Layout";
 import MainCardRepeatableSection from "../components/organizms/card-section/MainCardRepeatableSection";
+import MainCardSection from "../components/organizms/card-section/MainCardSection";
 //import terkep from "../../static/assets/terkep.png"
 //import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
 
@@ -17,6 +18,8 @@ const Szallasok = ({data: {szallas}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={true}
+
                 />
             ))}
         </Layout>

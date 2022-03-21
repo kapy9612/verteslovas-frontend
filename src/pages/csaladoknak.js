@@ -13,6 +13,8 @@ const Csaladoknak = ({data: {csalad}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={true}
+
                 />
             ))}
         </Layout>

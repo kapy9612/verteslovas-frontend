@@ -11,7 +11,7 @@ const TrainerSection = ({trainers}) => {
             {trainers && trainers.map((item, index) => (
                 <>
                     <Col span={12}>
-                        <Title textAlign={"center"} marginBottom={"medium"}>Oktatóink</Title>
+                        <Title textAlign={"center"} marginBottom={"medium"} sand={true}>Oktatóink</Title>
                     </Col>
                     <Col span={3} key={index}>
                         <TrainerImage src={item.avatar.localFile.publicURL}/>

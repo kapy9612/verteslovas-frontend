@@ -12,7 +12,7 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 import {Img} from "../../atoms/styled/image/imageComponents";
 
-const MainCardRepeatableSection = ({card, title, isRight, id}) => {
+const MainCardRepeatableSection = ({card, title, isRight, id,sand}) => {
         return (
             <SectionLayoutGrid background={"whitesmoke"} id={"main-card-repeatable-section" + id}>
                 <Col>
@@ -34,6 +34,7 @@ const MainCardRepeatableSection = ({card, title, isRight, id}) => {
                                     color={isRight ? "beige" : "grey"}
                                     title={card.title}
                                     description={card.description}
+                                    sand={sand}
                                 />
                             </MainRightCardContainer>
                         </MainCardSectionContainer>
@@ -46,6 +47,7 @@ const MainCardRepeatableSection = ({card, title, isRight, id}) => {
                                     color={isRight ? "beige" : "grey"}
                                     title={card.title}
                                     description={card.description}
+                                    sand={sand}
                                 />
                             </MainLeftCardContainer>
                             <StyledCarousel autoPlay={true} infiniteLoop={true} showThumbs={false}

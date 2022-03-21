@@ -7,8 +7,12 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
 import logo from "../../../../static/assets/verteslovas_logo_camp3.png"
-import eskuvo from "../../../../static/assets/eskuvo_index.png"
-import cegek from "../../../../static/assets/verteslovas_logo.png"
+import lovaglas from "../../../../static/assets/lovaglas4.png"
+import gyerekek from "../../../../static/assets/gyerekek.png"
+import eskuvo from "../../../../static/assets/eskuvo2.png"
+import cegek from "../../../../static/assets/ceg2.png"
+import csalad from "../../../../static/assets/csalad2.png"
+import haz from "../../../../static/assets/haz.png"
 
 const IndexCardSection = () => {
     return (
@@ -29,7 +33,7 @@ const IndexCardSection = () => {
             <Col span={4}>
                 <IndexCard
                     title={"Gyerekek"}
-                    logo={logo}
+                    logo={gyerekek}
                     slug={"/sajattaboraink"}
                 />
             </Col>
@@ -43,21 +47,22 @@ const IndexCardSection = () => {
             <Col span={4}>
                 <IndexCard
                     title={"Családok"}
-                    logo={logo}
+                    logo={csalad}
                     slug={"/csaladoknak"}
                 />
             </Col>
             <Col span={4}>
                 <IndexCard
                     title={"Lovaglás"}
-                    logo={logo}
+                    logo={lovaglas}
                     slug={"/lovaglas"}
                 />
             </Col>
+
             <Col span={4}>
                 <IndexCard
                     title={"Szállás"}
-                    logo={logo}
+                    logo={haz}
                     slug={"/szallas"}
                 />
             </Col>

@@ -14,6 +14,7 @@ const Cegeknek = ({data: {ceg}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={true}
                 />
             ))}
 

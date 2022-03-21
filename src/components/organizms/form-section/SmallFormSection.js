@@ -13,7 +13,7 @@ const SmallFormSection = ({button, image, sand, description}) => {
             </Col>
             <Col span={5} >
                 <FormContainer>
-                    <TitleContainer sand={true} textAlign={"center"} weight={"bold"} marginTop={"medium"} marginBottom={"medium"}>
+                    <TitleContainer sand={true} textAlign={"center"} weight={"bold"} marginTop={"medium"} marginBottom={"smallest"}>
                         Állítsd össze milyen programokat szeretnél és küldd el nekünk! 
                     </TitleContainer>
                     <ButtonContainer variant={"yellow"} children={"Tovább"}/>

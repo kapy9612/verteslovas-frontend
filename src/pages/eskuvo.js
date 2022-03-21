@@ -9,6 +9,7 @@ import GallerySection from "../components/organizms/gallery-section/GallerySecti
 import AboutUsSection from "../components/organizms/about-us-section/AboutUsSection";
 
 import image from "../components/molecules/stories/dummy/icon.png"
+import WeddingFormSection from "../components/organizms/form-section/WeddingFormSection";
 
 const Eskuvo = ({data: {eskuvo}}) => {
     return (
@@ -30,8 +31,10 @@ const Eskuvo = ({data: {eskuvo}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={false}
                 />
             ))}
+
             <AboutUsSection
                 title={eskuvo.they_said_section.title}
                 cards={eskuvo.they_said_section.cards}
@@ -44,12 +47,15 @@ const Eskuvo = ({data: {eskuvo}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={false}
+
                 />
             ))}
             <GallerySection
                 title={eskuvo.gallery_section.title}
                 images={eskuvo.gallery_section.images}
             />
+            <WeddingFormSection card={eskuvo.form_section}/>
         </Layout>
     );
 }

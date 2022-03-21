@@ -9,6 +9,7 @@ export const CampFormContainer = styled.div`
   row-gap: 1.5rem;
   box-sizing: border-box;
   padding: 2.5rem 2rem 3rem 2rem;
+  margin-top: 10rem;
   width: 100%;
   background-color: var(--light-brown-form);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
@@ -16,14 +17,15 @@ export const CampFormContainer = styled.div`
 `
 export const CampImage = styled.img`
   max-width: 100%;
-    
+
 `
 export const FormContainer = styled(CampFormContainer)`
-display: grid;
-height: 100%;
-justify-content: center;
-align-content: stretch;
-//max-width: 21rem;
+  display: grid;
+  height: 100%;
+  margin: auto;
+  justify-content: center;
+  align-content: stretch;
+  //max-width: 21rem;
 
 `
 export const ButtonContainer = styled(ButtonLink)`
@@ -32,6 +34,11 @@ export const ButtonContainer = styled(ButtonLink)`
 export const Buttonlink = styled(ButtonLink)`
   border-radius: 0.4rem;
   width: 100%;
+`
+export const WeddingButtonlink = styled(ButtonLink)`
+  border-radius: 0.4rem;
+  justify-content: center;
+margin-top:3rem
 `
 
 export const TitleContainer = styled(Header3)`
@@ -49,7 +56,7 @@ export const FormFieldSelect = styled.select`
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   align-self: stretch;
-  
+
   &:focus {
     font-weight: bold;
     outline: 0;
@@ -58,7 +65,7 @@ export const FormFieldSelect = styled.select`
 export const FormFieldTextArea = styled.textarea`
   padding: 0.5rem;
   position: static;
-  width: 95%;
+  width: 98%;
   border: 0;
   justify-self: center;
   font-family: 'Raleway', sans-serif;
@@ -67,7 +74,7 @@ export const FormFieldTextArea = styled.textarea`
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   align-self: stretch;
-  
+
   &:focus {
     font-weight: bold;
     outline: 0;

@@ -21,6 +21,8 @@ const Lovaglas = ({data: {lovaglas}}) => {
                     isRight={index % 2 === 1}
                     id={index}
                     key={index}
+                    sand={true}
+
                 />
             ))}
             <TrainerSection
@@ -29,16 +31,22 @@ const Lovaglas = ({data: {lovaglas}}) => {
             <GallerySection
                 images={lovaglas.gallery_section.images}
                 title={lovaglas.gallery_section.title}
+                sand={true}
+
             />
             <SimpleTableSection
                 title={lovaglas.prices.title}
                 header={lovaglas.prices.header}
                 rows={lovaglas.prices.table}
+                sand={true}
+
             />
 
             <ActiveCardSection
                 title={lovaglas.our_horses_section.title}
                 cards={lovaglas.our_horses_section.cards}
+                sand={true}
+
             />
         </Layout>
     );

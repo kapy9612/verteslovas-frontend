@@ -7,11 +7,11 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {TableRowCol} from "../styled/table-section/TableSectionComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const SimpleTableSection = ({title ,header, rows, isYellow, id}) => {
+const SimpleTableSection = ({title ,header, rows, isYellow, id,sand}) => {
     return (
         <SectionLayoutGrid customMinHeight="small"  id={id ? "simple-table-section-" + id : "simple-table-section"}>
             <Col>
-                <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"}>
+                <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"} sand={sand}>
                     {title}
                 </Title>
             </Col>

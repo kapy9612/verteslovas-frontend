@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormField = styled.input`
   padding: 0.5rem;
   position: static;
-  width: 95%;
+  width: 98%;
   border: 0;
   justify-self: center;
   font-family: 'Raleway', sans-serif;
