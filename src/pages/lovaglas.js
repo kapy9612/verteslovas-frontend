@@ -13,7 +13,9 @@ const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
         <Layout seo={lovaglas.seo}>
-            <VideoSection/>
+            <VideoSection
+                video={lovaglas.video_section.video.url}
+            />
             {lovaglas.riding_types && lovaglas.riding_types.map((item, index) => (
                 <MainCardSection
                     title={index === 0 ? lovaglas.title : null}
@@ -55,7 +57,12 @@ const Lovaglas = ({data: {lovaglas}}) => {
 export const query = graphql`
   {
     lovaglas: strapiHorseRidingPage {
-    title
+      video_section {
+          video {
+            url
+          }
+      }
+      title
       gallery_section {
         title
         images {

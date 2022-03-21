@@ -49,7 +49,7 @@ export const NavbarMenuItem = styled(Link)`
   height: 100%;
 
   p {
-    border-bottom: 2px solid transparent;
+    border-bottom: ${props => props.active ? "2px solid black" : "2px solid transparent"};
     margin-bottom: -2px;
     transition: border-bottom-color 0.4s;
 

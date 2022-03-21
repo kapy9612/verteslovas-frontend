@@ -7,13 +7,17 @@ import WeddingCardSection from "../components/organizms/card-section/WeddingCard
 import Layout from "../components/general/layout/Layout";
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import AboutUsSection from "../components/organizms/about-us-section/AboutUsSection";
+import WeddingFormSection from "../components/organizms/form-section/WeddingFormSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 import image from "../components/molecules/stories/dummy/icon.png"
-import WeddingFormSection from "../components/organizms/form-section/WeddingFormSection";
 
 const Eskuvo = ({data: {eskuvo}}) => {
     return (
         <Layout seo={eskuvo.seo}>
+            <VideoSection
+                video={eskuvo.video_section.video.url}
+            />
             <WeddingHeroSection
                 title={eskuvo.header.title}
                 image={eskuvo.header.image.localFile.publicURL}
@@ -63,6 +67,11 @@ const Eskuvo = ({data: {eskuvo}}) => {
 export const query = graphql`
   {
     eskuvo: strapiWeddingPage {
+        video_section {
+          video {
+            url
+          }
+      }
       form_section {
         form_id
         image {

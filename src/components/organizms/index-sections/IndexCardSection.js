@@ -63,7 +63,7 @@ const IndexCardSection = () => {
                 <IndexCard
                     title={"Szállás"}
                     logo={haz}
-                    slug={"/szallas"}
+                    slug={"/szallasok"}
                 />
             </Col>
         </SectionLayoutGrid>

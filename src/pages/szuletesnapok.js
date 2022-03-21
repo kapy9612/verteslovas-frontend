@@ -5,10 +5,14 @@ import CampCardSection from "../components/organizms/card-section/CampCardSectio
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
 import BirthdayFormSection from "../components/organizms/form-section/BirthdayFormSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
         <Layout seo={birthdays.seo} isChild>
+            <VideoSection
+                video={birthdays.video_section.video.url}
+            />
             {birthdays.main_section.content && birthdays.main_section.content.map((item, index) => (
                 <CampCardSection
                     title={index === 0 ? birthdays.main_section.title : null}
@@ -33,6 +37,11 @@ const Szuletesnapok = ({data: {birthdays}}) => {
 export const query = graphql`
   {
     birthdays: strapiBirthdayPage {
+      video_section {
+        video {
+          url
+        }
+      }
       form_section {
         form_id
         id

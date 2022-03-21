@@ -1,53 +1,33 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Layout from "../components/general/layout/Layout";
+import SectionLayoutGrid from "../components/atoms/layout/SectionLayoutGrid";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import {Col} from "../components/atoms/styled/layout/layoutComponents";
+import {Body, Title} from "../components/atoms/styled/typography/typographyComponents";
+import {ButtonLink} from "../components/atoms/styled/button/buttonComponents";
 
-// markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout seo={{title: "404 - Hiba"}}>
+      <SectionLayoutGrid customMinHeight={"medium"}>
+        <Col>
+          <Title color="black" sand="true" textAlign="center">
+            404 - Hiba
+          </Title>
+        </Col>
+        <Col>
+          <Body color="black" textAlign="center">
+            A kért oldal nem található.
+          </Body>
+        </Col>
+        <Col grid justifyContent="center">
+          <ButtonLink to="/" variant="yellow">
+            Vissza a főoldalra
+          </ButtonLink>
+        </Col>
+      </SectionLayoutGrid>
+    </Layout>
   )
 }
 

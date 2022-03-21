@@ -36,6 +36,7 @@ module.exports = {
                   `for-companies-page`,
                   `for-families-page`,
                   `wedding-page`,
+                  `main-page`
               ],
               collectionTypes: [],
           },

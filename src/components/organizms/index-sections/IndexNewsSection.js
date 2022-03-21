@@ -3,15 +3,16 @@ import {CarouselDiv, NewsCarousel} from "../styled/index-news-section/indexNewsS
 
 import testImg from "../../../../static/assets/test_news.png"
 
-const IndexNewsSection = () => {
+const IndexNewsSection = ({images}) => {
     return (
         <NewsCarousel
             autoPlay
             showThumbs={false}
             transitionTime={1000}
         >
-            <CarouselDiv image={testImg}/>
-            <CarouselDiv image={testImg}/>
+            {images && images.map((item, index) => (
+                <CarouselDiv image={item.localFile.publicURL} key={index}/>
+            ))}
         </NewsCarousel>
     );
 };

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react"
 import {Link} from "gatsby"
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
+import {useLocation} from "@reach/router";
 
 import {
     MenuItemSubmenuWrapper, NavbarButtonWrapper,
@@ -16,8 +17,9 @@ import {Body} from "../../atoms/styled/typography/typographyComponents"
 import logo from "../../../../static/assets/verteslovas_logo.png"
 import logo_camp from "../../../../static/assets/verteslovas_logo_camp.png"
 
-
 const Navbar = ({menus, isCamp}) => {
+
+    const { pathname } = useLocation()
 
     const [over, setOver] = useState(
         {
@@ -72,7 +74,7 @@ const Navbar = ({menus, isCamp}) => {
                     {menus.map((item, index) => (item.hasSubmenu ?
                             <NavbarMenuItemHoverContainer key={index} over={over} current={over.current} id={index}>
                                 {item.slug ?
-                                    <NavbarMenuItem to={item.slug}>
+                                    <NavbarMenuItem to={item.slug} active={pathname === item.slug ? "true" : ""}>
                                         <Body color="black">
                                             {item.name}
                                         </Body>
@@ -99,7 +101,7 @@ const Navbar = ({menus, isCamp}) => {
                                 </MenuItemSubmenuWrapper>
                             </NavbarMenuItemHoverContainer>
                             :
-                            <NavbarMenuItem key={index} to={item.slug}>
+                            <NavbarMenuItem key={index} to={item.slug} active={pathname === item.slug ? "true" : ""}>
                                 <Body color="black">
                                     {item.name}
                                 </Body>

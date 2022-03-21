@@ -3,10 +3,14 @@ import {graphql} from "gatsby"
 
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import Layout from "../components/general/layout/Layout";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Cegeknek = ({data: {ceg}}) => {
     return (
         <Layout seo={ceg.seo}>
+            <VideoSection
+                video={ceg.video_section.video.url}
+            />
             {ceg.main_section.content && ceg.main_section.content.map((item, index) => (
                 <MainCardSection
                     title={index === 0 ? ceg.main_section.title : null}
@@ -45,6 +49,11 @@ export const query = graphql`
             }
           }
         }
+      }
+      video_section {
+          video {
+            url
+          }
       }
       seo {
         description

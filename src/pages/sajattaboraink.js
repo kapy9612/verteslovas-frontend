@@ -4,11 +4,15 @@ import {graphql} from "gatsby";
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import Layout from "../components/general/layout/Layout";
 import CampFormSection from "../components/organizms/form-section/CampFormSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 
 const Sajattaboraink = ({data: {camp}}) => {
     return (
         <Layout seo={camp.seo} isChild>
+            <VideoSection
+                video={camp.video_section.video.url}
+            />
             {camp.main_section.content && camp.main_section.content.map((item, index) => (
                 <CampCardSection
                     title={index === 0 ? camp.main_section.title : null}
@@ -29,6 +33,11 @@ const Sajattaboraink = ({data: {camp}}) => {
 export const query = graphql`
   {
     camp: strapiOurCampsPage {
+      video_section {
+          video {
+            url
+          }
+      }
       form_section {
         form_id
         id

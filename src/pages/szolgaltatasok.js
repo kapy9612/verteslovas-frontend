@@ -14,11 +14,15 @@ import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import {Img} from "../components/atoms/styled/image/imageComponents";
 import {Title} from "../components/atoms/styled/typography/typographyComponents";
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Szolgaltatasok = ({data: {szolg}}) => {
 
     return (
         <Layout seo={szolg.seo}>
+            <VideoSection
+                video={szolg.video_section.video.url}
+            />
             <SectionLayoutGrid id="szolgaltatasok" customPadding={"firstElement"}>
                 <Col span={12}>
                     <Title textAlign={"center"} marginBottom={"largest"} sand={true}>Szolgáltatások</Title>
@@ -91,6 +95,11 @@ const Szolgaltatasok = ({data: {szolg}}) => {
 export const query = graphql`
   {
     szolg: strapiServicesPage {
+      video_section {
+          video {
+            url
+          }
+      }
       active_games {
         title
         cards {

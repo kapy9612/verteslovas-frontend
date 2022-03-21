@@ -4,6 +4,7 @@ import {graphql} from "gatsby"
 import Layout from "../components/general/layout/Layout";
 import MainCardRepeatableSection from "../components/organizms/card-section/MainCardRepeatableSection";
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 //import terkep from "../../static/assets/terkep.png"
 //import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
 
@@ -22,6 +23,9 @@ const Szallasok = ({data: {szallas}}) => {
 
                 />
             ))}
+            <VideoSection
+                video={szallas.video_section.video.url}
+            />
         </Layout>
     );
 }
@@ -29,6 +33,11 @@ const Szallasok = ({data: {szallas}}) => {
 export const query = graphql`
   {
     szallas: strapiHousingPage {
+      video_section {
+          video {
+            url
+          }
+      }
       buildings {
         description
         title

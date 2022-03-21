@@ -17,7 +17,7 @@ const VideoSection = ({video}) => {
         fluid: true,
         /*aspectRatio: '16:7',*/
         sources: [{
-            src: '/test.mp4',
+            src: video,
             type: 'video/mp4'
         }]
     }
