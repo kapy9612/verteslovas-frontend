@@ -8,7 +8,7 @@ import {Img} from "../../atoms/styled/image/imageComponents";
 
 const FormSection = ({title, leftImage, button, color, sand, placeholder, image, titlePosition, buttonColor}) => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid id="form-section">
             {leftImage ?
                 <>
                     <Col span={6} alignContent={"end"} grid>

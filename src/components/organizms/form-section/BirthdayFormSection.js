@@ -16,7 +16,7 @@ import taborform from "../../../../static/assets/tabor_form.png"
 
 const BirthdayFormSection = () => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid id="form-section">
             <Col span={7} grid alignContent={"end"}>
                 <CampImage src={taborform}/>
             </Col>

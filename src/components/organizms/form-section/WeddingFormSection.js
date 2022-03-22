@@ -16,7 +16,7 @@ import eskuvoform from "../../../../static/assets/couple2.png"
 
 const WeddingFormSection = () => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid id="form-section">
             <Col span={1}/>
             <Col span={10} marginTop={"largest"}>
                 <WeddingFormWrapper>

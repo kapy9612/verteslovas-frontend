@@ -71,11 +71,10 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                 sand={true}
 
             />
-            <SimpleTableSection
-                id={1}
-                title={szolg.meal.title}
-                header={szolg.meal.header}
-                rows={szolg.meal.table}
+            <ActiveCardSection
+                id={5}
+                cards={szolg.meals.cards}
+                title={szolg.meals.title}
                 sand={true}
 
             />
@@ -85,7 +84,6 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                 header={szolg.rents.header}
                 rows={szolg.rents.table}
                 sand={true}
-
             />
         </Layout>
     );
@@ -155,15 +153,16 @@ export const query = graphql`
           title
         }
       }
-      meal {
+      meals {
         title
-        header {
-          row1
-          row2
-        }
-        table {
-          row1
-          row2
+        cards {
+          cover {
+            localFile {
+              publicURL
+            }
+          }
+          description
+          title
         }
       }
       rents {

@@ -49,7 +49,7 @@ const Eskuvo = ({data: {eskuvo}}) => {
                     title={index === 0 ? eskuvo.housing_section.title : null}
                     card={item}
                     isRight={index % 2 === 1}
-                    id={index}
+                    id={index + 100}
                     key={index}
                     sand={false}
 
@@ -71,10 +71,6 @@ export const query = graphql`
           video {
             url
           }
-      }
-      form_section {
-        form_id
-        
       }
       gallery_section {
         title

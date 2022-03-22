@@ -16,7 +16,7 @@ import cegform from "../../../../static/assets/ceg_form.png"
 
 const CompanyFormSection = () => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid id="form-section">
             <Col span={7} grid alignContent={"end"} justifyContent={"start"}>
                 <CampImage src={cegform}/>
             </Col>

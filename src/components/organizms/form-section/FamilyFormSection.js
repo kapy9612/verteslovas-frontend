@@ -15,7 +15,7 @@ import csaladform from "../../../../static/assets/családúj.png"
 
 const FamilyFormSection = () => {
     return (
-        <SectionLayoutGrid>
+        <SectionLayoutGrid id="form-section">
             <Col span={7} grid alignContent={"end"} >
                 <CampImage src={csaladform}/>
             </Col>

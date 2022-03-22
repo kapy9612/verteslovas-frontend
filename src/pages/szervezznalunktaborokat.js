@@ -79,12 +79,6 @@ camps: strapiOrganizeYourCampPage
         id
         title
     }
-    form_section
-    {
-        form_id
-        id
-       
-    }
     seo
     {
         description

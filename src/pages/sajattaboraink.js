@@ -53,11 +53,6 @@ export const query = graphql`
         }
         title
       }
-      form_section {
-        form_id
-        id
-        
-      }
       main_section {
         id
         title

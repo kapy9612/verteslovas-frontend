@@ -31,14 +31,6 @@ const Cegeknek = ({data: {ceg}}) => {
 export const query = graphql`
   {
     ceg: strapiForCompaniesPage {
-      form_section {
-        form_id
-        image {
-          localFile {
-            publicURL
-          }
-        }
-      }
       main_section {
         title
         content {

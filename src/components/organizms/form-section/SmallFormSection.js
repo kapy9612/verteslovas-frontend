@@ -7,7 +7,7 @@ import {ButtonContainer, FormContainer, TitleContainer} from "../styled/form-sec
 
 const SmallFormSection = ({button, image, sand, description}) => {
     return (
-        <SectionLayoutGrid id={"smallFormSection"}>
+        <SectionLayoutGrid id="form-section">
             <Col span={7} alignContent={"end"} grid>
                 <Img src={image}/>
             </Col>
