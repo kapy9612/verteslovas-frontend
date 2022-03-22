@@ -13,7 +13,6 @@ import {
 import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import {Img} from "../components/atoms/styled/image/imageComponents";
 import {Title} from "../components/atoms/styled/typography/typographyComponents";
-import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Szolgaltatasok = ({data: {szolg}}) => {

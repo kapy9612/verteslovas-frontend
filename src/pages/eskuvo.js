@@ -20,7 +20,7 @@ const Eskuvo = ({data: {eskuvo}}) => {
             />
             <WeddingHeroSection
                 title={eskuvo.header.title}
-                image={eskuvo.header.image.localFile.publicURL}
+                // image={eskuvo.header.image.localFile.publicURL}
                 description={eskuvo.header.description}
             />
             <WeddingCardSection
@@ -74,11 +74,7 @@ export const query = graphql`
       }
       form_section {
         form_id
-        image {
-          localFile {
-            publicURL
-          }
-        }
+        
       }
       gallery_section {
         title

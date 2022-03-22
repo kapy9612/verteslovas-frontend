@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import Layout from "../components/general/layout/Layout";
 import VideoSection from "../components/organizms/video-section/VideoSection";
+import FamilyFormSection from "../components/organizms/form-section/FamilyFormSection";
 
 const Csaladoknak = ({data: {csalad}}) => {
     return (
@@ -21,6 +22,7 @@ const Csaladoknak = ({data: {csalad}}) => {
 
                 />
             ))}
+            <FamilyFormSection />
         </Layout>
 
     );

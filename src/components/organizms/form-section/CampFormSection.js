@@ -3,13 +3,7 @@ import React from 'react';
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
 import {Col} from "../../atoms/styled/layout/layoutComponents";
-import {Img} from "../../atoms/styled/image/imageComponents";
-import {
-    MainCardLeftImg,
-    MainCardSectionContainer,
-    MainRightCardContainer
-} from "../styled/card-section/cardSectionComponents";
-import CampCard from "../../molecules/cards/ChildCard";
+
 import {
     Buttonlink,
     CampFormContainer,
@@ -18,15 +12,14 @@ import {
     FormFieldTextArea
 } from "../styled/form-section/formsectionComponents";
 import {Header2} from "../../atoms/styled/typography/typographyComponents";
-import {ChildCardContainer} from "../../molecules/styled/cards/cardComponents";
 import {FormField} from "../../atoms/styled/formField/formFieldComponents";
-import {ButtonLink} from "../../atoms/styled/button/buttonComponents";
+import taborform from "../../../../static/assets/tabor_form.png"
 
-const CampFormSection = ({card}) => {
+const CampFormSection = () => {
     return (
         <SectionLayoutGrid>
             <Col span={7} grid alignContent={"end"}>
-                <CampImage src={card.image.localFile.publicURL}/>
+                <CampImage src={taborform}/>
             </Col>
             <Col span={5}>
                 <CampFormContainer>
@@ -45,10 +38,11 @@ const CampFormSection = ({card}) => {
                         <option value="juni1">2022.01.01-2022.09.05</option>
                         <option value="juli2">2022.08.01-2022.09.05</option>
                     </FormFieldSelect>
-                    <FormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50" placeholder={"Gyerek/gyerekek neve és életkora, egyéb megjegyzés"}>
+                    <FormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50"
+                                       placeholder={"Gyerek/gyerekek neve és életkora, egyéb megjegyzés"}>
                     </FormFieldTextArea>
 
-                    <Buttonlink variant={"yellow" }>Küldés</Buttonlink>
+                    <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
 
                 </CampFormContainer>
             </Col>

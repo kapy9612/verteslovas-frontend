@@ -3,16 +3,17 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/general/layout/Layout";
 import MainCardRepeatableSection from "../components/organizms/card-section/MainCardRepeatableSection";
-import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import VideoSection from "../components/organizms/video-section/VideoSection";
-//import terkep from "../../static/assets/terkep.png"
-//import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
+
+import terkep from "../../static/assets/terkep.png"
+import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
+import TableSection from "../components/organizms/table-section/TableSection";
 
 const Szallasok = ({data: {szallas}}) => {
 
     return (
-        <Layout seo={szallas.seo} >
-            {/*<TerkepImg  src={terkep}/>*/}
+        <Layout seo={szallas.seo}>
+            <TerkepImg  src={terkep}/>
             {szallas.buildings && szallas.buildings.map((item, index) => (
                 <MainCardRepeatableSection
                     card={item}
@@ -23,6 +24,7 @@ const Szallasok = ({data: {szallas}}) => {
 
                 />
             ))}
+            <TableSection sand={true}  isYellow={false} table={szallas.tables}/>
             <VideoSection
                 video={szallas.video_section.video.url}
             />
@@ -37,6 +39,19 @@ export const query = graphql`
           video {
             url
           }
+      }
+       tables {
+       id
+        header {
+          row1
+          row2
+          row3
+        }
+        table {
+          row1
+          row2
+          row3
+        }
       }
       buildings {
         description

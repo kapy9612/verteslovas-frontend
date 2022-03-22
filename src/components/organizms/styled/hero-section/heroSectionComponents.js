@@ -13,5 +13,6 @@ export const WeddingHeroContainer = styled.div`
   margin: auto;
   text-align: left;
   display: grid;
+  padding-bottom: 4rem;
 
 `

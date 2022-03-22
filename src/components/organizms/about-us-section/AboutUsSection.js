@@ -12,7 +12,7 @@ const AboutUsSection = ({image, title, cards}) => {
     return (
         <SectionLayoutGridWedding background={"whitesmoke"} id="about-us-section" >
             <Col >
-                <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
+                <Title textAlign={"center"} marginBottom={"medium"} marginTop={"medium"}>{title}</Title>
                 <Container>
                     <Icon>
                         <img src={image} alt={"kép"}/>

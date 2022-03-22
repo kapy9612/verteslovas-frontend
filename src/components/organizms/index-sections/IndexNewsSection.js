@@ -1,7 +1,6 @@
 import React from 'react';
 import {CarouselDiv, NewsCarousel} from "../styled/index-news-section/indexNewsSectionComponents";
 
-import testImg from "../../../../static/assets/test_news.png"
 
 const IndexNewsSection = ({images}) => {
     return (

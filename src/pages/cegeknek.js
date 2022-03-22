@@ -4,6 +4,7 @@ import {graphql} from "gatsby"
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import Layout from "../components/general/layout/Layout";
 import VideoSection from "../components/organizms/video-section/VideoSection";
+import CompanyFormSection from "../components/organizms/form-section/CompanyFormSection";
 
 const Cegeknek = ({data: {ceg}}) => {
     return (
@@ -21,7 +22,7 @@ const Cegeknek = ({data: {ceg}}) => {
                     sand={true}
                 />
             ))}
-
+        <CompanyFormSection/>
         </Layout>
 
     );

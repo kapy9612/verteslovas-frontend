@@ -18,7 +18,7 @@ const MainCardSection = ({card, title, id, isRight,sand}) => {
             <SectionLayoutGrid id={id ? "main-card-section" + id : "main-card-section"} customPadding={"firstElement"}>
                 {title &&
                 <Col>
-                    <Title textAlign="center" marginBottom="medium" marginTop={"largest"} sand={sand}>
+                    <Title textAlign="center" marginBottom="medium" marginTop={"medium"} sand={sand}>
                         {title}
                     </Title>
                 </Col>

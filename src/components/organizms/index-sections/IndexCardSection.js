@@ -6,7 +6,6 @@ import IndexCard from "../../molecules/cards/IndexCard";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-import logo from "../../../../static/assets/verteslovas_logo_camp3.png"
 import lovaglas from "../../../../static/assets/lovaglas4.png"
 import gyerekek from "../../../../static/assets/gyerekek.png"
 import eskuvo from "../../../../static/assets/eskuvo2.png"

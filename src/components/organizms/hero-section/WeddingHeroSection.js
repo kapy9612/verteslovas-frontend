@@ -11,8 +11,8 @@ const WeddingHeroSection = ({title, description, image}) => {
                 <Title textAlign={"center"} marginBottom={"medium"}>{title}</Title>
                 <WeddingHeroContainer>
                     <WeddingHeroImage src={image}/>
-                    <Body textAlign={"left"} marginTop={"medium"} weight={"bolder"}
-                          marginBottom={"medium"}>{description}</Body>
+                    <Body textAlign={"center"} marginTop={"medium"} weight={"bolder"}
+                          marginBottom={"largest"}>{description}</Body>
                 </WeddingHeroContainer>
             </Col>
         </SectionLayoutGrid>

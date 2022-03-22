@@ -14,7 +14,7 @@ export const Background = styled.div`
 `
 export const BackgroundWedding = styled.div`
   background: ${({customBg}) => handleLayoutBackground(customBg)};
-  background-image: url("/assets/bg16.png");
+  background-image: url("/assets/bg10.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;

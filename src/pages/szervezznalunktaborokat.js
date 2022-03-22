@@ -5,6 +5,7 @@ import CampButtonCardSection from "../components/organizms/card-section/CampButt
 import Layout from "../components/general/layout/Layout";
 import SmallFormSection from "../components/organizms/form-section/SmallFormSection";
 import VideoSection from "../components/organizms/video-section/VideoSection";
+import taborform from "../../static/assets/tabor_form.png"
 
 const Szervezznalunktaborokat = ({data: {camps}}) => {
 
@@ -28,7 +29,7 @@ const Szervezznalunktaborokat = ({data: {camps}}) => {
                 color={"white"}
                 sand={true}
             />
-            <SmallFormSection image={camps.form_section.image.localFile.publicURL}/>
+            <SmallFormSection image={taborform}/>
         </Layout>
     );
 }
@@ -82,13 +83,7 @@ camps: strapiOrganizeYourCampPage
     {
         form_id
         id
-        image
-        {
-            localFile
-            {
-                publicURL
-            }
-        }
+       
     }
     seo
     {

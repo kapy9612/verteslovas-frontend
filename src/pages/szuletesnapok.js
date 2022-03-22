@@ -28,6 +28,7 @@ const Szuletesnapok = ({data: {birthdays}}) => {
                 title={birthdays.table.title}
                 header={birthdays.table.header}
                 rows={birthdays.table.table}
+                sand={true}
             />
             <BirthdayFormSection card={birthdays.form_section}/>
         </Layout>
@@ -45,11 +46,7 @@ export const query = graphql`
       form_section {
         form_id
         id
-        image {
-          localFile {
-            publicURL
-          }
-        }
+       
       }
       main_section {
         title

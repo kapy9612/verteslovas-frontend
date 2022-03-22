@@ -5,6 +5,7 @@ import CampCardSection from "../components/organizms/card-section/CampCardSectio
 import Layout from "../components/general/layout/Layout";
 import CampFormSection from "../components/organizms/form-section/CampFormSection";
 import VideoSection from "../components/organizms/video-section/VideoSection";
+import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 
 
 const Sajattaboraink = ({data: {camp}}) => {
@@ -23,6 +24,8 @@ const Sajattaboraink = ({data: {camp}}) => {
                     border={"true"}
                 />
             ))}
+            <SimpleTableSection title={camp.table_section.title} sand={true} header={camp.table_section.header}
+                                isYellow={true} rows={camp.table_section.table}/>
             <CampFormSection
                 card={camp.form_section}
             />
@@ -38,14 +41,22 @@ export const query = graphql`
             url
           }
       }
+       table_section {
+       id
+        header {
+          row1
+          row2
+        }
+        table {
+          row1
+          row2
+        }
+        title
+      }
       form_section {
         form_id
         id
-        image {
-          localFile {
-            publicURL
-          }
-        }
+        
       }
       main_section {
         id
