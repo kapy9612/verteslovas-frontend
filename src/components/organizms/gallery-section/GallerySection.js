@@ -10,10 +10,10 @@ const GallerySection = ({title, images,sand}) => {
 
     return (
         <SectionLayoutGrid id="gallery-section">
-            <Col span={12} marginTop={"largest"}>
+            <Col span={12} >
                 <Title textAlign="center" marginBottom="medium" sand={sand}>{title}</Title>
             </Col>
-            <Col >
+            <Col marginBottom={"large"} >
                 <Gallery
                     images={images}
                 />

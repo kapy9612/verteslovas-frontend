@@ -10,7 +10,7 @@ export const TerkepImg = styled.img`
   max-width: 100%;
   height: auto;
   padding-top: 10rem;
-  margin-bottom: -8rem;
+  margin-bottom: var(--small);
 `
 
 export const MobileImg = styled(Img)`

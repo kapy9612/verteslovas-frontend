@@ -39,7 +39,7 @@ export const WeddingFormContainer = styled.form`
   padding: 2.5rem 2rem 3rem 2rem;
   width: 100%;
   //background: var(--light-grey);
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  //box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5rem;
   justify-self: center;
 `

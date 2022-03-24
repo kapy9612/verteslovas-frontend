@@ -223,7 +223,8 @@ export const handleButtonColor = variant => {
         case "beige":
             return "var(--light-beige)";
         case "whitesmoke":
-            return "var(--whitesmoke-background)";
+            return "var(--light-grey)";
+
         default:
             return "";
     }

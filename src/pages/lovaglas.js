@@ -8,14 +8,13 @@ import ActiveCardSection from "../components/organizms/card-section/ActiveCardSe
 import Layout from "../components/general/layout/Layout";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import VideoSection from "../components/organizms/video-section/VideoSection";
+import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 const Lovaglas = ({data: {lovaglas}}) => {
 
     return (
         <Layout seo={lovaglas.seo}>
-            <VideoSection
-                video={lovaglas.video_section.video.url}
-            />
+
             {lovaglas.riding_types && lovaglas.riding_types.map((item, index) => (
                 <MainCardSection
                     title={index === 0 ? lovaglas.title : null}
@@ -44,11 +43,15 @@ const Lovaglas = ({data: {lovaglas}}) => {
 
             />
 
+
             <ActiveCardSection
                 title={lovaglas.our_horses_section.title}
                 cards={lovaglas.our_horses_section.cards}
                 sand={true}
 
+            />
+            <SmallVideoSection
+                video={lovaglas.video_section.video.url}
             />
         </Layout>
     );
