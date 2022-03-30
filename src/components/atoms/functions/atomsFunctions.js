@@ -179,6 +179,8 @@ export const handleLayoutBackground = bg => {
             return "var(--wedding-background)";
         case "grey":
             return "var(--grey-background)";
+        case "brown":
+            return "var(--light-brown-form)";
         default:
             return "var(--whitesmoke-background)";
     }

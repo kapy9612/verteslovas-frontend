@@ -100,6 +100,7 @@ export const query = graphql`
       active_games {
         title
         cards {
+        title
         description
           cover {
             localFile {

@@ -1,6 +1,49 @@
 import styled from "styled-components";
 import {ButtonLink} from "../../../atoms/styled/button/buttonComponents"
 import {Header3} from "../../../atoms/styled/typography/typographyComponents"
+export const LongFormFieldWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+`
+export const LongSimpleFormFieldWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 0.3fr 1fr ;
+  width: 49%;
+`
+export const SmallFormFieldWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr 0.1fr ;
+  grid-gap:1rem;
+  width: 100%;
+`
+export const RadioWrapper = styled.div`
+  display: grid;
+  grid-template-columns:1fr 0.1fr;
+  width: 50%;
+`
+export const RadioLabel = styled.label`
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+  padding-right: 1rem;
+
+`
+export const LongFormWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:2rem;
+
+`
+export const LongFormContainer = styled.div`
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: var(--medium);
+  width:50%;
+`
+export const LongFormFContainer = styled.form`
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: var(--medium)
+`
 
 export const CampFormContainer = styled.form`
   display: grid;
@@ -14,6 +57,8 @@ export const CampFormContainer = styled.form`
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5rem;
 `
+
+
 export const FamilyFormContainer = styled.form`
   display: grid;
   grid-template-rows: auto;
