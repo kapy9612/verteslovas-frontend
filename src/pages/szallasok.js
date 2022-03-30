@@ -8,6 +8,7 @@ import VideoSection from "../components/organizms/video-section/VideoSection";
 import terkep from "../../static/assets/vlTérkép.png"
 import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
 import TableSection from "../components/organizms/table-section/TableSection";
+import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 const Szallasok = ({data: {szallas}}) => {
 
@@ -24,10 +25,11 @@ const Szallasok = ({data: {szallas}}) => {
 
                 />
             ))}
-            <TableSection sand={true}  isYellow={false} table={szallas.tables}/>
-            <VideoSection
+            <SmallVideoSection
+                title={"Tekintsd meg promó videónkat"}
                 video={szallas.video_section.video.url}
             />
+            <TableSection sand={true}  isYellow={false} table={szallas.tables}/>
         </Layout>
     );
 }

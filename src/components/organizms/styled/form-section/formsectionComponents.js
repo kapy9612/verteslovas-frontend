@@ -1,6 +1,42 @@
 import styled from "styled-components";
+
+import {FormControl, TextField} from "@mui/material";
+import {handleGridColumn} from "../../../atoms/functions/atomsFunctions";
+
 import {ButtonLink} from "../../../atoms/styled/button/buttonComponents"
 import {Header3} from "../../../atoms/styled/typography/typographyComponents"
+
+/*MUI Fields*/
+
+export const Input = styled(TextField)`
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 1rem !important;
+  margin-bottom: ${props => props.nomargin ? "" : "var(--small)"};
+  grid-column: ${({ span }) => handleGridColumn(span)};
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1/-1;
+  }
+`
+
+export const SelectControl = styled(FormControl)`
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 1rem !important;
+  margin-bottom: ${props => props.nomargin ? "" : "var(--smaller)"};
+  grid-column: ${({ span }) => handleGridColumn(span)};
+
+  option {
+    background-color: var(--light-gray) !important;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1/-1;
+  }
+`
+
+
+/*MUI Fields End*/
+
 export const LongFormFieldWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.3fr 1fr;
@@ -31,6 +67,7 @@ export const LongFormWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap:2rem;
+  grid-column: 1/-1;
 
 `
 export const LongFormContainer = styled.div`
@@ -39,10 +76,16 @@ export const LongFormContainer = styled.div`
   grid-gap: var(--medium);
   width:50%;
 `
-export const LongFormFContainer = styled.form`
+export const LongForm = styled.form`
   display: grid;
-  grid-template-rows: auto;
-  grid-gap: var(--medium)
+  grid-gap: 1rem 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: stretch;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem 1rem;
+  }
 `
 
 export const CampFormContainer = styled.form`

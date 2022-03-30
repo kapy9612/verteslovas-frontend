@@ -1,17 +1,19 @@
 import React, {useRef} from 'react';
 
 import VideoJS from "../../general/video/VideoJS";
+import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {SmallVideoSectionContainer, VideoSectionContainer} from "../styled/video-section/videoSectionComponents";
-import {Title} from "../../atoms/styled/typography/typographyComponents";
+import {Header2} from "../../atoms/styled/typography/typographyComponents";
+import {Col} from "../../atoms/styled/layout/layoutComponents";
+import {SmallVideoSectionContainer} from "../styled/video-section/videoSectionComponents";
 
-const SmallVideoSection = ({video}) => {
+const SmallVideoSection = ({video, title}) => {
 
     const playerRef = useRef(null);
 
     const videoJsOptions = { // lookup the options in the docs for more options
-        autoplay: true,
-        muted: true,
+        autoplay: false,
+        muted: false,
         controls: true,
         responsive: true,
         loop: true,
@@ -37,9 +39,16 @@ const SmallVideoSection = ({video}) => {
     };
 
     return (
-        <SmallVideoSectionContainer id="video-section">
-            <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-        </SmallVideoSectionContainer>
+        <SectionLayoutGrid id="small-video-section">
+            <Col>
+                <Header2 sand="true" textAlign="center">
+                    {title}
+                </Header2>
+            </Col>
+            <SmallVideoSectionContainer>
+                <VideoJS options={videoJsOptions} onReady={handlePlayerReady}/>
+            </SmallVideoSectionContainer>
+        </SectionLayoutGrid>
     );
 };
 

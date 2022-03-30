@@ -7,7 +7,6 @@ import GallerySection from "../components/organizms/gallery-section/GallerySecti
 import ActiveCardSection from "../components/organizms/card-section/ActiveCardSection";
 import Layout from "../components/general/layout/Layout";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
-import VideoSection from "../components/organizms/video-section/VideoSection";
 import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 const Lovaglas = ({data: {lovaglas}}) => {
@@ -26,32 +25,30 @@ const Lovaglas = ({data: {lovaglas}}) => {
 
                 />
             ))}
-            <TrainerSection
-                trainers={lovaglas.trainer_section}
-            />
-            <GallerySection
-                images={lovaglas.gallery_section.images}
-                title={lovaglas.gallery_section.title}
-                sand={true}
-
+            <SmallVideoSection
+                title={"Tekintsd meg promó videónkat"}
+                video={lovaglas.video_section.video.url}
             />
             <SimpleTableSection
                 title={lovaglas.prices.title}
                 header={lovaglas.prices.header}
                 rows={lovaglas.prices.table}
                 sand={true}
-
             />
-
-
+            <TrainerSection
+                trainers={lovaglas.trainer_section}
+            />
             <ActiveCardSection
                 title={lovaglas.our_horses_section.title}
                 cards={lovaglas.our_horses_section.cards}
                 sand={true}
 
             />
-            <SmallVideoSection
-                video={lovaglas.video_section.video.url}
+            <GallerySection
+                images={lovaglas.gallery_section.images}
+                title={lovaglas.gallery_section.title}
+                sand={true}
+
             />
         </Layout>
     );
