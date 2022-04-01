@@ -87,6 +87,17 @@ export const LongForm = styled.form`
     grid-gap: 1rem 1rem;
   }
 `
+export const WeddingForm = styled.form`
+  display: grid;
+  grid-gap: 1rem 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: stretch;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem 1rem;
+  }
+`
 
 export const CampFormContainer = styled.form`
   display: grid;

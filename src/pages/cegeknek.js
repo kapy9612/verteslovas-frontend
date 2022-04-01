@@ -3,15 +3,12 @@ import {graphql} from "gatsby"
 
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import Layout from "../components/general/layout/Layout";
-import VideoSection from "../components/organizms/video-section/VideoSection";
 import CompanyFormSection from "../components/organizms/form-section/CompanyFormSection";
+import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 const Cegeknek = ({data: {ceg}}) => {
     return (
         <Layout seo={ceg.seo}>
-            <VideoSection
-                video={ceg.video_section.video.url}
-            />
             {ceg.main_section.content && ceg.main_section.content.map((item, index) => (
                 <MainCardSection
                     title={index === 0 ? ceg.main_section.title : null}
@@ -22,6 +19,10 @@ const Cegeknek = ({data: {ceg}}) => {
                     sand={true}
                 />
             ))}
+            <SmallVideoSection
+                title={"Tekintsd meg promó videónkat"}
+                video={ceg.video_section.video.url}
+            />
         <CompanyFormSection/>
         </Layout>
 

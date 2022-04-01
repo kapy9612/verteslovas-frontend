@@ -14,3 +14,11 @@ export const SmallVideoSectionContainer = styled(Col)`
   box-sizing: border-box;
   box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
 `
+export const WeddingVideoSectionContainer = styled(Col)`
+  //border: 5px solid var(--dark-gray);
+  width: 70%;
+  margin: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
+`

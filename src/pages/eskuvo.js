@@ -8,19 +8,18 @@ import Layout from "../components/general/layout/Layout";
 import GallerySection from "../components/organizms/gallery-section/GallerySection";
 import AboutUsSection from "../components/organizms/about-us-section/AboutUsSection";
 import WeddingFormSection from "../components/organizms/form-section/WeddingFormSection";
-import VideoSection from "../components/organizms/video-section/VideoSection";
 
 import image from "../components/molecules/stories/dummy/icon.png"
+import WeddingVideoSection from "../components/organizms/video-section/WeddingVideoSection";
 
 const Eskuvo = ({data: {eskuvo}}) => {
     return (
         <Layout seo={eskuvo.seo}>
-            <VideoSection
-                video={eskuvo.video_section.video.url}
-            />
-            <WeddingHeroSection
+
+
+            <WeddingVideoSection
                 title={eskuvo.header.title}
-                // image={eskuvo.header.image.localFile.publicURL}
+                video={eskuvo.video_section.video.url}
                 description={eskuvo.header.description}
             />
             <WeddingCardSection
