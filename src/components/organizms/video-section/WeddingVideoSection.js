@@ -13,7 +13,7 @@ const SmallVideoSection = ({video, title,description}) => {
 
     const videoJsOptions = { // lookup the options in the docs for more options
         autoplay: true,
-        muted: false,
+        muted: true,
         controls: true,
         responsive: true,
         loop: true,
