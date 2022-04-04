@@ -11,7 +11,6 @@ import SmallVideoSection from "../components/organizms/video-section/SmallVideoS
 const Sajattaboraink = ({data: {camp}}) => {
     return (
         <Layout seo={camp.seo} isChild>
-
             {camp.main_section.content && camp.main_section.content.map((item, index) => (
                 <CampCardSection
                     title={index === 0 ? camp.main_section.title : null}
@@ -20,7 +19,7 @@ const Sajattaboraink = ({data: {camp}}) => {
                     id={index}
                     key={index}
                     border={"true"}
-                    first={true}
+                    first={index === 0}
                 />
             ))}
             <SimpleTableSection title={camp.table_section.title} sand={true} header={camp.table_section.header}

@@ -11,7 +11,7 @@ const SimpleTableSection = ({title ,header, rows, isYellow, id,sand}) => {
     return (
         <SectionLayoutGrid customMinHeight="small"  id={id ? "simple-table-section-" + id : "simple-table-section"}>
             <Col>
-                <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"} sand={sand}>
+                <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"}>
                     {title}
                 </Title>
             </Col>

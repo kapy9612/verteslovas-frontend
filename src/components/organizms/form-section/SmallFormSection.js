@@ -6,7 +6,6 @@ import {Img} from "../../atoms/styled/image/imageComponents";
 import {
     ButtonContainer,
     CampFormContainer,
-    FormContainer,
     TitleContainer
 } from "../styled/form-section/formsectionComponents";
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {Col} from "../../atoms/styled/layout/layoutComponents";
+import {Col, DesktopCol} from "../../atoms/styled/layout/layoutComponents";
 
 import {
     Buttonlink,
@@ -17,9 +17,9 @@ import {InputLabel, Select} from "@mui/material";
 const CampFormSection = () => {
     return (
         <SectionLayoutGrid id="form-section">
-            <Col span={7} grid alignContent={"end"}>
+            <DesktopCol span={7} grid alignContent={"end"}>
                 <CampImage src={taborform}/>
-            </Col>
+            </DesktopCol>
             <Col span={5}>
                 <CampFormContainer>
                     <Col>
@@ -91,9 +91,7 @@ const CampFormSection = () => {
                     </Col>
                 </CampFormContainer>
             </Col>
-
         </SectionLayoutGrid>
-
     );
 };
 

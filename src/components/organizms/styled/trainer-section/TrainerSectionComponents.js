@@ -16,6 +16,9 @@ export const TrainerWrapper = styled.div`
   display: grid;
   grid-gap:2rem;
   grid-template-columns: 3fr 9fr;
+  @media(max-width: 800px){
+    grid-template-columns: 1fr;
+  }
 `
 export const TrainerButton = styled.button`
   border:none ;

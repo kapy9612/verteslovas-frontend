@@ -17,18 +17,15 @@
     --wedding-background: #F9EBEB;
     --beige: #F1E0DA;
 
-    --dark-gray: rgb(0,0,0,0.4);
+    --dark-gray: rgb(0, 0, 0, 0.4);
     --dark-grey: #4D4D4D;
     --black: #000000;
     --white: #FFFFFF;
 
+    --edding-white: #F9F6F1;
 
-    --edding-white:#F9F6F1;
-
-    --light-grey: #E6E6E6; --light-beige: #F8EFEC;
-
-
-
+    --light-grey: #E6E6E6;
+    --light-beige: #F8EFEC;
 
     /*Font sizes verteslovas*/
     --title: 5.625rem;
@@ -107,6 +104,17 @@ body {
     html,
     body {
         font-size: 12px;
+    }
+
+    :root {
+        --title: 3.5rem;
+        --h2: 2.75rem;
+        --p-simple: 1rem;
+        --form-title-camp: 2rem;
+        --form-title-simple: 3.75rem;
+        --form-p: 1rem;
+        --card-title: 4rem;
+        --h5: 3rem;
     }
 }
 

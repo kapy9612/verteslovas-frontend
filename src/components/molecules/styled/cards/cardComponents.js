@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import {handleMainCardColor, handleButtonCardBG} from "../../functions/moleculesFunctions"
 import {Link} from "gatsby";
+
+import {handleMainCardColor, handleButtonCardBG} from "../../functions/moleculesFunctions"
+
 import {ButtonLink} from "../../../atoms/styled/button/buttonComponents";
 
 export const WeddingCardContainer = styled.div`
@@ -34,6 +36,9 @@ export const MainCardContainer = styled.div`
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   min-height: 25rem;
 
+  @media(max-width: 800px){
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
 `
 export const MainCardButton = styled(ButtonLink)`
   text-align: left;
@@ -59,7 +64,10 @@ export const ChildCardContainer = styled.div`
   border-radius: 2.5rem;
   background: ${({color}) => handleMainCardColor(color)};
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-
+  
+  @media(max-width: 800px){
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
 `
 
 export const ActiveCardContainer = styled.div`

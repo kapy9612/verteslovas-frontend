@@ -4,7 +4,7 @@ import { Body } from "../../../atoms/styled/typography/typographyComponents"
 
 export const SidebarContainer = styled.nav`
   display: none;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1150px) {
     display: grid;
   }
 `
@@ -22,7 +22,7 @@ export const SidebarLogo = styled.img`
 
 export const HamburgerWrapper = styled.div`
   display: none;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1150px) {
     display: block;
   }
 `

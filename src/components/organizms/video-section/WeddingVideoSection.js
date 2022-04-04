@@ -3,7 +3,7 @@ import React, {useRef} from 'react';
 import VideoJS from "../../general/video/VideoJS";
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {Body, Header2, Title} from "../../atoms/styled/typography/typographyComponents";
+import {Body, Title} from "../../atoms/styled/typography/typographyComponents";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import { WeddingVideoSectionContainer} from "../styled/video-section/videoSectionComponents";
 

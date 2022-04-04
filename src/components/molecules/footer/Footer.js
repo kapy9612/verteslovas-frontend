@@ -33,7 +33,7 @@ const Footer = ({phone, address, email}) => {
                             <Body>Cím: {address}</Body>
                         </FooterContactWrapper>
                         <div>
-                            <Body weight={"bold"} marginBottom="small">Social</Body>
+                            <Body weight={"bold"} marginBottom="small">Közösségi média</Body>
                             <FooterSocialWrapper>
                                 <a href={"https://facebook.com/verteslovas"} target={"_blank"} rel={"noreferrer"}>
                                     <img alt="face" src={facebook}/>

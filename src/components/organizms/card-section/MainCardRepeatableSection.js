@@ -35,6 +35,7 @@ const MainCardRepeatableSection = ({card, title, isRight, id,sand}) => {
                                     title={card.title}
                                     description={card.description}
                                     sand={sand}
+                                    images={card.image}
                                 />
                             </MainRightCardContainer>
                         </MainCardSectionContainer>
@@ -48,6 +49,7 @@ const MainCardRepeatableSection = ({card, title, isRight, id,sand}) => {
                                     title={card.title}
                                     description={card.description}
                                     sand={sand}
+                                    images={card.image}
                                 />
                             </MainLeftCardContainer>
                             <StyledCarousel autoPlay={true} infiniteLoop={true} showThumbs={false}

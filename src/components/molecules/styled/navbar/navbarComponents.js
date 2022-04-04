@@ -9,7 +9,7 @@ export const NavbarContainer = styled.div`
   transition: margin-top 0.2s ease-out;
   position: fixed;
   z-index: 101;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1150px) {
     display: none;
   }
 `
