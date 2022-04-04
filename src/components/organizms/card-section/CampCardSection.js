@@ -13,9 +13,9 @@ import {
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const CampCardSection = ({title, card, border, isRight, id}) => {
+const CampCardSection = ({title, card, border, isRight, id,first}) => {
     return (
-        <SectionLayoutGrid customPadding={"firstElement"} id={id ? "camp-card-section" + id : "camp-card-section"} customMinHeight={"small"}>
+        <SectionLayoutGrid customPadding={first ? "firstElement" : "10vh 0 10vh 0"} id={id ? "camp-card-section" + id : "camp-card-section"} customMinHeight={"small"}>
             <Col>
                 <Title sand="true" textAlign="center" marginBottom="medium">
                     {title}

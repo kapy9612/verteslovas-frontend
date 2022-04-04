@@ -4,7 +4,7 @@ import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 import TableRow from "../../atoms/table-row/TableRow";
 
 import {TableRowCol} from "../styled/table-section/TableSectionComponents";
-import {Header2, Title} from "../../atoms/styled/typography/typographyComponents";
+import {Header2} from "../../atoms/styled/typography/typographyComponents";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 const TableSection = ({isYellow, id, sand, table}) => {

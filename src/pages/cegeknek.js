@@ -34,7 +34,11 @@ export const query = graphql`
     ceg: strapiForCompaniesPage {
       main_section {
         title
-        content {
+        content {        
+         button {
+          name
+          slug
+        }
           description
           title
           image {

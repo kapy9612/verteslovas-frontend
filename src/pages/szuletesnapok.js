@@ -5,14 +5,12 @@ import CampCardSection from "../components/organizms/card-section/CampCardSectio
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
 import BirthdayFormSection from "../components/organizms/form-section/BirthdayFormSection";
-import VideoSection from "../components/organizms/video-section/VideoSection";
+import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 const Szuletesnapok = ({data: {birthdays}}) => {
     return (
         <Layout seo={birthdays.seo} isChild>
-            <VideoSection
-                video={birthdays.video_section.video.url}
-            />
+
             {birthdays.main_section.content && birthdays.main_section.content.map((item, index) => (
                 <CampCardSection
                     title={index === 0 ? birthdays.main_section.title : null}
@@ -21,6 +19,7 @@ const Szuletesnapok = ({data: {birthdays}}) => {
                     id={index}
                     key={index}
                     border={"true"}
+                    first={true}
                 />
             ))}
             <SimpleTableSection
@@ -30,7 +29,13 @@ const Szuletesnapok = ({data: {birthdays}}) => {
                 rows={birthdays.table.table}
                 sand={true}
             />
+            <SmallVideoSection
+                first={false}
+                video={birthdays.video_section.video.url}
+                title={"Rekintse meg promó videónkat!"}
+            />
             <BirthdayFormSection card={birthdays.form_section}/>
+
         </Layout>
     );
 };
@@ -46,6 +51,7 @@ export const query = graphql`
       main_section {
         title
         content {
+        
           title
           description
           image {

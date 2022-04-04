@@ -22,7 +22,7 @@ export const vertesTheme = createTheme({
     },
     typography: {
         root: {
-            fontFamily: "Lato, sans-serif",
+            fontFamily: "Raleway, sans-serif",
             fontSize: "1rem"
         }
     }

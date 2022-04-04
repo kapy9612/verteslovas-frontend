@@ -8,10 +8,9 @@ import {
     Buttonlink,
     CampFormContainer,
     CampImage,
-    FormFieldTextArea
+     Input,
 } from "../styled/form-section/formsectionComponents";
 import {Header2} from "../../atoms/styled/typography/typographyComponents";
-import {FormField} from "../../atoms/styled/formField/formFieldComponents";
 import taborform from "../../../../static/assets/tabor_form.png"
 
 const BirthdayFormSection = () => {
@@ -22,16 +21,60 @@ const BirthdayFormSection = () => {
             </Col>
             <Col span={5}>
                 <CampFormContainer>
-                    <Header2 marginBottom="small" textAlign="center" weight={"bolder"}
-                             sand={"true"}>Ajánlatkérés</Header2>
-                    <FormField placeholder={"Szülő neve"}/>
-                    <FormField placeholder={"Telefonszám"}/>
-                    <FormField placeholder={"Email"}/>
-                    <FormField placeholder={"Gyerekek száma"}/>
-                    <FormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50" placeholder={"Kért programok"}>
-                    </FormFieldTextArea>
+                    <Col>
+                        <Header2 marginBottom="small" textAlign="center" weight={"bolder"}
+                                 sand={"true"}>Ajánlatkérés</Header2>
+                    </Col>
 
-                    <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Szülő neve:"}
+                        required
+                        name={"name"}
+
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Telefonszám:"}
+                        required
+                        name={"name"}
+
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Email:"}
+                        required
+                        type={"email"}
+                        name={"name"}
+
+                    />
+
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Gyerekek száma:"}
+                        required
+                        name={"name"}
+
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        multiline
+                        rows={4}
+                        label={"Kért programok:"}
+                        required
+                        name={"name"}
+
+                    />
+
+                    <Col grid justifyContent={"stretch"}>
+                        <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
+                    </Col>
+
 
                 </CampFormContainer>
             </Col>

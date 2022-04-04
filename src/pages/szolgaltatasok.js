@@ -6,7 +6,6 @@ import ActiveCardSection from "../components/organizms/card-section/ActiveCardSe
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
 import Layout from "../components/general/layout/Layout";
 import MainCard from "../components/molecules/cards/MainCard";
-import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 import {
     MainCardSectionContainer, MainLeftCardContainer, StyledCarousel,
@@ -14,13 +13,13 @@ import {
 import {Col} from "../components/atoms/styled/layout/layoutComponents";
 import {Img} from "../components/atoms/styled/image/imageComponents";
 import {Title} from "../components/atoms/styled/typography/typographyComponents";
+import VideoSection from "../components/organizms/video-section/VideoSection";
 
 const Szolgaltatasok = ({data: {szolg}}) => {
 
     return (
         <Layout seo={szolg.seo}>
-            <SmallVideoSection
-                title={"Tekintsd meg promó videónkat"}
+            <VideoSection
                 video={szolg.video_section.video.url}
             />
             <SectionLayoutGrid id="szolgaltatasok" customPadding={"firstElement"}>

@@ -13,7 +13,7 @@ import {
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const MainCardSection = ({card, title, id, isRight,sand}) => {
+const MainCardSection = ({card, title, id, isRight,sand,}) => {
         return (
             <SectionLayoutGrid id={id ? "main-card-section" + id : "main-card-section"} customPadding={"firstElement"}>
                 {title &&
@@ -33,6 +33,8 @@ const MainCardSection = ({card, title, id, isRight,sand}) => {
                                     title={card.title}
                                     description={card.description}
                                     sand={sand}
+                                    name={card.button && card.button.name}
+                                    slug={card.button && card.button.slug}
                                 />
                             </MainRightCardContainer>
                         </MainCardSectionContainer>
@@ -46,6 +48,8 @@ const MainCardSection = ({card, title, id, isRight,sand}) => {
                                     title={card.title}
                                     description={card.description}
                                     sand={sand}
+                                    name={card.button && card.button.name}
+                                    slug={card.button && card.button.slug}
                                 />
                             </MainLeftCardContainer>
                             <MainCardRightImg src={card.image.localFile.publicURL}/>

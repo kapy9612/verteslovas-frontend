@@ -1,7 +1,6 @@
 import React from "react"
 import {graphql} from "gatsby"
 
-import WeddingHeroSection from "../components/organizms/hero-section/WeddingHeroSection";
 import MainCardSection from "../components/organizms/card-section/MainCardSection";
 import WeddingCardSection from "../components/organizms/card-section/WeddingCardSection";
 import Layout from "../components/general/layout/Layout";

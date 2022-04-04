@@ -36,6 +36,10 @@ export const query = graphql`
       main_section {
         title
         content {
+        button {
+          name
+          slug
+        }
           description
           id
           image {

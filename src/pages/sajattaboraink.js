@@ -4,16 +4,14 @@ import {graphql} from "gatsby";
 import CampCardSection from "../components/organizms/card-section/CampCardSection";
 import Layout from "../components/general/layout/Layout";
 import CampFormSection from "../components/organizms/form-section/CampFormSection";
-import VideoSection from "../components/organizms/video-section/VideoSection";
 import SimpleTableSection from "../components/organizms/table-section/SimpleTableSection";
+import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 
 
 const Sajattaboraink = ({data: {camp}}) => {
     return (
         <Layout seo={camp.seo} isChild>
-            <VideoSection
-                video={camp.video_section.video.url}
-            />
+
             {camp.main_section.content && camp.main_section.content.map((item, index) => (
                 <CampCardSection
                     title={index === 0 ? camp.main_section.title : null}
@@ -22,10 +20,16 @@ const Sajattaboraink = ({data: {camp}}) => {
                     id={index}
                     key={index}
                     border={"true"}
+                    first={true}
                 />
             ))}
             <SimpleTableSection title={camp.table_section.title} sand={true} header={camp.table_section.header}
                                 isYellow={true} rows={camp.table_section.table}/>
+            <SmallVideoSection
+                first={false}
+                video={camp.video_section.video.url}
+                title={"Tekintse meg a táborainkról készült videót"}
+            />
             <CampFormSection
                 card={camp.form_section}
             />
@@ -56,7 +60,7 @@ export const query = graphql`
       main_section {
         id
         title
-        content {
+        content {      
           description
           id
           image {
@@ -82,16 +86,3 @@ export const query = graphql`
   }
 `
 export default Sajattaboraink;
-/*  return (
-        <div>
-            <CampCardSection
-                title={camp.main_section.title}
-                cards={camp.main_section.content}
-                border={"true"}
-            />
-        </div>
-    );
-};
-
-
-*/

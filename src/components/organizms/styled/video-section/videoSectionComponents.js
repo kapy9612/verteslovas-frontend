@@ -10,7 +10,9 @@ export const VideoSectionContainer = styled.div`
   justify-self: center;
 `
 export const SmallVideoSectionContainer = styled(Col)`
-  //border: 5px solid var(--dark-gray);
+ // border: 2px solid var(--black);
+  width:95%;
+  margin: auto;
   box-sizing: border-box;
   box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
 `

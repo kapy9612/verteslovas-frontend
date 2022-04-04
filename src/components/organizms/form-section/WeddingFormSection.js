@@ -1,18 +1,12 @@
 import React from 'react';
 
-import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 import {Col} from "../../atoms/styled/layout/layoutComponents";
+
+import { Title} from "../../atoms/styled/typography/typographyComponents";
 import {
-    WeddingFormContainer,
-    WeddingFormField, WeddingFormFieldTextArea,
-    WeddingFormWrapper
-} from "../../molecules/styled/form/formComponentes";
-import {Body, Header2, Title} from "../../atoms/styled/typography/typographyComponents";
-import {
-    CampImage, Input, LongForm,
+    Input, LongForm,
     WeddingButtonlink
 } from "../styled/form-section/formsectionComponents";
-import eskuvoform from "../../../../static/assets/couple2.png"
 import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
 import {TextField} from "@mui/material";
 

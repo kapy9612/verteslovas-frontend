@@ -6,12 +6,12 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 
 import {
     Buttonlink,
-    CampImage, FamilyFormContainer, FormFieldSelect,
-    FormFieldTextArea
+    CampImage, FamilyFormContainer,
+     Input, SelectControl
 } from "../styled/form-section/formsectionComponents";
 import {Header2} from "../../atoms/styled/typography/typographyComponents";
-import {FormField} from "../../atoms/styled/formField/formFieldComponents";
 import cegform from "../../../../static/assets/ceg_form.png"
+import {InputLabel, Select} from "@mui/material";
 
 
 const CompanyFormSection = () => {
@@ -22,23 +22,68 @@ const CompanyFormSection = () => {
             </Col>
             <Col span={5}>
                 <FamilyFormContainer>
-                    <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={true}>Ajánlatkérés</Header2>
-                    <FormField placeholder={"Teljes név"}/>
-                    <FormField placeholder={"Cégnév"}/>
-                    <FormField placeholder={"Telefonszám"}/>
-                    <FormField placeholder={"Email"}/>
-                    <FormFieldSelect placeholder={"Esemény típusa"} id="a" name="a">
-                        <option value={0}>Esemény típusa</option>
-                        <option value="Céges nap">Céges nap</option>
-                        <option value="Csapatépítő">Csapatépítő</option>
-                        <option value="Céges családinap">Céges családinap</option>
-                        <option value="Céges gyerektábor">Céges gyerektábor</option>
-                    </FormFieldSelect>
-                    <FormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50" placeholder={"Megjegyzés"}>
-                    </FormFieldTextArea>
+                    <Col>
+                        <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={true}>Ajánlatkérés</Header2>
+                    </Col>
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Teljes név:"}
+                        required
+                        name={"name"}
 
-                    <Buttonlink variant={"beige"}>Küldés</Buttonlink>
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Cégnév:"}
+                        required
+                        name={"name"}
 
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Telefonszám:"}
+                        required
+                        name={"name"}
+
+                    />
+                   <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Email:"}
+                        required
+                        name={"name"}
+
+                    />
+                    <SelectControl variant="outlined" size="small" required>
+                        <InputLabel id="package-label">Esemény típusa</InputLabel>
+                        <Select
+                            native
+                            label="Esemény típusa:"
+                            name={"type"}
+                        >
+                            <option aria-label="None" value=""/>
+                            <option value="Céges nap">Céges nap</option>
+                            <option value="Csapatépítő">Csapatépítő</option>
+                            <option value="Céges családinap">Céges családinap</option>
+                            <option value="Céges gyerektábor">Céges gyerektábor</option>
+                        </Select>
+                    </SelectControl>
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        multiline
+                        rows={3}
+                        label={"Megjegyzés"}
+                        required
+                        name={"name"}
+
+                    />
+                    <Col grid justifyContent={"stretch"}>
+                        <Buttonlink variant={"beige"}>Küldés</Buttonlink>
+                    </Col>
                 </FamilyFormContainer>
             </Col>
 

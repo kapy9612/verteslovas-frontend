@@ -98,20 +98,36 @@ export const WeddingForm = styled.form`
     grid-gap: 1rem 1rem;
   }
 `
-
 export const CampFormContainer = styled.form`
+  display: grid;
+  grid-gap: 1rem 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: stretch;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--light-brown-form);
+  box-sizing: border-box;
+  padding: 2.5rem 2rem 3rem 2rem;
+  border-radius: 1.5rem;
+
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem 1rem;
+  }
+`
+/*export const CampFormContainer = styled.form`
   display: grid;
   grid-template-rows: auto;
   row-gap: 1.5rem;
   box-sizing: border-box;
   padding: 2.5rem 2rem 3rem 2rem;
   margin-top: var(--large);
-  width: 100%;
-  background-color: var(--light-brown-form);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--light-brown-form);
+  width: 100%;
   border-radius: 1.5rem;
 `
-
+*/
 
 export const FamilyFormContainer = styled.form`
   display: grid;
@@ -123,6 +139,9 @@ export const FamilyFormContainer = styled.form`
   background-color: var(--light-grey);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.5rem;
+  grid-gap: 1rem 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: stretch;
 `
 export const CampImage = styled.img`
   max-width: 100%;

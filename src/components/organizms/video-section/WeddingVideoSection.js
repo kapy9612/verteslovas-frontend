@@ -39,7 +39,7 @@ const SmallVideoSection = ({video, title,description}) => {
     };
 
     return (
-        <SectionLayoutGrid id="small-video-section">
+        <SectionLayoutGrid id="small-video-section" customPadding={"firstElement"}>
             <Col>
                 <Title sand={false} textAlign="center">
                     {title}

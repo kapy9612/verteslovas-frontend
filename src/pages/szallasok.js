@@ -3,7 +3,6 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/general/layout/Layout";
 import MainCardRepeatableSection from "../components/organizms/card-section/MainCardRepeatableSection";
-import VideoSection from "../components/organizms/video-section/VideoSection";
 
 import terkep from "../../static/assets/vlTérkép.png"
 import {TerkepImg} from "../components/atoms/styled/image/imageComponents";

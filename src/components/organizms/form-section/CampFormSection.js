@@ -8,12 +8,11 @@ import {
     Buttonlink,
     CampFormContainer,
     CampImage,
-    FormFieldSelect,
-    FormFieldTextArea
+    Input, SelectControl
 } from "../styled/form-section/formsectionComponents";
 import {Header2} from "../../atoms/styled/typography/typographyComponents";
-import {FormField} from "../../atoms/styled/formField/formFieldComponents";
 import taborform from "../../../../static/assets/tabor_form.png"
+import {InputLabel, Select} from "@mui/material";
 
 const CampFormSection = () => {
     return (
@@ -23,27 +22,73 @@ const CampFormSection = () => {
             </Col>
             <Col span={5}>
                 <CampFormContainer>
-                    <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={"true"}>Jelentkezz
-                        táborainkba!</Header2>
-                    <FormField placeholder={"Szülő neve"}/>
-                    <FormField placeholder={"Telefonszám"}/>
-                    <FormField placeholder={"Email"}/>
-                    <FormFieldSelect placeholder={"Tábor típusa"} id="taborok" name="tábprok">
-                        <option value={0}>Tábor fajtája</option>
-                        <option value="Lovastábor">Lovastábor</option>
-                        <option value="Kalandtábor">Kalandtábor</option>
-                    </FormFieldSelect>
-                    <FormFieldSelect placeholder={"Tábor időpont"} id="idopont" name="időpont">
-                        <option value={0}>Tábor időpontja</option>
-                        <option value="juni1">2022.01.01-2022.09.05</option>
-                        <option value="juli2">2022.08.01-2022.09.05</option>
-                    </FormFieldSelect>
-                    <FormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50"
-                                       placeholder={"Gyerek/gyerekek neve és életkora, egyéb megjegyzés"}>
-                    </FormFieldTextArea>
+                    <Col>
+                        <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={"true"}>Jelentkezz
+                            táborainkba!</Header2>
+                    </Col>
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Szülő neve:"}
+                        required
+                        name={"name"}
 
-                    <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Telefonszám:"}
+                        required
+                        name={"name"}
 
+                    />
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Email:"}
+                        required
+                        type={"email"}
+                        name={"name"}
+
+                    />
+                    <SelectControl variant="outlined" size="small" required>
+                        <InputLabel id="package-label">Tábor típusa</InputLabel>
+                        <Select
+                            native
+                            label="Tábor típusa:"
+                            name={"type"}
+                        >
+                            <option aria-label="None" value=""/>
+                            <option value="lovas">Lovastábor</option>
+                            <option value="kalnad">Kalandtábor</option>
+                        </Select>
+                    </SelectControl>
+                    <SelectControl variant="outlined" size="small" required>
+                        <InputLabel id="package-label">Tábor időpontja</InputLabel>
+                        <Select
+                            native
+                            label="Tábor időpontja:"
+                            name={"type"}
+                        >
+                            <option aria-label="None" value=""/>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3l</option>
+                        </Select>
+                    </SelectControl>
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        multiline
+                        rows={4}
+                        label={"Gyerek/gyerekek neve és életkora, egyéb megjegyzés"}
+                        required
+                        name={"name"}
+
+                    />
+                    <Col grid justifyContent={"stretch"}>
+                        <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
+                    </Col>
                 </CampFormContainer>
             </Col>
 
