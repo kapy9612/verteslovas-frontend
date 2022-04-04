@@ -79,28 +79,28 @@ body {
     font-size: 16px;
 }
 
-@media screen and (max-width: 1500px) {
+@media (max-width: 1500px) {
     html,
     body {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media (max-width: 1300px) {
     html,
     body {
         font-size: 13px;
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
     html,
     body {
         font-size: 11px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     html,
     body {
         font-size: 12px;

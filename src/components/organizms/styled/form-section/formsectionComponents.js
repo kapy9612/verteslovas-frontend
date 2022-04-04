@@ -168,6 +168,10 @@ export const WeddingButtonlink = styled(ButtonLink)`
 
 export const TitleContainer = styled(Header3)`
   align-self: center;
+  
+  @media (max-width: 1000px){
+    font-size: 2rem;
+  }
 `
 export const FormFieldSelect = styled.select`
   padding: 0.5rem;

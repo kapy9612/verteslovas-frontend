@@ -65,8 +65,13 @@ export const ChildCardContainer = styled.div`
   background: ${({color}) => handleMainCardColor(color)};
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   
-  @media(max-width: 800px){
+  @media(max-width: 1150px){
+    border-radius: 0 0 2.5rem 2.5rem;
+  }
+  
+  @media(max-width: 600px){
     padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 0 0 2.5rem 2.5rem;
   }
 `
 
@@ -87,6 +92,7 @@ export const ButtonCardContainer = styled.div`
   grid-template-rows: 18rem 1fr;
   box-sizing: border-box;
   background: ${({color}) => handleButtonCardBG(color)};
+  border-radius: 2.5rem;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
 `
 
@@ -101,6 +107,7 @@ export const ButtonCardImg = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2.5rem 2.5rem 0 0;
 `
 export const ActiveCardContentWrapper = styled.div`
   display: grid;

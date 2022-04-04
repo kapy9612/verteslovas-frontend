@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
 import {
     handleAlignContent,
@@ -35,15 +35,32 @@ export const LayoutGrid = styled.div`
   min-height: ${({minHeight}) => handleLayoutMinHeight(minHeight)};
   align-content: center;
 
-  @media screen and (max-width: 1100px) {
+  @media (max-width: 1400px) {
+    width: ${props => props.wide ? "70vw" : "85vw"};
+  }
+  
+  @media (max-width: 1100px) {
     width: ${props => props.wide ? "70vw" : "85vw"};
   }
 
-  @media screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     min-height: auto;
     width: 90%;
     grid-template-columns: 1fr;
   }
+
+  ${props => props.sectionPadding==="mobile" && css`
+    @media (max-width: 800px) {
+      padding: 2vh 0 2vh 0;
+    }
+  `}
+
+  ${props => props.sectionPadding==="mobileFirst" && css`
+    @media (max-width: 800px) {
+      padding: 10vh 0 2vh 0;
+    }
+  `}
+
 `
 
 export const InlineGrid = styled.div`

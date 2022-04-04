@@ -8,14 +8,14 @@ import {
     MainRightCardContainer,
     MainLeftCardContainer,
     MainCardRightImg,
-    MainCardSectionContainer
+    MainCardSectionContainer, MainCardMobileImg
 } from "../styled/card-section/cardSectionComponents"
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
 const CampCardSection = ({title, card, border, isRight, id,first}) => {
     return (
-        <SectionLayoutGrid customPadding={first && "firstElement"} id={id ? "camp-card-section" + id : "camp-card-section"} customMinHeight={"small"}>
+        <SectionLayoutGrid customPadding={first && "firstElement"} id={id ? "camp-card-section" + id : "camp-card-section"} customMinHeight={"small"} repeatable={first ? "mobileFirst" : "mobile"}>
             <Col>
                 <Title sand="true" textAlign="center" marginBottom="medium">
                     {title}
@@ -37,6 +37,7 @@ const CampCardSection = ({title, card, border, isRight, id,first}) => {
                 :
                 <Col>
                     <MainCardSectionContainer>
+                        <MainCardMobileImg src={card.image.localFile.publicURL}/>
                         <MainLeftCardContainer>
                             <CampCard
                                 color={isRight ? "yellow" : "green"}
