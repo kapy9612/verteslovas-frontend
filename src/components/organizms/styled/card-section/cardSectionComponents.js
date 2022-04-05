@@ -27,6 +27,18 @@ export const MainCardLeftImg = styled.img`
     border-radius: 2.5rem 2.5rem 0 0;
   }
 `
+export const MainCardLeftImgNoBorder = styled.img`
+  width: 105%;
+  height: auto;
+  display: grid;
+  align-self: center;
+  border-radius: ${props => props.border ? "2.5rem" : "0"};
+
+  @media (max-width: 1150px) {
+    max-width: 100%;
+    width: auto;
+  }
+`
 export const MainRightCardContainer = styled.div`
   width: 105%;
   margin-left: -5%;
@@ -77,6 +89,17 @@ export const MainCardMobileImg = styled.img`
 
   @media (max-width: 1150px) {
     border-radius: 2.5rem 2.5rem 0 0;
+    max-width: 100%;
+    width: auto;
+    display: grid;
+  }
+`
+export const MainCardMobileImgNoBorder = styled.img`
+  height: auto;
+  display: none;
+  align-self: center;
+
+  @media (max-width: 1150px) {
     max-width: 100%;
     width: auto;
     display: grid;

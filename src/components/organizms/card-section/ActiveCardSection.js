@@ -4,7 +4,7 @@ import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 import ActiveCard from "../../molecules/cards/ActiveCard";
 
 import {Title} from "../../atoms/styled/typography/typographyComponents";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
+import {ActiveCol, Col} from "../../atoms/styled/layout/layoutComponents";
 
 const ActiveCardSection = ({title, cards, id,sand}) => {
     return (
@@ -13,13 +13,13 @@ const ActiveCardSection = ({title, cards, id,sand}) => {
                 <Title textAlign="center" sand={sand}>{title}</Title>
             </Col>
             {cards && cards.map((item, index) => (
-                <Col span={4} key={index} grid justifyContent={"stretch"}>
+                <ActiveCol span={4} key={index} grid justifyContent={"stretch"}>
                     <ActiveCard
                         description={item.description}
                         title={item.title}
                         image={item.cover.localFile.publicURL}
                     />
-                </Col>
+                </ActiveCol>
             ))}
         </SectionLayoutGrid>
     );

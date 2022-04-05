@@ -145,6 +145,8 @@ export const FamilyFormContainer = styled.form`
 `
 export const CampImage = styled.img`
   max-width: 100%;
+ 
+  
 `
 export const FormContainer = styled(CampFormContainer)`
   display: grid;

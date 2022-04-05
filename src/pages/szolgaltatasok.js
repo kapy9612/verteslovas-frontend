@@ -32,6 +32,8 @@ const Szolgaltatasok = ({data: {szolg}}) => {
                                 title={szolg.animator_section.title}
                                 description={szolg.animator_section.description}
                                 sand={true}
+                                images={szolg.animator_section.image}
+
                             />
                         </MainLeftCardContainer>
                         <StyledCarousel autoPlay={true} infiniteLoop={true} showThumbs={false} transitionTime={1000}>

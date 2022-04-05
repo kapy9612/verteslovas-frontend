@@ -8,7 +8,7 @@ import {
     MainRightCardContainer,
     MainLeftCardContainer,
     MainCardRightImg,
-    MainCardSectionContainer
+    MainCardSectionContainer, MainCardMobileImg, MainCardMobileImgNoBorder, MainCardLeftImgNoBorder
 } from "../styled/card-section/cardSectionComponents"
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
@@ -26,7 +26,7 @@ const MainCardSection = ({card, title, id, isRight,sand,}) => {
                 {isRight ?
                     <Col >
                         <MainCardSectionContainer>
-                            <MainCardLeftImg src={card.image.localFile.publicURL}/>
+                            <MainCardLeftImgNoBorder src={card.image.localFile.publicURL}/>
                             <MainRightCardContainer>
                                 <MainCard
                                     color={isRight ? "beige" : "grey"}
@@ -42,6 +42,8 @@ const MainCardSection = ({card, title, id, isRight,sand,}) => {
                     :
                     <Col>
                         <MainCardSectionContainer>
+                            <MainCardMobileImgNoBorder src={card.image.localFile.publicURL}/>
+
                             <MainLeftCardContainer>
                                 <MainCard
                                     color={isRight ? "beige" : "grey"}

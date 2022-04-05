@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {Col, DesktopCol} from "../../atoms/styled/layout/layoutComponents";
+import {Col, DesktopCol, FormCol, FormImageCol} from "../../atoms/styled/layout/layoutComponents";
 
 import {
     Buttonlink,
@@ -17,10 +17,10 @@ import {InputLabel, Select} from "@mui/material";
 const CampFormSection = () => {
     return (
         <SectionLayoutGrid id="form-section">
-            <DesktopCol span={7} grid alignContent={"end"}>
+            <FormImageCol span={7} grid alignContent={"end"}>
                 <CampImage src={taborform}/>
-            </DesktopCol>
-            <Col span={5}>
+            </FormImageCol>
+            <FormCol span={5}>
                 <CampFormContainer>
                     <Col>
                         <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={"true"}>Jelentkezz
@@ -90,7 +90,7 @@ const CampFormSection = () => {
                         <Buttonlink variant={"yellow"}>Küldés</Buttonlink>
                     </Col>
                 </CampFormContainer>
-            </Col>
+            </FormCol>
         </SectionLayoutGrid>
     );
 };

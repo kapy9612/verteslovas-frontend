@@ -23,4 +23,7 @@ export const WeddingVideoSectionContainer = styled(Col)`
   box-sizing: border-box;
   justify-content: center;
   box-shadow: -4px -4px 8px #FFFFFF, 4px 4px 8px rgba(0, 0, 0, 0.25);
+  @media(max-width: 800px){
+    width: 100%;
+  }
 `

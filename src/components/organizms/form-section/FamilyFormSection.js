@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {Col} from "../../atoms/styled/layout/layoutComponents";
+import {Col, FormCol, FormImageCol} from "../../atoms/styled/layout/layoutComponents";
 
 import {
     Buttonlink,
@@ -16,10 +16,10 @@ import {InputLabel, Select} from "@mui/material";
 const FamilyFormSection = () => {
     return (
         <SectionLayoutGrid id="form-section">
-            <Col span={7} grid alignContent={"end"} >
+            <FormImageCol span={7} grid alignContent={"end"} >
                 <CampImage src={csaladform}/>
-            </Col>
-            <Col span={5} >
+            </FormImageCol>
+            <FormCol  span={5} >
                 <FamilyFormContainer>
                     <Col>
                         <Header2 marginBottom="small" textAlign="center" weight={"bolder"} sand={true}>Ajánlatkérés</Header2>
@@ -86,7 +86,7 @@ const FamilyFormSection = () => {
                     </Col>
                 </FamilyFormContainer>
 
-            </Col>
+            </FormCol>
 
         </SectionLayoutGrid>
 

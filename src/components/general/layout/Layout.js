@@ -94,21 +94,42 @@ const Layout = ({children, seo, isChild}) => {
             <Sidebar
                 menus={[
                     {
-                        "name": "Helyszínek",
-                        "slug": "/test",
+                        "name":"Szervezz nálunk tábort",
+                        "slug":"/szervezznalunktaborokat"
+                    },
+                    {
+                        "name":"Saját táboraink",
+                        "slug":"/sajattaboraink"
+                    },
+                    {
+                        "name":"Születésnapok",
+                        "slug":"/szuletesnapok"
+                    },
+                    {
+                        "name": "Esküvő",
+                        "slug": "/eskuvo",
+                    },
+                    {
+                        "name": "Cégek",
+                        "slug": "/cegeknek",
+                    },
+                    {
+                        "name": "Családok",
+                        "slug": "/csaladoknak",
+                    },
+                    {
+                        "name": "Lovaglás",
+                        "slug": "/lovaglas",
+                    },
+                    {
+                        "name": "Szállás",
+                        "slug": "/szallasok",
                     },
                     {
                         "name": "Szolgáltatások",
-                        "slug": "/test",
+                        "slug": "/szolgaltatasok",
                     },
-                    {
-                        "name": "Ajánlatkérés",
-                        "slug": "/test",
-                    },
-                    {
-                        "name": "Kapcsolat",
-                        "slug": "/test",
-                    },
+
                 ]}
             />
             <SideNavigation/>

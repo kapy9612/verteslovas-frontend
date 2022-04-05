@@ -23,6 +23,8 @@ export const WeddingCardContainer = styled.div`
     place-self: center;
     margin-bottom: 1rem;
   }
+ 
+  
 `
 
 export const MainCardContainer = styled.div`
@@ -35,9 +37,13 @@ export const MainCardContainer = styled.div`
   background: ${({color}) => handleMainCardColor(color)};
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
   min-height: 25rem;
+  @media(max-width: 1140px){
+    min-height: 10rem;
 
+  }
   @media(max-width: 800px){
     padding: 1rem 1.5rem 1rem 1.5rem;
+
   }
 `
 export const MainCardButton = styled(ButtonLink)`

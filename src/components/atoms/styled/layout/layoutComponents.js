@@ -16,13 +16,20 @@ export const BackgroundWedding = styled.div`
   background: ${({customBg}) => handleLayoutBackground(customBg)};
   background-image: url("/assets/bg16.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size:  100%  ;
   background-position: top;
   box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
   z-index: 100;
   border-bottom: 2rem;
   background-color: var(--grey-background);
   margin-bottom: 1rem;
+  @media (max-width: 1300px) {
+    background-position: right;
+
+    background-size: auto 100%  ;
+
+  }
+  
 `
 
 export const LayoutGrid = styled.div`
@@ -38,7 +45,7 @@ export const LayoutGrid = styled.div`
   @media (max-width: 1400px) {
     width: ${props => props.wide ? "70vw" : "85vw"};
   }
-  
+
   @media (max-width: 1100px) {
     width: ${props => props.wide ? "70vw" : "85vw"};
   }
@@ -49,13 +56,13 @@ export const LayoutGrid = styled.div`
     grid-template-columns: 1fr;
   }
 
-  ${props => props.sectionPadding==="mobile" && css`
+  ${props => props.sectionPadding === "mobile" && css`
     @media (max-width: 800px) {
       padding: 2vh 0 2vh 0;
     }
   `}
 
-  ${props => props.sectionPadding==="mobileFirst" && css`
+  ${props => props.sectionPadding === "mobileFirst" && css`
     @media (max-width: 800px) {
       padding: 10vh 0 2vh 0;
     }
@@ -84,6 +91,57 @@ export const Col = styled.div`
   align-content: ${({alignContent}) => handleAlignContent(alignContent)};
   justify-content: ${({justifyContent}) => handleJustifyContent(justifyContent)};
 
+  @media screen and (max-width: 800px) {
+    grid-column: 1/-1 !important;
+  }
+`
+export const FormCol = styled.div`
+  width: 100%;
+  display: ${props => props.grid ? "grid" : ""};
+  grid-column: ${({span}) => handleGridColumn(span)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  align-content: ${({alignContent}) => handleAlignContent(alignContent)};
+  justify-content: ${({justifyContent}) => handleJustifyContent(justifyContent)};
+
+  @media screen and (max-width: 1400px) {
+    grid-column: span 6 !important;
+  }
+  @media screen and (max-width: 1100px) {
+    grid-column: 1/-1 !important;
+  }
+`
+export const FormImageCol = styled.div`
+  width: 100%;
+  display: ${props => props.grid ? "grid" : ""};
+  grid-column: ${({span}) => handleGridColumn(span)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  align-content: ${({alignContent}) => handleAlignContent(alignContent)};
+  justify-content: ${({justifyContent}) => handleJustifyContent(justifyContent)};
+
+  @media screen and (max-width: 1400px) {
+    grid-column: span 6 !important;
+  }
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+`
+export const ActiveCol = styled.div`
+  width: 100%;
+  display: ${props => props.grid ? "grid" : ""};
+  grid-column: ${({span}) => handleGridColumn(span)};
+  margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+  margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
+  align-content: ${({alignContent}) => handleAlignContent(alignContent)};
+  justify-content: ${({justifyContent}) => handleJustifyContent(justifyContent)};
+
+  @media screen and (max-width: 1350px) {
+    grid-column:span 4 !important;
+  }
+  @media screen and (max-width: 1150px) {
+    grid-column:span 6 !important;
+  }
   @media screen and (max-width: 800px) {
     grid-column: 1/-1 !important;
   }

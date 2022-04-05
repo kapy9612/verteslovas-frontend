@@ -5,15 +5,19 @@ import TableRow from "../../atoms/table-row/TableRow";
 
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {TableRowCol} from "../styled/table-section/TableSectionComponents";
-import {Title} from "../../atoms/styled/typography/typographyComponents";
+import {Body, Title} from "../../atoms/styled/typography/typographyComponents";
 
-const SimpleTableSection = ({title ,header, rows, isYellow, id,sand}) => {
+const SimpleTableSection = ({title ,header, rows, isYellow, id,sand,subtitle}) => {
     return (
         <SectionLayoutGrid customMinHeight="small"  id={id ? "simple-table-section-" + id : "simple-table-section"}>
             <Col>
-                <Title color="black" textAlign="center" marginBottom="small" sand={isYellow && "true"}>
-                    {title}
-                </Title>
+                <>
+                    <Title color="black" textAlign="center" marginBottom="small"  sand={sand}>
+                        {title}
+                    </Title>
+                    {subtitle && <Body textAlign={"center"}>Az kedvezmények nem összevonhatók</Body>
+                    }
+                </>
             </Col>
             <TableRowCol>
                 <TableRow firstColumn={header.row1} secondColumn={header.row2} variant={isYellow ? "yellow" : "grey"} isBold/>
