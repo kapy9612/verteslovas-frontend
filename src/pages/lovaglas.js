@@ -34,6 +34,8 @@ const Lovaglas = ({data: {lovaglas}}) => {
                 header={lovaglas.prices.header}
                 rows={lovaglas.prices.table}
                 sand={true}
+                subt={true}
+                subtitle={"Lovaglást edzőinkkel kell egyeztetni!"}
             />
             <TrainerSection
                 trainers={lovaglas.trainer_section}

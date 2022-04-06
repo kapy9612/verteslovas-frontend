@@ -22,7 +22,7 @@ const Sajattaboraink = ({data: {camp}}) => {
                     first={index === 0}
                 />
             ))}
-            <SimpleTableSection title={camp.table_section.title} subtitle={true} sand={true} header={camp.table_section.header}
+            <SimpleTableSection title={camp.table_section.title} subt={true} subtitle={"Az kedvezmények nem összevonhatók"}sand={true} header={camp.table_section.header}
                                 isYellow={true} rows={camp.table_section.table}/>
             <SmallVideoSection
                 first={false}

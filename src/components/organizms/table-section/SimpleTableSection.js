@@ -7,7 +7,7 @@ import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {TableRowCol} from "../styled/table-section/TableSectionComponents";
 import {Body, Title} from "../../atoms/styled/typography/typographyComponents";
 
-const SimpleTableSection = ({title ,header, rows, isYellow, id,sand,subtitle}) => {
+const SimpleTableSection = ({title ,header, rows, isYellow, id,sand,subtitle,subt}) => {
     return (
         <SectionLayoutGrid customMinHeight="small"  id={id ? "simple-table-section-" + id : "simple-table-section"}>
             <Col>
@@ -15,7 +15,7 @@ const SimpleTableSection = ({title ,header, rows, isYellow, id,sand,subtitle}) =
                     <Title color="black" textAlign="center" marginBottom="small"  sand={sand}>
                         {title}
                     </Title>
-                    {subtitle && <Body textAlign={"center"}>Az kedvezmények nem összevonhatók</Body>
+                    {subt && <Body textAlign={"center"}>{subtitle}</Body>
                     }
                 </>
             </Col>

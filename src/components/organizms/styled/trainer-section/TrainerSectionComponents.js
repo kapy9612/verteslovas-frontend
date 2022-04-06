@@ -5,12 +5,26 @@ export const TrainerImage = styled.img`
   border-radius: 50%;
   width: 100%;
   box-shadow: var(--table-shadow);
-`
+  @media(max-width: 800px){
+    display: none;
 
+  }
+`
+export const TrainerPhoneImage = styled.img`
+  display: none;
+  @media(max-width: 800px){
+    display: grid;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: var(--table-shadow);
+
+  }
+`
 export const TrainerName = styled(Body)`
   font-size: calc(var(--p-simple) * 2);
   font-weight: var(--bolder);
-  color: #8c5e5a;
+  //color: #8c5e5a;
 `
 export const TrainerWrapper = styled.div`
   display: grid;

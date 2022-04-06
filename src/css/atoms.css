@@ -107,14 +107,14 @@ body {
     }
 
     :root {
-        --title: 3.5rem;
-        --h2: 2.75rem;
+        --title: 3.1rem;
+        --h2: 2.5rem;
         --p-simple: 1rem;
         --form-title-camp: 2rem;
         --form-title-simple: 3.75rem;
         --form-p: 1rem;
         --card-title: 4rem;
-        --h5: 3rem;
+        --h5:2.5rem;
     }
 }
 

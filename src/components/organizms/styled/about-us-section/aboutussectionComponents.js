@@ -41,4 +41,10 @@ export const BodyContainer = styled.div`
   text-align: ${({textAlign}) => handleTextAlign(textAlign)};
   margin-top: ${({marginTop}) => handleMarginTop(marginTop)};
   margin-bottom: ${({marginBottom}) => handleMarginBottom(marginBottom)};
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    margin: 0;
+    min-height: 18rem;
+
+  }
 `
