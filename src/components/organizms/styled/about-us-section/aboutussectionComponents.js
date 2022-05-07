@@ -47,4 +47,5 @@ export const BodyContainer = styled.div`
     min-height: 18rem;
 
   }
+
 `

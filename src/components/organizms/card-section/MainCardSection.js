@@ -4,11 +4,10 @@ import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 import MainCard from "../../molecules/cards/MainCard";
 
 import {
-    MainCardLeftImg,
     MainRightCardContainer,
     MainLeftCardContainer,
     MainCardRightImg,
-    MainCardSectionContainer, MainCardMobileImg, MainCardMobileImgNoBorder, MainCardLeftImgNoBorder
+    MainCardSectionContainer,  MainCardMobileImgNoBorder, MainCardLeftImgNoBorder
 } from "../styled/card-section/cardSectionComponents"
 import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {Title} from "../../atoms/styled/typography/typographyComponents";

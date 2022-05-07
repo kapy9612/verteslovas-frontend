@@ -149,6 +149,8 @@ export const handleLayoutPadding = padding => {
 
 export const handleLayoutMinHeight = mh => {
     switch (mh) {
+        case "smaller":
+            return "10vh";
         case "small":
             return "40vh";
         case "large":

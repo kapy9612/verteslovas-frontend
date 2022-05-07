@@ -17,7 +17,7 @@ const LongFormSection = () => {
 
     const [state, dispatch] = useReducer(FormReducer, initialState)
 
-    const campLength = ((new Date(state.last_date).getTime() - new Date(state.first_date).getTime()) / (1000 * 3600 * 24) + 1)
+    const campLength = ((new Date(state.last_date).getTime() - new Date(state.first_date).getTime()) / (1000 * 3600 * 24))
     const peopleNumber = Number(state.child_number) + Number(state.adults_number)
     const peopleNumberSleep = Number(state.adults_number) + Number(state.boys_number) + Number(state.girls_number)
     const childCount = Number(state.boys_number) + Number(state.girls_number)
@@ -46,7 +46,7 @@ const LongFormSection = () => {
         (state.group_program.suttogo && 26670) +
         (((state.active_games.bungee && 1270) + (state.active_games.falmaszas && 1270) + (state.active_games.karika && 1270) + (state.active_games.buborekfoci && 1270) + (state.active_games.lovasproba && 1270) + (state.active_games.ijaszat && 1270)) * childCount) +
         (((state.craftsman.gyongy && 1486) + (state.craftsman.cserep && 1486) + (state.craftsman.batokilas && 1486) + (state.craftsman.kavics && 1486) + (state.craftsman.ytong && 1486)) * childCount);
-
+//1x kell terulethasznalati
     const price = (((state.food.teljes && 4095) + (state.food.reggeli && 1400) + (state.food.ebed && 1990) + (state.food.vacsora && 1800) + (state.food.tizoraiuzsonna && 850)) * peopleNumber * campLength) +
         (state.food.tuzrako && 6000) +
         (state.food.langallo && 1500 * peopleNumber) +
@@ -58,7 +58,7 @@ const LongFormSection = () => {
         (state.group_program.suttogo && 26670) +
         (((state.active_games.bungee && 1270) + (state.active_games.falmaszas && 1270) + (state.active_games.karika && 1270) + (state.active_games.buborekfoci && 1270) + (state.active_games.lovasproba && 1270) + (state.active_games.ijaszat && 1270)) * Number(state.child_number)) +
         (((state.craftsman.gyongy && 1486) + (state.craftsman.cserep && 1486) + (state.craftsman.batokilas && 1486) + (state.craftsman.kavics && 1486) + (state.craftsman.ytong && 1486)) * Number(state.child_number));
-
+//minden nap fizet terulethsznalatit
     const priceOne = (((state.food.teljes && 4095) + (state.food.reggeli && 1400) + (state.food.ebed && 1990) + (state.food.vacsora && 1800) + (state.food.tizoraiuzsonna && 850)) * peopleNumber) +
         (state.food.tuzrako && 6000) +
         (state.food.langallo && 1500 * peopleNumber) +
@@ -70,7 +70,7 @@ const LongFormSection = () => {
         (state.group_program.suttogo && 26670) +
         (((state.active_games.bungee && 1270) + (state.active_games.falmaszas && 1270) + (state.active_games.karika && 1270) + (state.active_games.buborekfoci && 1270) + (state.active_games.lovasproba && 1270) + (state.active_games.ijaszat && 1270)) * Number(state.child_number)) +
         (((state.craftsman.gyongy && 1486) + (state.craftsman.cserep && 1486) + (state.craftsman.batokilas && 1486) + (state.craftsman.kavics && 1486) + (state.craftsman.ytong && 1486)) * Number(state.child_number));
-
+//kell egy megjegyzes mező a végére
     return (
         <SectionLayoutGrid background={"brown"} customPadding={"firstElement"}>
             <Col>
@@ -204,7 +204,7 @@ const LongFormSection = () => {
                             value={state.last_date}
                         />
                         <Col span={4}>
-                            <Body marginTop={"smallest"}>Tábor hossza: {campLength ? campLength : 0} nap</Body>
+                            <Body marginTop={"smallest"}>Tábor hossza: {campLength ? campLength+1 : 0} nap ({campLength ? campLength : 0} éjszaka)</Body>
                         </Col>
                     </>
 

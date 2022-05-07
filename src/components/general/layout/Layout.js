@@ -5,6 +5,7 @@ import Footer from "../../molecules/footer/Footer";
 import Sidebar from "../../molecules/sidebar/Sidebar";
 import Seo from "../seo/SEO"
 import SideNavigation from "../side-navigation/SideNavigation";
+import ModallImage from "../modall-image/ModallImage";
 
 const Layout = ({children, seo, isChild}) => {
 
@@ -135,6 +136,7 @@ const Layout = ({children, seo, isChild}) => {
             <SideNavigation/>
             <div id="layout-components">
                 {children}
+                <ModallImage/>
             </div>
             <Footer
                 description={"Buying the right telescope to take your love of astronomy to the next level is a big next step in the development of your passion for the stars."}

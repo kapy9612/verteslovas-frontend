@@ -35,19 +35,23 @@ export const BackgroundWedding = styled.div`
 export const LayoutGrid = styled.div`
   display: grid;
   width: ${props => props.thin ? "60vw" : "72vw"};
+  max-width:1920px;
   margin: auto;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 3rem 3rem;
   padding: ${({customPadding}) => handleLayoutPadding(customPadding)};
   min-height: ${({minHeight}) => handleLayoutMinHeight(minHeight)};
   align-content: center;
-
+ }
+  @media (max-width: 1920px) {
+    width: ${props => props.thin ? "70vw" : "85vw"};
+  }
   @media (max-width: 1400px) {
-    width: ${props => props.wide ? "70vw" : "85vw"};
+    width: ${props => props.thin ? "70vw" : "85vw"};
   }
 
   @media (max-width: 1100px) {
-    width: ${props => props.wide ? "70vw" : "85vw"};
+    width: ${props => props.thin ? "70vw" : "85vw"};
   }
 
   @media (max-width: 800px) {

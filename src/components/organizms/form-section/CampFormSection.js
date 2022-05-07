@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
 
-import {Col, DesktopCol, FormCol, FormImageCol} from "../../atoms/styled/layout/layoutComponents";
+import {Col, FormCol, FormImageCol} from "../../atoms/styled/layout/layoutComponents";
 
 import {
     Buttonlink,

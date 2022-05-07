@@ -14,7 +14,7 @@ import {Img} from "../../atoms/styled/image/imageComponents";
 
 const MainCardRepeatableSection = ({card, title, isRight, id,sand}) => {
         return (
-            <SectionLayoutGrid background={"whitesmoke"} id={"main-card-repeatable-section" + id}>
+            <SectionLayoutGrid background={"whitesmoke"} id={`main-card-repeatable-section${id}`} >
                 <Col>
                     <Title textAlign="center" marginBottom="medium">
                         {title}

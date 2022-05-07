@@ -8,12 +8,15 @@ import terkep from "../../static/assets/vlTérkép.png"
 import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
 import TableSection from "../components/organizms/table-section/TableSection";
 import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
+import MapSection from "../components/organizms/map-section/MapSection";
 
 const Szallasok = ({data: {szallas}}) => {
 
     return (
         <Layout seo={szallas.seo}>
-            <TerkepImg  src={terkep}/>
+
+            <MapSection></MapSection>
+            {/*<TerkepImg  src={terkep}/>*/}
             {szallas.buildings && szallas.buildings.map((item, index) => (
                 <MainCardRepeatableSection
                     card={item}

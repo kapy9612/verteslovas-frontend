@@ -6,7 +6,7 @@ const Gallery = ({images}) => {
     return (
         <GalleryWrapper>
             {images.map((item, index) => (
-                <img src={item.localFile.publicURL} alt={"kep"} key={index}/>
+                <img src={item.localFile.publicURL} alt={"kep"} key={index} className={ ` ${"image-for-modal"}`} />
             ))}
         </GalleryWrapper>
     );
