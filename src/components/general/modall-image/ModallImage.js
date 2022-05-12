@@ -13,15 +13,12 @@ const ModalImage = () => {
 
         function modalImageOpen(event) {
             let image = event.target;
-            let captionText = document.getElementById("caption");
-            console.log()
 
             modal.style.display = "grid";
             modal.tabIndex = 0;
             modal.children[0].tabIndex = 0;
             modalImage.src = image.src;
             modalImage.alt = image.alt;
-            captionText.innerHTML = image.alt;
         }
         modal.onclick = function () {
             modal.style.display = "none";

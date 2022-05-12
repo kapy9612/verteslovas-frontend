@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import SectionLayoutGrid from "../../../atoms/layout/SectionLayoutGrid";
-import {Link} from "gatsby";
 
 export const MapDiv = styled.div`
   background-image: url("/assets/vlTérkép.png");

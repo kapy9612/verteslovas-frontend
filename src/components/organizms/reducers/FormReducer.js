@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const initialState =
     {
         name: "",
@@ -5,14 +7,14 @@ export const initialState =
         phone: "",
         type: "",
         date: "",
-        first_date:"",
-        last_date:"",
-        adults_number:"",
-        child_number:"",
-        youngest_child:"",
-        oldest_child:"",
-        boys_number:"",
-        girls_number:"",
+        first_date: "",
+        last_date: "",
+        adults_number: "",
+        child_number: "",
+        youngest_child: "",
+        oldest_child: "",
+        boys_number: "",
+        girls_number: "",
         housing: {
             jurta: false,
             paraszthaz: false,
@@ -58,6 +60,55 @@ export const initialState =
         teremberles: false
     }
 
+export const initialOurCampsState =
+    {
+        name: "",
+        phone: "",
+        email: "",
+        type: "",
+        date: "",
+        message: "",
+    }
+
+export const initialBirthdaysState =
+    {
+        name: "",
+        phone: "",
+        email: "",
+        child_count: "",
+        adult_count: "",
+        message: "",
+    }
+
+export const initialFamilyState =
+    {
+        name: "",
+        phone: "",
+        email: "",
+        count: "",
+        type: "",
+        message: "",
+    }
+
+export const initialCompanyState =
+    {
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        count: "",
+        type: "",
+        message: "",
+    }
+
+export const initialWeddingState =
+    {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+    }
+
 export const FormReducer = (state, action) => {
 
     switch (action.type) {
@@ -79,4 +130,8 @@ export const FormReducer = (state, action) => {
         default:
             throw new Error("Unexpected action type " + action.type)
     }
+}
+
+export async function sendFormData(to, data) {
+    return axios.post(`https://verteslovas.herokuapp.com/${to}`, data)
 }

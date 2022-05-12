@@ -13,7 +13,7 @@ const SideNavigation = () => {
         let SideNavigation = document.getElementById("navigation-container");
         const x = document.getElementById("layout-components").childNodes
         for (let i = 0; i < x.length; i++) {
-            if (x[i].id) {
+            if (x[i].id && !x[i].id.includes("modal")) {
                 let li = document.createElement("li")
                 li.key = i
                 let a = document.createElement("a")

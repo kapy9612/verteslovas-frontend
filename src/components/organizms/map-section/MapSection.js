@@ -1,24 +1,22 @@
 import React from 'react';
 
-import "../../../css/carousel.css";
-import {Col} from "../../atoms/styled/layout/layoutComponents";
 import SectionLayoutGrid from "../../atoms/layout/SectionLayoutGrid";
+
+import {Col} from "../../atoms/styled/layout/layoutComponents";
 import {LinkContainer, Links, MapDiv, TitleMobil} from "../styled/map-section/MapSectionComponents";
-import {Link} from "gatsby";
 import {Title} from "../../atoms/styled/typography/typographyComponents";
 
-const MapSection = () => {
+import "../../../css/carousel.css";
+
+const MapSection = ({list}) => {
     return (
         <SectionLayoutGrid thin={false} customMinHeight={"smaller"}>
             <Col >
                 <MapDiv>
                     <LinkContainer>
-                        <Links href={"#main-card-repeatable-section0"}>16 - Lovasházak</Links>
-                        <Links href={"#main-card-repeatable-section1"}>23 - Apartman</Links>
-                        <Links href={"#main-card-repeatable-section2"}>24 - Tetőtéri birodalom</Links>
-                        <Links href={"#main-card-repeatable-section3"}>25,26 - Muskátli parasztház</Links>
-                        <Links href={"#main-card-repeatable-section4"}>32 - Jurta falva</Links>
-                        <Links href={"#main-card-repeatable-section5"}>34 - Metzger-ház</Links>
+                        {list && list.map((item, index) => (
+                            <Links href={item.slug} key={index}>{item.name}</Links>
+                        ))}
                     </LinkContainer>
                 </MapDiv>
                 <TitleMobil>

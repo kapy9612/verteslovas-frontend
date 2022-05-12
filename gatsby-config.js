@@ -36,7 +36,8 @@ module.exports = {
                   `for-companies-page`,
                   `for-families-page`,
                   `wedding-page`,
-                  `main-page`
+                  `main-page`,
+                  `form-prices`
               ],
               collectionTypes: [],
           },

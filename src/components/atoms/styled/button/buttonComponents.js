@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
+import {Link} from "gatsby";
 
-import { handleButtonColor, handleButtonHover } from "../../functions/atomsFunctions";
+import {handleButtonColor, handleButtonHover} from "../../functions/atomsFunctions";
 
 export const ButtonLink = styled(Link)`
   font-size: var(--form-p);
@@ -16,14 +16,15 @@ export const ButtonLink = styled(Link)`
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   color: var(--black);
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25); 
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   background-color: ${({variant}) => handleButtonColor(variant)};
   text-align: center;
+
   &:hover {
     background-color: ${({variant}) => handleButtonHover(variant)};
   }
-  
-  &:active{
+
+  &:active {
     box-shadow: inset 0 0 0.5rem #000000;
   }
 
@@ -34,30 +35,28 @@ export const ButtonLink = styled(Link)`
   }
 `
 
-/*export const Button = styled.button`
-  font-size: var(--body);
-  line-height: var(--button-lh);
-  font-family: "Lato", sans-serif;
+export const FormButton = styled.button`
+  font-size: var(--form-p);
+  line-height: var(--title-lh);
+  font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  border: ${props => props.variant==="outlined" ? "1px solid var(--dark-blue)" : "none"};
-  padding: ${props => props.arrow ? "0.75rem 2.5rem 0.75rem 1rem" : "0.75rem 1rem 0.75rem 1rem"};
+  border-radius: 0;
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
   box-sizing: border-box;
   margin: 0;
+  max-height: 3rem;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s, border 0.2s;
-  color: ${props => props.variant==="outlined" ? "var(--dark-blue)" : "white"};
-  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s, color 0.2s;
+  color: var(--black);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   background-color: ${({variant}) => handleButtonColor(variant)};
-  
+  text-align: center;
+
   &:hover {
     background-color: ${({variant}) => handleButtonHover(variant)};
-    color: ${props => props.variant==="outlined" ? "var(--grayish-cyan)" : "white"};
-    border: ${props => props.variant==="outlined" ? "1px solid var(--grayish-cyan)" : "none"};
   }
-  
-  &:active{
+
+  &:active {
     box-shadow: inset 0 0 0.5rem #000000;
   }
 
@@ -67,7 +66,8 @@ export const ButtonLink = styled(Link)`
     pointer-events: none;
   }
 `
-*//*
+
+/*
 export const ButtonSpan = styled.span`
   font-size: var(--body);
   line-height: var(--button-lh);

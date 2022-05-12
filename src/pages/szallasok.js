@@ -4,8 +4,8 @@ import {graphql} from "gatsby"
 import Layout from "../components/general/layout/Layout";
 import MainCardRepeatableSection from "../components/organizms/card-section/MainCardRepeatableSection";
 
-import terkep from "../../static/assets/vlTérkép.png"
-import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
+//import terkep from "../../static/assets/vlTérkép.png"
+//import {TerkepImg} from "../components/atoms/styled/image/imageComponents";
 import TableSection from "../components/organizms/table-section/TableSection";
 import SmallVideoSection from "../components/organizms/video-section/SmallVideoSection";
 import MapSection from "../components/organizms/map-section/MapSection";
@@ -14,8 +14,7 @@ const Szallasok = ({data: {szallas}}) => {
 
     return (
         <Layout seo={szallas.seo}>
-
-            <MapSection></MapSection>
+            <MapSection list={szallas.map_section.list}/>
             {/*<TerkepImg  src={terkep}/>*/}
             {szallas.buildings && szallas.buildings.map((item, index) => (
                 <MainCardRepeatableSection
@@ -39,6 +38,12 @@ const Szallasok = ({data: {szallas}}) => {
 export const query = graphql`
   {
     szallas: strapiHousingPage {
+      map_section {
+        list {
+            name
+            slug
+        }
+      }
       video_section {
           video {
             url

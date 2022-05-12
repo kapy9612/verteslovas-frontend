@@ -6,9 +6,7 @@ const Form = () => {
     return (
         <Layout seo={{title: "Jelentkezés Form"}} isChild>
             <LongFormSection/>
-
         </Layout>
-
     );
 }
 

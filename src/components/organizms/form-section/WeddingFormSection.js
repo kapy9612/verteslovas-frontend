@@ -1,36 +1,52 @@
-import React from 'react';
+import React, {useReducer} from 'react';
+
+import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
+import {FormReducer, initialWeddingState, sendFormData} from "../reducers/FormReducer";
 
 import {Col} from "../../atoms/styled/layout/layoutComponents";
-
-import { Title} from "../../atoms/styled/typography/typographyComponents";
+import {Title} from "../../atoms/styled/typography/typographyComponents";
 import {
     Input, LongForm,
     WeddingButtonlink
 } from "../styled/form-section/formsectionComponents";
-import SectionLayoutGridWedding from "../../atoms/layout/SectionLayoutGridWedding";
-import {TextField} from "@mui/material";
+import {navigate} from "gatsby";
 
 const WeddingFormSection = () => {
+
+    const [state, dispatch] = useReducer(FormReducer, initialWeddingState)
+
     return (
         <SectionLayoutGridWedding id="form-section">
             <Col>
                 <Title marginBottom="smallest" textAlign="center"
-                      sand={false}>Ajálatkérés
+                       sand={false}>Ajálatkérés
                 </Title>
-
             </Col>
             <Col span={3}/>
             <Col span={6}>
-                <LongForm>
-
+                <LongForm onSubmit={(e) => {
+                    e.preventDefault()
+                    sendFormData('forms-weddings',state).then(function(response) {
+                        if (response.status === 200) {
+                            navigate('/koszonjuk')
+                        }
+                    }).catch(function(error) {
+                        alert(error.response.data.message)
+                    })
+                }}>
                     <Input
                         size={"small"}
                         fullWidth
                         label={"Szervező neve:"}
                         required
                         variant="outlined"
-                        //onChange={handleChange}
-                        //value={values[item.name]}
+                        name={"name"}
+                        onChange={(e) => dispatch({
+                            type: "SET_STATE",
+                            value: e.target.value,
+                            name: e.target.name
+                        })}
+                        value={state.name}
                     />
                     <Input
                         size={"small"}
@@ -39,35 +55,48 @@ const WeddingFormSection = () => {
                         label={"Email:"}
                         required
                         variant="outlined"
-                        //onChange={handleChange}
-                        //value={values[item.name]}
+                        name={"email"}
+                        onChange={(e) => dispatch({
+                            type: "SET_STATE",
+                            value: e.target.value,
+                            name: e.target.name
+                        })}
+                        value={state.email}
                     />
                     <Input
                         size={"small"}
                         fullWidth
                         label={"Telefonszám:"}
-                        type="number"
                         required
                         variant="outlined"
-                        //onChange={handleChange}
-                        //value={values[item.name]}
+                        name={"phone"}
+                        onChange={(e) => dispatch({
+                            type: "SET_STATE",
+                            value: e.target.value,
+                            name: e.target.name
+                        })}
+                        value={state.phone}
                     />
-                    <Col>
-                        <TextField
-                            fullWidth
-                            id="filled-textarea"
-                            label="Megjegyzés"
-                            multiline
-                            rows={4}
-                            variant="outlined"/>
-                    </Col>
-
+                    <Input
+                        size={"small"}
+                        fullWidth
+                        label={"Megjegyzés:"}
+                        multiline
+                        rows={4}
+                        required
+                        variant="outlined"
+                        name={"message"}
+                        onChange={(e) => dispatch({
+                            type: "SET_STATE",
+                            value: e.target.value,
+                            name: e.target.name
+                        })}
+                        value={state.message}
+                    />
                     <Col grid justifyContent={"center"}>
-                        <WeddingButtonlink variant={"beige"}>Küldés</WeddingButtonlink>
-
+                        <WeddingButtonlink variant={"beige"} type="submit">Küldés</WeddingButtonlink>
                     </Col>
                 </LongForm>
-
             </Col>
         </SectionLayoutGridWedding>
 
@@ -75,41 +104,3 @@ const WeddingFormSection = () => {
 };
 
 export default WeddingFormSection;
-/*<Col span={1}/>
-            <Col span={10} marginTop={"largest"}>
-                <WeddingFormWrapper>
-                    <CampImage src={eskuvoform}/>
-                    <WeddingFormContainer>
-                        <Header2 marginBottom="small" textAlign="center" weight={"bolder"}
-                                 sand={false}>Ajánlatkérés</Header2>
-                        <WeddingFormField placeholder={"Teljes név"}/>
-                        <WeddingFormField placeholder={"Telefonszám"}/>
-                        <WeddingFormField placeholder={"Email"}/>
-                        <WeddingFormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50"
-                                                  placeholder={"Megjegyzés"}>
-                        </WeddingFormFieldTextArea>
-                        <WeddingButtonlink variant={"beige"}>Küldés</WeddingButtonlink>
-
-                    </WeddingFormContainer>
-                </WeddingFormWrapper>
-                <Col span={1}/>
-
-            </Col>*/
-/* <SectionLayoutGridWedding id="form-section">
-            <Col span={4}/>
-            <Col span={4}>
-                <WeddingFormContainer>
-                    <Title marginBottom="medium" textAlign="center" weight={"bolder"}
-                           sand={false}>Ajánlatkérés
-                    </Title>
-                    <WeddingFormField placeholder={"Teljes név"}/>
-                    <WeddingFormField placeholder={"Telefonszám"}/>
-                    <WeddingFormField placeholder={"Email"}/>
-                    <WeddingFormFieldTextArea id="id" name="megjegyzes" rows="4" cols="50"
-                                              placeholder={"Megjegyzés"}>
-                    </WeddingFormFieldTextArea>
-                    <WeddingButtonlink variant={"beige"}>Küldés</WeddingButtonlink>
-                </WeddingFormContainer>
-
-            </Col>
-        </SectionLayoutGridWedding>*/

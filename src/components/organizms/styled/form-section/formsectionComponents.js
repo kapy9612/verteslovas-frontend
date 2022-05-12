@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FormControl, TextField} from "@mui/material";
 import {handleGridColumn} from "../../../atoms/functions/atomsFunctions";
 
-import {ButtonLink} from "../../../atoms/styled/button/buttonComponents"
+import {ButtonLink, FormButton} from "../../../atoms/styled/button/buttonComponents"
 import {Header3} from "../../../atoms/styled/typography/typographyComponents"
 
 /*MUI Fields*/
@@ -158,11 +158,11 @@ export const FormContainer = styled(CampFormContainer)`
 export const ButtonContainer = styled(ButtonLink)`
   align-self: end;
 `
-export const Buttonlink = styled(ButtonLink)`
+export const Buttonlink = styled(FormButton)`
   border-radius: 0.4rem;
   width: 100%;
 `
-export const WeddingButtonlink = styled(ButtonLink)`
+export const WeddingButtonlink = styled(FormButton)`
   border-radius: 0.4rem;
   justify-content: center;
   margin-top: 3rem
